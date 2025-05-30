@@ -15,8 +15,28 @@ El objetivo es desarrollar un sistema de gestión para un comercio, trabajando e
 
 --------------------------------------------------------------------------------------------------------------------
 
-📌 TAREAS PENDIENTES:
-• Definir requerimientos del sistema
-• Hacer diagramas iniciales
-• Dividir tareas
-• Desarrollar funcionalidades mínimas
+sistema-gestion-comercio/
+│
+├── src/              → Código fuente principal (main.cpp, funciones.cpp)
+├── include/          → Archivos de cabecera (.h)
+├── test/             → Pruebas (en caso de agregar más adelante)
+├── docs/             → Diagramas y documentación del proyecto
+├── README.md         → Descripción general del proyecto
+├── CONTRIB.md        → Guía para colaborar en el repositorio
+
+## 📌 Tareas en progreso
+- [x] Crear estructura base del proyecto
+- [ ] Definir requerimientos principales del sistema
+- [ ] Hacer diagramas iniciales (flujo, lógica, menú, etc.)
+- [ ] Dividir tareas entre integrantes
+- [ ] Desarrollar funcionalidades mínimas
+- [ ] Implementar validaciones y reportes
+- [ ] Testear el programa en las tres computadoras
+
+---
+
+## 📝 Notas
+- El sistema se ejecuta por consola.
+- Los datos se mantienen en memoria mientras el programa está en ejecución.
+- No se utilizan archivos ni estructuras avanzadas (punteros, listas, etc.).
+- Se busca un código limpio, modular y bien comentado.

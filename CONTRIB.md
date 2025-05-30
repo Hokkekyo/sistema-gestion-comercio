@@ -47,24 +47,22 @@ git push origin main
 
 –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 
-## 📂 Organización del proyecto
-src/:              Archivos .cpp
-include/:          Archivos .h
-docs/:             Diagramas y documentación del sistema
-test/:             Casos de prueba
-README.md:         Descripción general del proyecto
-CONTRIB.md:        Guía para colaborar
+sistema-gestion-comercio/
+├── src/              → Archivos .cpp (main, lógica del sistema)
+├── include/          → Archivos .h (declaraciones de funciones)
+├── docs/             → Diagramas y documentación
+├── test/             → Casos de prueba
+├── README.md         → Descripción general del proyecto
+├── CONTRIB.md        → Guía de colaboración
 
 –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 
-## 🧠 Buenas prácticas
-•Usar nombres de variables y funciones descriptivos.
-•Evitar modificar archivos que estén siendo trabajados por otro compañero.
-•Hacer pull antes de comenzar y push cuando termines.
+🧠 Buenas prácticas
+•	Usar nombres de variables y funciones descriptivos.
+•	Mantener el main.cpp lo más limpio posible.
+•	Mover la lógica a funciones en funciones.cpp.
+•	No modificar archivos en los que está trabajando otro compañero.
+•	Hacer git pull antes de empezar y git push cuando termines.
+•	Comentar el código cuando algo no sea obvio.
 
 –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
-
-## 🧑‍🤝‍🧑 Equipo
-•Luciano (Hokkeyo)
-•[Nombre Compañero 2]
-•Melina (melinamarconi)
