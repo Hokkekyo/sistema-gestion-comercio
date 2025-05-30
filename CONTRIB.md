@@ -67,4 +67,4 @@ CONTRIB.md:        Guía para colaborar
 ## 🧑‍🤝‍🧑 Equipo
 •Luciano (Hokkeyo)
 •[Nombre Compañero 2]
-•[Nombre Compañero 3]
+•Melina (melinamarconi)
