@@ -8,6 +8,11 @@ El objetivo es desarrollar un sistema de gestión para un comercio, trabajando e
 - Control de versiones: Git
 - Plataforma: GitHub
 
+## Integrantes
+• Luciano *(Hokkeyo)*
+• [Nombre Compañero 2]
+• [Nombre Compañero 3]
+
 --------------------------------------------------------------------------------------------------------------------
 
 📌 TAREAS PENDIENTES:
