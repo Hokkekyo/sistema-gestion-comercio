@@ -11,7 +11,7 @@ El objetivo es desarrollar un sistema de gestión para un comercio, trabajando e
 ## Integrantes
 • Luciano *(Hokkeyo)*
 • Javier *(JaviHuido)*
-• [Nombre Compañero 3]
+• Melina *(melinamarconi)*
 
 --------------------------------------------------------------------------------------------------------------------
 
