@@ -56,9 +56,3 @@ git push origin main
 	•	Evitar modificar archivos que estén siendo trabajados por otro compañero.
 	•	Hacer pull antes de comenzar y push cuando termines.
 
-–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
-
-🧑‍🤝‍🧑 Equipo
-	•	Luciano (Hokkeyo)
-	•	[Nombre Compañero 2]
-	•	[Nombre Compañero 3]
