@@ -1,5 +1,16 @@
 #include <iostream>
+#include "../include/funciones.h"
+
 using namespace std;
+
+/*
+ * Archivo: main.cpp
+ * Acá arranca todo.
+ *
+ * Solo va el menú principal y las llamadas a las funciones que están en funciones.cpp.
+ * La idea es que este archivo quede limpio, sin meter toda la lógica acá adentro.
+ * Así es más fácil leer y mantener el código.
+ */
 
 int main () {
 
