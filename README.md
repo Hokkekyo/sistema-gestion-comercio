@@ -31,6 +31,23 @@ git add .                  # Preparar los cambios
 git commit -m "mensaje"    # Guardar en Git local con mensaje descriptivo
 git push origin main       # Subir los cambios a GitHub
 
+Workflow para cuando empiezo a trabajar:
+
+# 1. Entrár al repo local
+cd sistema-gestion-comercio/
+
+# 2. Traés los últimos cambios de tus compañeros
+git pull origin main
+
+# 3. Trabajás (modificás, agregás archivos)
+
+# 4. Guardás tus cambios
+git add .
+git commit -m "Tu mensaje"
+
+# 5. Subís tu trabajo
+git push origin main
+
 --------------------------------------------------------------------------------------------------------------------
 
 📌 TAREAS PENDIENTES:
