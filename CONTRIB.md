@@ -8,16 +8,16 @@ conflictos y trabajar de forma ordenada entre los integrantes del grupo.
 ✅ Flujo de trabajo general
 
 ## Antes de empezar a trabajar:
-1.Entrá al directorio del proyecto:
+1. Entrá al directorio del proyecto:
 cd sistema-gestion-comercio/
 
-2.Traé la última versión del proyecto desde GitHub:
+2. Traé la última versión del proyecto desde GitHub:
 git pull origin main
 
 –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 
 ## Para guardar tus cambios:
-1. Verificá qué archivos modificaste:
+Verificá qué archivos modificaste:
 ```sh
 git status
 ```
