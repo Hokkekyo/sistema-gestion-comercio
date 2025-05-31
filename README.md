@@ -15,14 +15,20 @@ El objetivo es desarrollar un sistema de gestión para un comercio, trabajando e
 
 --------------------------------------------------------------------------------------------------------------------
 
+```markdown
+## Estructura del proyecto
+
+```text
 sistema-gestion-comercio/
 │
 ├── src/              → Código fuente principal (main.cpp, funciones.cpp)
 ├── include/          → Archivos de cabecera (.h)
 ├── test/             → Pruebas (en caso de agregar más adelante)
 ├── docs/             → Diagramas y documentación del proyecto
-├── README.md         → Descripción general del proyecto
-├── CONTRIB.md        → Guía para colaborar en el repositorio
+├── [README.md](http://_vscodecontentref_/4)         → Descripción general del proyecto
+├── [CONTRIB.md](http://_vscodecontentref_/5)        → Guía para colaborar en el repositorio
+
+--------------------------------------------------------------------------------------------------------------------
 
 ## 📌 Tareas en progreso
 - [x] Crear estructura base del proyecto
@@ -33,7 +39,7 @@ sistema-gestion-comercio/
 - [ ] Implementar validaciones y reportes
 - [ ] Testear el programa en las tres computadoras
 
----
+--------------------------------------------------------------------------------------------------------------------
 
 ## 📝 Notas
 - El sistema se ejecuta por consola.

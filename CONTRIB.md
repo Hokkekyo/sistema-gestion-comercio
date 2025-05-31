@@ -47,13 +47,16 @@ git push origin main
 
 –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 
+```markdown
+```text
 sistema-gestion-comercio/
+│
 ├── src/              → Archivos .cpp (main, lógica del sistema)
 ├── include/          → Archivos .h (declaraciones de funciones)
 ├── docs/             → Diagramas y documentación
 ├── test/             → Casos de prueba
-├── README.md         → Descripción general del proyecto
-├── CONTRIB.md        → Guía de colaboración
+├── [README.md](http://_vscodecontentref_/7)         → Descripción general del proyecto
+├── [CONTRIB.md](http://_vscodecontentref_/8)        → Guía de colaboración
 
 –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 
