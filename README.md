@@ -25,8 +25,8 @@ sistema-gestion-comercio/
 ├── include/          → Archivos de cabecera (.h)
 ├── test/             → Pruebas (en caso de agregar más adelante)
 ├── docs/             → Diagramas y documentación del proyecto
-├── [README.md](http://_vscodecontentref_/4)         → Descripción general del proyecto
-├── [CONTRIB.md](http://_vscodecontentref_/5)        → Guía para colaborar en el repositorio
+├── README.md         → Descripción general del proyecto
+├── CONTRIB.md        → Guía para colaborar en el repositorio
 
 --------------------------------------------------------------------------------------------------------------------
 
