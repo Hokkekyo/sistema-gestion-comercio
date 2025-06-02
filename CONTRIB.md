@@ -39,7 +39,7 @@ git push origin main
 
 ## Reglas para los mensajes de commit
 ```markdown
-•Escribí mensajes cortos, ejemplos:
+## Escribí mensajes cortos, ejemplos:
 “Agrego módulo de productos”,
 “Corrijo error en validación de login”,
 “Update README”.
