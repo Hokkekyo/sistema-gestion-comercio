@@ -3,14 +3,16 @@
 *Este archivo define cómo colaborar correctamente en el proyecto para evitar*
 *conflictos y trabajar de forma ordenada entre los integrantes del grupo.*
 
-✅ Flujo de trabajo general
-
 ## Antes de empezar a trabajar:
 1. Entrá al directorio del proyecto:
+```sh
 cd sistema-gestion-comercio/
+```
 
 2. Traé la última versión del proyecto desde GitHub:
+```sh
 git pull origin main
+```
 
 ## Para guardar tus cambios:
 Verificá qué archivos modificaste:
