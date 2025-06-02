@@ -27,7 +27,7 @@ git add .           # Agrega todos los archivos modificados en el directorio act
 git add CONTRIB.md  # Ejemplo: agrega un archivo específico
 ```
 
-3. Hacé el commit con un mensaje claro:
+3. Hacé el commit(guarda los cambios que agregaste al staging) con un mensaje claro:
 ```sh
 git commit -m "Descripción breve y clara de lo que hiciste"
 ```
