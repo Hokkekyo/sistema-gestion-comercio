@@ -10,9 +10,9 @@ El objetivo es desarrollar un sistema de gestión para un comercio, trabajando e
 
 ## Integrantes
 ```text
-• Luciano *(Hokkeyo)*
-• Javier *(JaviHuido)*
-• Melina *(melinamarconi)*
+• Luciano (Hokkeyo)
+• Javier (JaviHuido)
+• Melina (melinamarconi)
 ```
 
 ```markdown
@@ -27,6 +27,8 @@ sistema-gestion-comercio/
 ├── README.md         → Descripción general del proyecto
 ├── CONTRIB.md        → Guía para colaborar en el repositorio
 
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
 ## 📌 Tareas en progreso
 - [x] Crear estructura base del proyecto
 - [ ] Definir requerimientos principales del sistema
@@ -35,6 +37,8 @@ sistema-gestion-comercio/
 - [ ] Desarrollar funcionalidades mínimas
 - [ ] Implementar validaciones y reportes
 - [ ] Testear el programa en las tres computadoras
+
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 
 ## 📝 Notas
 - El sistema se ejecuta por consola.
