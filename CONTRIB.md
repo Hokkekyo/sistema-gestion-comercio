@@ -54,8 +54,7 @@ sistema-gestion-comercio/
 ├── test/             → Casos de prueba
 ├── README.md         → Descripción general del proyecto
 ├── CONTRIB.md        → Guía de colaboración
-
-–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+```
 
 ## Buenas prácticas:
 
