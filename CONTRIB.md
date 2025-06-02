@@ -3,8 +3,6 @@
 *Este archivo define cómo colaborar correctamente en el proyecto para evitar*
 *conflictos y trabajar de forma ordenada entre los integrantes del grupo.*
 
-–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
-
 ✅ Flujo de trabajo general
 
 ## Antes de empezar a trabajar:
@@ -35,18 +33,15 @@ git commit -m "Descripción breve y clara de lo que hiciste"
 git push origin main
 ```
 
-–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
-
 ## 💡 Reglas para los mensajes de commit
 ```markdown
 •Escribí mensajes cortos, ejemplos:
-“Agrego módulo de productos”
-“Corrijo error en validación de login”
-“Update README with Git workflow”
+“Agrego módulo de productos”,
+“Corrijo error en validación de login”,
+“Update README”.
 
 –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 
-```markdown
 sistema-gestion-comercio/
 │
 ├── src/              → Archivos .cpp (main, lógica del sistema)
@@ -65,5 +60,3 @@ sistema-gestion-comercio/
 •	No modificar archivos en los que está trabajando otro compañero.
 •	Hacer git pull antes de empezar y git push cuando termines.
 •	Comentar el código cuando algo no sea obvio.
-
-–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
