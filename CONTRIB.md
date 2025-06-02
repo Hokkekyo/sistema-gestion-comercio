@@ -57,7 +57,8 @@ sistema-gestion-comercio/
 
 –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 
-Buenas prácticas
+## Buenas prácticas:
+
 •	Usar nombres de variables y funciones descriptivos.
 •	Mantener el main.cpp lo más limpio posible.
 •	Mover la lógica a funciones en funciones.cpp.

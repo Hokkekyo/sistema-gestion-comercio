@@ -18,7 +18,6 @@ El objetivo es desarrollar un sistema de gestión para un comercio, trabajando e
 ```markdown
 ## Estructura del proyecto
 
-```text
 sistema-gestion-comercio/
 │
 ├── src/              → Código fuente principal (main.cpp, funciones.cpp)
