@@ -15,14 +15,16 @@ git pull origin main
 ```
 
 ## Para guardar tus cambios:
-Verificá qué archivos modificaste:
+1. Verificá qué archivos modificaste (éste comando no es necesario para guardar los cambios):
 ```sh
 git status
 ```
 
-2. Agregá los cambios:
+2. Agregá los cambios al área de staging.
+El punto . selecciona todos los archivos dentro del directorio actual (directorio raíz del proyecto). También podés agregar archivos o carpetas de forma específica:
 ```sh
-git add .
+git add .           # Agrega todos los archivos modificados en el directorio actual y sus subdirectorios
+git add CONTRIB.md  # Ejemplo: agrega un archivo específico
 ```
 
 3. Hacé el commit con un mensaje claro:
