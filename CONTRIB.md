@@ -43,17 +43,6 @@ git push origin main
 “Agrego módulo de productos”,
 “Corrijo error en validación de login”,
 “Update README”.
-
-–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
-
-sistema-gestion-comercio/
-│
-├── src/              → Archivos .cpp (main, lógica del sistema)
-├── include/          → Archivos .h (declaraciones de funciones)
-├── docs/             → Diagramas y documentación
-├── test/             → Casos de prueba
-├── README.md         → Descripción general del proyecto
-├── CONTRIB.md        → Guía de colaboración
 ```
 
 ## Buenas prácticas:
