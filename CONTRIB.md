@@ -59,9 +59,9 @@ sistema-gestion-comercio/
 
 ## Buenas prácticas:
 
-•	Usar nombres de variables y funciones descriptivos.
-•	Mantener el main.cpp lo más limpio posible.
-•	Mover la lógica a funciones en funciones.cpp.
-•	No modificar archivos en los que está trabajando otro compañero.
-•	Hacer git pull antes de empezar y git push cuando termines.
-•	Comentar el código cuando algo no sea obvio.
+• Usar nombres de variables y funciones descriptivos.
+• Mantener el main.cpp lo más limpio posible.
+• Mover la lógica a funciones en funciones.cpp.
+• No modificar archivos en los que está trabajando otro compañero.
+• Hacer git pull antes de empezar y git push cuando termines.
+• Comentar el código cuando algo no sea obvio.
