@@ -1,4 +1,4 @@
-## 🧑‍💻 Guía de colaboración – TP Integrador: Sistema de Gestión de Comercio
+## Guía de colaboración – TP Integrador: Sistema de Gestión de Comercio
 
 *Este archivo define cómo colaborar correctamente en el proyecto para evitar*
 *conflictos y trabajar de forma ordenada entre los integrantes del grupo.*
@@ -37,7 +37,7 @@ git commit -m "Descripción breve y clara de lo que hiciste"
 git push origin main
 ```
 
-## 💡 Reglas para los mensajes de commit
+## Reglas para los mensajes de commit
 ```markdown
 •Escribí mensajes cortos, ejemplos:
 “Agrego módulo de productos”,
@@ -57,7 +57,7 @@ sistema-gestion-comercio/
 
 –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 
-🧠 Buenas prácticas
+Buenas prácticas
 •	Usar nombres de variables y funciones descriptivos.
 •	Mantener el main.cpp lo más limpio posible.
 •	Mover la lógica a funciones en funciones.cpp.
