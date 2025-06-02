@@ -9,11 +9,11 @@ El objetivo es desarrollar un sistema de gestión para un comercio, trabajando e
 - Plataforma: GitHub
 
 ## Integrantes
+```text
 • Luciano *(Hokkeyo)*
 • Javier *(JaviHuido)*
 • Melina *(melinamarconi)*
-
---------------------------------------------------------------------------------------------------------------------
+```
 
 ```markdown
 ## Estructura del proyecto
@@ -27,8 +27,6 @@ sistema-gestion-comercio/
 ├── README.md         → Descripción general del proyecto
 ├── CONTRIB.md        → Guía para colaborar en el repositorio
 
---------------------------------------------------------------------------------------------------------------------
-
 ## 📌 Tareas en progreso
 - [x] Crear estructura base del proyecto
 - [ ] Definir requerimientos principales del sistema
@@ -38,10 +36,9 @@ sistema-gestion-comercio/
 - [ ] Implementar validaciones y reportes
 - [ ] Testear el programa en las tres computadoras
 
---------------------------------------------------------------------------------------------------------------------
-
 ## 📝 Notas
 - El sistema se ejecuta por consola.
 - Los datos se mantienen en memoria mientras el programa está en ejecución.
 - No se utilizan archivos ni estructuras avanzadas (punteros, listas, etc.).
 - Se busca un código limpio, modular y bien comentado.
+```
