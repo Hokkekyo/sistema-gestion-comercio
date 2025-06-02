@@ -15,9 +15,9 @@ El objetivo es desarrollar un sistema de gestión para un comercio, trabajando e
 • Melina (melinamarconi)
 ```
 
-```markdown
-## Estructura del proyecto
 
+## Estructura del proyecto
+```markdown
 sistema-gestion-comercio/
 │
 ├── src/              → Código fuente principal (main.cpp, funciones.cpp)
@@ -26,10 +26,10 @@ sistema-gestion-comercio/
 ├── docs/             → Diagramas y documentación del proyecto
 ├── README.md         → Descripción general del proyecto
 ├── CONTRIB.md        → Guía para colaborar en el repositorio
-
-–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+```
 
 ## 📌 Tareas en progreso
+```text
 - [x] Crear estructura base del proyecto
 - [ ] Definir requerimientos principales del sistema
 - [ ] Hacer diagramas iniciales (flujo, lógica, menú, etc.)
