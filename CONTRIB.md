@@ -1,4 +1,4 @@
-## Guía de colaboración – TP Integrador: Sistema de Gestión de Comercio
+# Guía de colaboración – TP Integrador: Sistema de Gestión de Comercio
 
 *Este archivo define cómo colaborar correctamente en el proyecto para evitar*
 *conflictos y trabajar de forma ordenada entre los integrantes del grupo.*

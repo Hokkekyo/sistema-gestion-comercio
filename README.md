@@ -37,10 +37,10 @@ sistema-gestion-comercio/
 - [ ] Desarrollar funcionalidades mínimas
 - [ ] Implementar validaciones y reportes
 - [ ] Testear el programa en las tres computadoras
-
-–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+```
 
 ## 📝 Notas
+```text
 - El sistema se ejecuta por consola.
 - Los datos se mantienen en memoria mientras el programa está en ejecución.
 - No se utilizan archivos ni estructuras avanzadas (punteros, listas, etc.).
