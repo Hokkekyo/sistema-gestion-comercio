@@ -31,7 +31,6 @@ sistema-gestion-comercio/
 ## 📌 Tareas en progreso
 ```text
 - [x] Crear estructura base del proyecto
-- [ ] Definir requerimientos principales del sistema
 - [ ] Hacer diagramas iniciales (flujo, lógica, menú, etc.)
 - [ ] Dividir tareas entre integrantes
 - [ ] Desarrollar funcionalidades mínimas
