@@ -1,0 +1,21 @@
+# Archivos de compilación
+*.o
+*.out
+*.exe
+
+# Carpetas de build (por si se generan en el futuro)
+build/
+bin/
+obj/
+
+# Configuraciones locales de editores
+.vscode/
+.idea/
+
+# Archivos temporales de sistema
+.DS_Store
+*.log
+*.tmp
+
+# Archivos de prueba generados temporalmente
+test/*.out
