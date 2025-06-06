@@ -1,5 +1,8 @@
+#include <string>
 #ifndef FUNCIONES_H
 #define FUNCIONES_H
+
+using namespace std;
 
 /*
  * Archivo: funciones.h
@@ -10,6 +13,9 @@
  */
 
 // funcion1
+
+void cargarLoteMarcas(int vCodigoMarca[], string vNombremarca[], int &cantidadMarcasCargadas, bool &marcasCargadas );
+
 // funcion2
 // funcion3
 // funcion4

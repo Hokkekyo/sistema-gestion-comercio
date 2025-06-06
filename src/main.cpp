@@ -13,6 +13,20 @@ using namespace std;
  */
 
 int main () {
+
+/*Declaracion de los vectores para la carga del Lote 1 (Codigo de Marca + Nombre de Marca)
+* int vCodigomarca[10] - Vector de Codigo de marcas.
+* string vNombremarca[10] - Vector de Nombres de marcas.
+* int cantidadMarcasCargadas=0 - Contador de marcas cargadas para Validar la bandera de marcasCargadas.
+* bool marcasCargadas - Bandera para validar la carga completa.
+*/
+
+int vCodigomarca[10];
+string vNombremarca[10];
+int cantidadMarcasCargadas=0;
+bool marcasCargadas=false;
+
+
 int opcion, opcionRep;
     bool opInvalida, opRepInvalida;
     cout<< "=== Menu MI NEGOCIO ==="<< endl;
@@ -30,8 +44,12 @@ int opcion, opcionRep;
     while (opInvalida == true) {
         switch (opcion) {
         case 1:
+
             opInvalida = false;
             cout<< "Se ingreso una opcion valida" << endl;
+            cout<< "*Inicio de carga Lote 1 - Codigo / Nombre de marcas*";
+            cargarLoteMarcas (vCodigomarca,vNombremarca,cantidadMarcasCargadas,marcasCargadas);
+
             break;
         case 2:
             opInvalida = false;
