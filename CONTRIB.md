@@ -11,7 +11,7 @@ cd sistema-gestion-comercio/
 
 2. Traé la última versión del proyecto desde GitHub:
 ```sh
-git pull origin main
+git pull
 ```
 
 ## Para guardar tus cambios:
