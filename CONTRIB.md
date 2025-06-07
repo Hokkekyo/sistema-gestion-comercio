@@ -34,7 +34,7 @@ git commit -m "Descripción breve y clara de lo que hiciste"
 
 4. Subí tus cambios al repo:
 ```sh
-git push origin main
+git push
 ```
 
 ## Reglas para los mensajes de commit
