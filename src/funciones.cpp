@@ -33,18 +33,18 @@ for (int i=0; i<10; i++){
 
     do{
         marcaValida=false;
-        cout<<"- Código de marca (entero del 1 al 10): ";
+        cout<<"- Código de marca (número entero del 1 al 10): ";
         cin>>codigoIngresado;
         
         //Se verifica que el codigo ingresado sea entre 1 y 10
-
         if (codigoIngresado>=1 && codigoIngresado<=10){
             marcaValida=true;
         }
         else {
-            cout<<"El código ingresado es inválido."<<endl;
+            cout<<"\nEl código ingresado no es válido. Intente nuevamente."<<endl;
         }
     } while (marcaValida==false);
+
 //Si el codigo es correcto se guarda en el vector 
 vCodigomarca[i]= codigoIngresado;
 
@@ -63,7 +63,7 @@ do {
         marcaValida=true;
     } 
     else {
-        cout<<"El nombre ingresado no es valido: "<<endl;
+        cout<<"El nombre ingresado no es válido. Intente nuevamente."<<endl;
     }
 } while (marcaValida==false);
 
@@ -76,14 +76,14 @@ cantidadMarcasCargadas ++;//Usamos este contador para contar la cantidad
 
 if (cantidadMarcasCargadas==10){
     marcasCargadas=true;
-    cout<<"Carga de Lote 1 - Codigo y nombre de marcas completo."<<endl;
+    cout<<"Carga del lote 1 completada con éxito. A continuación se muestra el listado:"<<endl << endl;
 
     for (int x=0; x<10; x++){
-    cout<<"Cod Marca: "<<vCodigomarca[x]<<"  Nombre de marca: "<<vNombremarca[x]<<endl;
+    cout<<"Código de marca: "<<vCodigomarca[x]<<"   |   Nombre de marca: "<<vNombremarca[x]<<endl;
 }
 }
 else {
-    cout<<"No se completo correctamente la carga del Lote 1"<<endl;
+    cout<<"No se completo correctamente la carga del lote 1."<<endl;
 }
 
  }
