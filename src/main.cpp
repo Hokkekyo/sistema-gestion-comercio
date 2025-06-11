@@ -14,12 +14,11 @@ using namespace std;
 
 int main() {
 
-  /*Declaracion de los vectores para la carga del Lote 1 (Codigo de Marca +
-   * Nombre de Marca) int vCodigomarca[10] - Vector de Codigo de marcas. string
+  /* Declaracion de los vectores para la carga del Lote 1 (Codigo de Marca + Nombre de Marca)
+   * int vCodigomarca[10] - Vector de Codigo de marcas. string
    * vNombremarca[10] - Vector de Nombres de marcas. int
-   * cantidadMarcasCargadas=0 - Contador de marcas cargadas para Validar la
-   * bandera de marcasCargadas. bool marcasCargadas - Bandera para validar la
-   * carga completa.
+   * cantidadMarcasCargadas=0 - Contador de marcas cargadas para validar la bandera de marcasCargadas.
+   * bool marcasCargadas - Bandera para validar la carga completa.
    */
 
   // Declaración de variables:
