@@ -13,8 +13,8 @@ using namespace std;
 
 //vCodigomarca,vNombremarca,cantidadMarcasCargadas,marcasCargadas
 
- void cargarLoteMarcas(int vCodigomarca[], string vNombremarca[], int cantidadMarcasCargadas, bool marcasCargadas)
- {
+void cargarLoteMarcas(int vCodigomarca[], string vNombremarca[], int &cantidadMarcasCargadas, bool &marcasCargadas)
+{
 cantidadMarcasCargadas=0;
 marcasCargadas=false;
 
