@@ -83,12 +83,14 @@ int main() {
       cout << "2. Porcentaje de ventas por forma de pago" << endl;
       cout << "3. Ventas por marca y forma de pago" << endl;
       cout << "4. Productos sin ventas" << endl;
-      cout << "5. Top 10 clientes + sorteo de cupones" << endl << endl;
+      cout << "5. Top 10 clientes + sorteo de cupones" << endl;
+      cout << " ─────────────────────────────────────" << endl;
+      cout << "0. Volver al MENÚ PRINCIPAL." << endl << endl;
 
       cout << "Ingrese el número de la opción deseada: ";
       cin >> opcionRep;
       opRepInvalida = true;
-      cin >> opcionRep;
+
       while (opRepInvalida == true) {
         switch (opcionRep) {
         case 1:
@@ -111,18 +113,21 @@ int main() {
           opRepInvalida = false;
           cout << "Se ingresó una opción de reporte válida." << endl;
           break;
+        case 0:
+          opRepInvalida = false;
+          cout << "Volviendo al menú principal..." << endl;
+          opInvalida = true;
+          menuPrincipal(opcion);
+          break;
         default:
-          cout
-              << "La opción ingresada es inválida. Por favor, intente de nuevo."
-              << endl;
+          cout << "La opción ingresada es inválida. Por favor, intente de nuevo:";
           cin >> opcionRep;
           break;
         }
       }
       break;
     default:
-      cout << "La opción ingresada no es válida. Por favor, intente nuevamente."
-           << endl;
+      cout << "La opción ingresada no es válida. Por favor, intente nuevamente:";
       cin >> opcion;
       break;
     }

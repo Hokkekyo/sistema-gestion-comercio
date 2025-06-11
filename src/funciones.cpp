@@ -13,6 +13,23 @@ using namespace std;
  * sistema) esté acá, así el main no se llena de cosas.
  */
 
+void menuPrincipal(int &opcion) {
+  cout << endl;
+  cout << " ─────────────────────────────────────" << endl;
+  cout << "      MENÚ PRINCIPAL - MI NEGOCIO     " << endl;
+  cout << " ─────────────────────────────────────" << endl;
+  cout << "" << endl;
+  cout << "Seleccione una opción del menú." << endl;
+  cout << "" << endl;
+  cout << "1. Ingresar Marcas" << endl;
+  cout << "2. Ingresar Productos" << endl;
+  cout << "3. Ingresar Formas de Pago" << endl;
+  cout << "4. Ingresar Ventas" << endl;
+  cout << "5. Reportes" << endl << endl;
+  cout << "Ingrese el número de la opción deseada: ";
+  cin >> opcion;
+}
+
 // ===================================================
 // ===========  CARGA DE MARCAS - LOTE 1 =============
 // ===================================================

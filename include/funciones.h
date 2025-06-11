@@ -12,7 +12,8 @@ using namespace std;
  * funciones.cpp. Sirve para mantener organizado el proyecto y separar bien las partes.
  */
 
-void cargarLoteMarcas(int vCodigoMarca[], string vNombremarca[],
-                      int &cantidadMarcasCargadas, bool &marcasCargadas);
+void cargarLoteMarcas(int vCodigoMarca[], string vNombremarca[],int &cantidadMarcasCargadas, bool &marcasCargadas);
+
+void menuPrincipal(int &opcion);
 
 #endif
