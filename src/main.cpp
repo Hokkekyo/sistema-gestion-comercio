@@ -69,6 +69,8 @@ int main() {
       opInvalida = false;
       cout << "Se ingreso una opcion valida" << endl;
       break;
+
+      // Submenú reportes:
     case 5:
       opInvalida = false;
       cout << "Se ingreso una opcion valida" << endl;
