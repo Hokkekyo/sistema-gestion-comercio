@@ -29,8 +29,9 @@ bool marcasCargadas=false;
 
 int opcion, opcionRep;
     bool opInvalida, opRepInvalida;
-    cout << "\n –––––––––––––––––––––––––––––" << endl;
-    cout << "|     Menu - MI NEGOCIO       |"<< endl;
+    cout << endl;
+    cout << " –––––––––––––––––––––––––––––" << endl;
+    cout << "|      Menú - MI NEGOCIO      |"<< endl;
     cout << " –––––––––––––––––––––––––––––" << endl;
     cout<< "" <<endl;
     cout<<"Seleccione una opción del menú."<< endl;
