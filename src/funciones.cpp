@@ -51,25 +51,25 @@ void cargarLoteMarcas(int vCodigomarca[], string vNombremarca[], int &cantidadMa
         cin.ignore(); // Limpia el buffer antes de getline
 
         // Solicitamos ingresar nombre de marca:
-            do {
-                cout << "- Nombre de marca (no puede estar vacío): ";
-                getline(cin, nombreIngresado); // Es para evitar que ingresen solo espacios
-                cout << endl;
+        do {
+            cout << "- Nombre de marca (no puede estar vacío): ";
+            getline(cin, nombreIngresado); // Es para evitar que ingresen solo espacios
+            cout << endl;
         
-                nombreIngresado.erase(0, nombreIngresado.find_first_not_of(' '));
-                nombreIngresado.erase(nombreIngresado.find_last_not_of(' ') + 1);
+            nombreIngresado.erase(0, nombreIngresado.find_first_not_of(' '));
+            nombreIngresado.erase(nombreIngresado.find_last_not_of(' ') + 1);
         
-                marcaValida = false;
-                if (!nombreIngresado.empty()) {
-                    marcaValida = true;
-                } else {
-                    cout << "El nombre ingresado no es válido. Intente nuevamente." << endl;
-                }
-            } while (marcaValida == false);
+            marcaValida = false;
+            if (!nombreIngresado.empty()) {
+                marcaValida = true;
+            } else {
+                cout << "El nombre ingresado no es válido. Intente nuevamente." << endl;
+            }
+        } while (marcaValida == false);
 
-            vNombremarca[i] = nombreIngresado;
-            cantidadMarcasCargadas++; // Usamos este contador para contar la cantidad
-                                      // de marcas que se cargan correctamente
+        vNombremarca[i] = nombreIngresado;
+        cantidadMarcasCargadas++; // Usamos este contador para contar la cantidad
+                                  // de marcas que se cargan correctamente
     }
 
     // En este if validamos que la carga se completó.
