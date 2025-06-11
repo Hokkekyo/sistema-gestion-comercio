@@ -29,17 +29,20 @@ bool marcasCargadas=false;
 
 int opcion, opcionRep;
     bool opInvalida, opRepInvalida;
-    cout<< "=== Menu MI NEGOCIO ==="<< endl;
+    cout << "\n –––––––––––––––––––––––––––––" << endl;
+    cout << "|     Menu - MI NEGOCIO       |"<< endl;
+    cout << " –––––––––––––––––––––––––––––" << endl;
     cout<< "" <<endl;
-    cout<<"Ingrese el numero de la opcion deseada:"<< endl;
+    cout<<"Seleccione una opción del menú."<< endl;
     cout<< "" <<endl;
-    cout<< "1-Ingresar Marcas" <<endl;
-    cout<< "2-Ingresar Productos"<< endl;
-    cout<< "3-Ingresar Formas de Pago"<< endl;
-    cout<< "4-Ingresar Ventas"<< endl;
-    cout<< "5-Reportes"<< endl;
+    cout<< "1. Ingresar Marcas" <<endl;
+    cout<< "2. Ingresar Productos"<< endl;
+    cout<< "3. Ingresar Formas de Pago"<< endl;
+    cout<< "4. Ingresar Ventas"<< endl;
+    cout<< "5. Reportes" << endl << endl;
 
     opInvalida = true;
+    cout << "Ingrese el número de la opción elegida: ";
     cin >> opcion;
     while (opInvalida == true) {
         switch (opcion) {
@@ -67,7 +70,9 @@ int opcion, opcionRep;
             opInvalida = false;
             cout<< "Se ingreso una opcion valida" << endl;
             cout<< "" <<endl;
-            cout<< "Ingrese el numero de la opcion deseada"<< endl;
+            cout << "––––––––––––––––––––––––––––––––––––––––" << endl;
+            cout<< "Ingrese el número de la opción deseada"<< endl;
+            cout << "––––––––––––––––––––––––––––––––––––––––" << endl;
             cout<< "" <<endl;
             cout<< "1-Recaudacion por Producto" <<endl;
             cout<< "2-Porcentaje de Ventas por Forma de Pago"<< endl;
@@ -80,26 +85,26 @@ int opcion, opcionRep;
                 switch (opcionRep) {
                 case 1:
                     opRepInvalida = false;
-                    cout<< "Se ingreso una opcion de reporte valida" << endl;
+                    cout<< "Se ingresó una opción de reporte válida." << endl;
                     break;
                 case 2:
                     opRepInvalida = false;
-                    cout<< "Se ingreso una opcion de reporte valida" << endl;
+                    cout<< "Se ingresó una opción de reporte válida." << endl;
                     break;
                 case 3:
                     opRepInvalida = false;
-                    cout<< "Se ingreso una opcion de reporte valida" << endl;
+                    cout<< "Se ingresó una opción de reporte válida." << endl;
                     break;
                 case 4:
                     opRepInvalida = false;
-                    cout<< "Se ingreso una opcion de reporte valida" << endl;
+                    cout<< "Se ingresó una opción de reporte válida." << endl;
                      break;
                 case 5:
                     opRepInvalida = false;
-                    cout<< "Se ingreso una opcion de reporte valida" << endl;
+                    cout<< "Se ingresó una opción de reporte válida." << endl;
                     break;
                 default:
-                    cout<< "La opcion ingresada es incorrecta. Intente de nuevo" << endl;
+                    cout<< "La opción ingresada es inválida. Por favor, intente de nuevo" << endl;
                     cin >> opcionRep;
                      break;
                     }
@@ -107,7 +112,7 @@ int opcion, opcionRep;
             }
             break;
         default:
-            cout<< "La opción ingresada es incorrecta. Intente de nuevo" << endl;
+            cout<< "La opción ingresada es inválida. Por favor, intente de nuevo." << endl;
             cin >> opcion;
              break;
         }
