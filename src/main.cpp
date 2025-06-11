@@ -32,9 +32,9 @@ int main() {
 
   // Menú:
   cout << endl;
-  cout << " –––––––––––––––––––––––––––––" << endl;
-  cout << "|      Menú - MI NEGOCIO      |" << endl;
-  cout << " –––––––––––––––––––––––––––––" << endl;
+  cout << " ─────────────────────────────────────" << endl;
+  cout << "|     MENÚ PRINCIPAL - MI NEGOCIO     |" << endl;
+  cout << " ─────────────────────────────────────" << endl;
   cout << "" << endl;
   cout << "Seleccione una opción del menú." << endl;
   cout << "" << endl;
@@ -108,7 +108,7 @@ int main() {
           cout << "Se ingresó una opción de reporte válida." << endl;
           break;
         default:
-          cout << "La opción ingresada es inválida. Por favor, intente de nuevo"
+          cout << "La opción ingresada es inválida. Por favor, intente de nuevo."
                << endl;
           cin >> opcionRep;
           break;
