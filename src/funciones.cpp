@@ -22,16 +22,18 @@ int codigoIngresado;
 string nombreIngresado;
 bool marcaValida;
 
-cout<<" Iniciando carga de LOTE 1 - Codigo / Nombre de marcas"<<endl;
+cout << "\n –––––––––––––––––––––––––––––––––––––––––––––––––––––" << endl;
+cout << " INICIANDO CARGA DE LOTE 1 - Código y nombre de marcas."<<endl;
+cout << " –––––––––––––––––––––––––––––––––––––––––––––––––––––" << endl;
 cout<<endl;
 
 for (int i=0; i<10; i++){
-    cout<<" Ingrese datos para la Marca #"<<i+1<<": "<<endl;
-    cout<<endl;
+    cout<<"A continuación, ingrese los datos para la Marca #"<<i+1<<"."<<endl;
+    //cout<<endl;
 
     do{
         marcaValida=false;
-        cout<<"Codigo de Marca (entero del 1 al 10): ";
+        cout<<"- Código de marca (entero del 1 al 10): ";
         cin>>codigoIngresado;
         
         //Se verifica que el codigo ingresado sea entre 1 y 10
@@ -40,7 +42,7 @@ for (int i=0; i<10; i++){
             marcaValida=true;
         }
         else {
-            cout<<"El codigo ingresado es invalido: "<<endl;
+            cout<<"El código ingresado es inválido."<<endl;
         }
     } while (marcaValida==false);
 //Si el codigo es correcto se guarda en el vector 
@@ -49,7 +51,7 @@ vCodigomarca[i]= codigoIngresado;
 cin.ignore(); // Limpia el buffer antes de getline
 
 do {
-    cout<<"Nombre de Marca (no puede estar vacio): ";
+    cout<<"- Nombre de marca (no puede estar vacío): ";
     getline(cin, nombreIngresado); //Es para evitar que ingresen solo espacios 
     cout<<endl;
 

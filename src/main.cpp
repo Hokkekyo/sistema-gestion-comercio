@@ -52,8 +52,7 @@ int main() {
     case 1:
 
       opInvalida = false;
-      cout << "Se ingresó una opción válida." << endl;
-      cout << "* Inicio de carga del lote 1 - Códigos y nombres de marcas *";
+      //cout << "Se ingresó una opción válida." << endl;
       cargarLoteMarcas(vCodigomarca, vNombremarca, cantidadMarcasCargadas,
                        marcasCargadas);
 
