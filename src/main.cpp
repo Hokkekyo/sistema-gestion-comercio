@@ -44,6 +44,7 @@ int main() {
     cout << "3. Ingresar Formas de Pago" << endl;
     cout << "4. Ingresar Ventas" << endl;
     cout << "5. Reportes" << endl << endl;
+    cout << "0. SALIR" << endl << endl;
 
     opInvalida = true;
     cout << "Ingrese el número de la opción deseada: ";
@@ -114,6 +115,10 @@ int main() {
         cout << "Ingrese el número de la opción deseada: ";
         cin >> opcionRep;
         opRepInvalida = true;
+
+        case 0:
+          cout << "\nHasta luegitooooooo" << endl;
+          return 0;
 
         while (opRepInvalida == true) {
           switch (opcionRep) {
