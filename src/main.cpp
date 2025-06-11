@@ -31,107 +31,156 @@ int main() {
   bool opInvalida, opRepInvalida;
 
   // Menú:
-  cout << endl;
-  cout << " ─────────────────────────────────────" << endl;
-  cout << "      MENÚ PRINCIPAL - MI NEGOCIO     " << endl;
-  cout << " ─────────────────────────────────────" << endl;
-  cout << "" << endl;
-  cout << "Seleccione una opción del menú." << endl;
-  cout << "" << endl;
-  cout << "1. Ingresar Marcas" << endl;
-  cout << "2. Ingresar Productos" << endl;
-  cout << "3. Ingresar Formas de Pago" << endl;
-  cout << "4. Ingresar Ventas" << endl;
-  cout << "5. Reportes" << endl << endl;
+  do {
+    cout << endl;
+    cout << " ─────────────────────────────────────" << endl;
+    cout << "      MENÚ PRINCIPAL - MI NEGOCIO     " << endl;
+    cout << " ─────────────────────────────────────" << endl;
+    cout << "" << endl;
+    cout << "Seleccione una opción del menú." << endl;
+    cout << "" << endl;
+    cout << "1. Ingresar Marcas" << endl;
+    cout << "2. Ingresar Productos" << endl;
+    cout << "3. Ingresar Formas de Pago" << endl;
+    cout << "4. Ingresar Ventas" << endl;
+    cout << "5. Reportes" << endl << endl;
 
-  opInvalida = true;
-  cout << "Ingrese el número de la opción deseada: ";
-  cin >> opcion;
-  while (opInvalida == true) {
-    switch (opcion) {
-    case 1:
+    opInvalida = true;
+    cout << "Ingrese el número de la opción deseada: ";
+    cin >> opcion;
+    while (opInvalida == true) {
+      switch (opcion) {
+      case 1:
 
-      opInvalida = false;
-      // cout << "Se ingresó una opción válida." << endl;
-      cargarLoteMarcas(vCodigomarca, vNombremarca, cantidadMarcasCargadas,
-                       marcasCargadas);
+        opInvalida = false;
+        // cout << "Se ingresó una opción válida." << endl;
+        cargarLoteMarcas(vCodigomarca, vNombremarca, cantidadMarcasCargadas,
+                         marcasCargadas);
+        cout << "\nToca ENTER para ir al menú principal.";
+        cin.ignore(); // Si antes de cin.get(); usaste otro cin (como cin >>
+                      // variable;), a veces queda un "Enter" pendiente en el
+                      // buffer. Por eso, muchas veces se usa antes un
+                      // cin.ignore(); para limpiar ese Enter y que la pausa
+                      // funcione bien:
 
-      break;
-    case 2:
-      opInvalida = false;
-      cout << "Se ingreso una opcion valida" << endl;
-      break;
-    case 3:
-      opInvalida = false;
-      cout << "Se ingreso una opcion valida" << endl;
-      break;
-    case 4:
-      opInvalida = false;
-      cout << "Se ingreso una opcion valida" << endl;
-      break;
+        cin.get(); // "cin.get()" espera a que el usuario presiona una tecla,
+                   // lo usamos para pausar la pantalla antes de volver al menú
+                   // o salir.
+        break;
+      case 2:
+        opInvalida = false;
+        // Ingrese <AQUI> funcion para lote de productos.
 
-      // Submenú reportes:
-    case 5:
-      opInvalida = false;
-      cout << "Se ingreso una opcion valida" << endl;
-      cout << endl;
-      cout << " ─────────────────────────────────────" << endl;
-      cout << "           MENÚ DE REPORTES           " << endl;
-      cout << " ─────────────────────────────────────" << endl << endl;
-      cout << "Seleccione una opción de reporte." << endl << endl;
-      cout << "1. Recaudación por producto" << endl;
-      cout << "2. Porcentaje de ventas por forma de pago" << endl;
-      cout << "3. Ventas por marca y forma de pago" << endl;
-      cout << "4. Productos sin ventas" << endl;
-      cout << "5. Top 10 clientes + sorteo de cupones" << endl;
-      cout << " ─────────────────────────────────────" << endl;
-      cout << "0. Volver al MENÚ PRINCIPAL." << endl << endl;
+        cout << "\nToca ENTER para ir al menú principal.";
+        cin.ignore();
+        cin.get();
+        break;
+      case 3:
+        opInvalida = false;
+        // Ingrese <AQUI> funcion para lote de formas de pago.
 
-      cout << "Ingrese el número de la opción deseada: ";
-      cin >> opcionRep;
-      opRepInvalida = true;
+        cout << "\nToca ENTER para volver al menú principal.";
+        cin.ignore();
+        cin.get();
+        break;
+      case 4:
+        opInvalida = false;
+        // Ingrese <AQUI> funcion para lote de ventas.
 
-      while (opRepInvalida == true) {
-        switch (opcionRep) {
-        case 1:
-          opRepInvalida = false;
-          cout << "Se ingresó una opción de reporte válida." << endl;
-          break;
-        case 2:
-          opRepInvalida = false;
-          cout << "Se ingresó una opción de reporte válida." << endl;
-          break;
-        case 3:
-          opRepInvalida = false;
-          cout << "Se ingresó una opción de reporte válida." << endl;
-          break;
-        case 4:
-          opRepInvalida = false;
-          cout << "Se ingresó una opción de reporte válida." << endl;
-          break;
-        case 5:
-          opRepInvalida = false;
-          cout << "Se ingresó una opción de reporte válida." << endl;
-          break;
-        case 0:
-          opRepInvalida = false;
-          cout << "Volviendo al menú principal..." << endl;
-          opInvalida = true;
-          menuPrincipal(opcion);
-          break;
-        default:
-          cout << "La opción ingresada es inválida. Por favor, intente de nuevo:";
-          cin >> opcionRep;
-          break;
+        cout << "\nToca ENTER para volver al menú principal.";
+        cin.ignore();
+        cin.get();
+        break;
+
+      // =======================================
+      //           Submenú reportes
+      // =======================================
+      case 5:
+        opInvalida = false;
+        cout << "Se ingreso una opcion valida" << endl;
+        cout << endl;
+        cout << " ─────────────────────────────────────" << endl;
+        cout << "           MENÚ DE REPORTES           " << endl;
+        cout << " ─────────────────────────────────────" << endl << endl;
+        cout << "Seleccione una opción de reporte." << endl << endl;
+        cout << "1. Recaudación por producto" << endl;
+        cout << "2. Porcentaje de ventas por forma de pago" << endl;
+        cout << "3. Ventas por marca y forma de pago" << endl;
+        cout << "4. Productos sin ventas" << endl;
+        cout << "5. Top 10 clientes + sorteo de cupones" << endl;
+        cout << " ─────────────────────────────────────" << endl;
+        cout << "0. Volver al MENÚ PRINCIPAL." << endl << endl;
+
+        cout << "Ingrese el número de la opción deseada: ";
+        cin >> opcionRep;
+        opRepInvalida = true;
+
+        while (opRepInvalida == true) {
+          switch (opcionRep) {
+          case 1:
+            opRepInvalida = false;
+            // Ingrese <AQUI> funcion recaudacion por producto.
+
+            cout << "Toca ENTER para volver al menú principal." << endl;
+            cin.ignore();
+            cin.get();
+            break;
+          case 2:
+            opRepInvalida = false;
+            // Ingrese <AQUI> funcion para porcentaje de ventas por forma de pago.
+
+            cout << "\nToca ENTER para volver al menú principal.";
+            cin.ignore();
+            cin.get();
+            break;
+          case 3:
+            opRepInvalida = false;
+            // Ingrese <AQUI> funcion para ventas por marca y forma de pago.
+
+            cout << "\nToca ENTER para volver al menú principal.";
+            cin.ignore();
+            cin.get();
+            break;
+          case 4:
+            opRepInvalida = false;
+            // Ingrese <AQUI> funcion para productos sin ventas.
+
+            cout << "\nToca ENTER para volver al menú principal.";
+            cin.ignore();
+            cin.get();
+            break;
+          case 5:
+            opRepInvalida = false;
+            // Ingrese <AQUI> funcion top 10 clientes + sorteo de cupones.
+
+            cout << "\nToca ENTER para volver al menú principal.";
+            cin.ignore();
+            cin.get();
+            break;
+          case 0:
+            opRepInvalida = false;
+            cout << "Regresando al menú principal. Por favor, espere..."
+                 << endl;
+            opInvalida = true;
+            menuPrincipal(opcion);
+            break;
+          default:
+            cout << "La opción ingresada es inválida. Por favor, intente de "
+                    "nuevo:";
+            cin >> opcionRep;
+            break;
+          }
         }
+        break;
+      default:
+        cout << "La opción ingresada no es válida. Por favor, intente "
+                "nuevamente:";
+        cin >> opcion;
+        break;
       }
-      break;
-    default:
-      cout << "La opción ingresada no es válida. Por favor, intente nuevamente:";
-      cin >> opcion;
-      break;
     }
-  }
+  } while (opcion != 0);
+
   return 0;
 }
 
