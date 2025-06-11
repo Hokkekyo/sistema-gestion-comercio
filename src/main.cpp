@@ -52,7 +52,7 @@ int main() {
     case 1:
 
       opInvalida = false;
-      //cout << "Se ingresó una opción válida." << endl;
+      // cout << "Se ingresó una opción válida." << endl;
       cargarLoteMarcas(vCodigomarca, vNombremarca, cantidadMarcasCargadas,
                        marcasCargadas);
 

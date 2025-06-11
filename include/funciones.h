@@ -8,16 +8,11 @@ using namespace std;
  * Archivo: funciones.h
  * Acá van solo las declaraciones de funciones.
  *
- * Es como un índice que le avisa al main qué funciones puede usar de funciones.cpp.
- * Sirve para mantener organizado el proyecto y separar bien las partes.
+ * Es como un índice que le avisa al main qué funciones puede usar de
+ * funciones.cpp. Sirve para mantener organizado el proyecto y separar bien las partes.
  */
 
-// funcion1
-
-void cargarLoteMarcas(int vCodigoMarca[], string vNombremarca[], int &cantidadMarcasCargadas, bool &marcasCargadas );
-
-// funcion2
-// funcion3
-// funcion4
+void cargarLoteMarcas(int vCodigoMarca[], string vNombremarca[],
+                      int &cantidadMarcasCargadas, bool &marcasCargadas);
 
 #endif
