@@ -14,11 +14,12 @@ using namespace std;
 
 int main() {
 
-  /* Declaracion de los vectores para la carga del Lote 1 (Codigo de Marca + Nombre de Marca)
-   * int vCodigomarca[10] - Vector de Codigo de marcas. string
+  /* Declaracion de los vectores para la carga del Lote 1 (Codigo de Marca +
+   * Nombre de Marca) int vCodigomarca[10] - Vector de Codigo de marcas. string
    * vNombremarca[10] - Vector de Nombres de marcas. int
-   * cantidadMarcasCargadas=0 - Contador de marcas cargadas para validar la bandera de marcasCargadas.
-   * bool marcasCargadas - Bandera para validar la carga completa.
+   * cantidadMarcasCargadas=0 - Contador de marcas cargadas para validar la
+   * bandera de marcasCargadas. bool marcasCargadas - Bandera para validar la
+   * carga completa.
    */
 
   // Declaración de variables:
@@ -32,7 +33,7 @@ int main() {
   // Menú:
   cout << endl;
   cout << " ─────────────────────────────────────" << endl;
-  cout << "|     MENÚ PRINCIPAL - MI NEGOCIO     |" << endl;
+  cout << "      MENÚ PRINCIPAL - MI NEGOCIO     " << endl;
   cout << " ─────────────────────────────────────" << endl;
   cout << "" << endl;
   cout << "Seleccione una opción del menú." << endl;
@@ -44,15 +45,15 @@ int main() {
   cout << "5. Reportes" << endl << endl;
 
   opInvalida = true;
-  cout << "Ingrese el número de la opción elegida: ";
+  cout << "Ingrese el número de la opción deseada: ";
   cin >> opcion;
   while (opInvalida == true) {
     switch (opcion) {
     case 1:
 
       opInvalida = false;
-      cout << "Se ingreso una opcion valida" << endl;
-      cout << "*Inicio de carga Lote 1 - Codigo / Nombre de marcas*";
+      cout << "Se ingresó una opción válida." << endl;
+      cout << "* Inicio de carga del lote 1 - Códigos y nombres de marcas *";
       cargarLoteMarcas(vCodigomarca, vNombremarca, cantidadMarcasCargadas,
                        marcasCargadas);
 
@@ -72,16 +73,19 @@ int main() {
     case 5:
       opInvalida = false;
       cout << "Se ingreso una opcion valida" << endl;
-      cout << "" << endl;
-      cout << "––––––––––––––––––––––––––––––––––––––––" << endl;
-      cout << "Ingrese el número de la opción deseada" << endl;
-      cout << "––––––––––––––––––––––––––––––––––––––––" << endl;
-      cout << "" << endl;
-      cout << "1-Recaudacion por Producto" << endl;
-      cout << "2-Porcentaje de Ventas por Forma de Pago" << endl;
-      cout << "3-Ventas por Marca y Forma de Pago" << endl;
-      cout << "4-Productos Sin Ventas" << endl;
-      cout << "5-Top 10 clientes + sorteo cupones" << endl;
+      cout << endl;
+      cout << " ─────────────────────────────────────" << endl;
+      cout << "           MENÚ DE REPORTES           " << endl;
+      cout << " ─────────────────────────────────────" << endl << endl;
+      cout << "Seleccione una opción de reporte." << endl << endl;
+      cout << "1. Recaudación por producto" << endl;
+      cout << "2. Porcentaje de ventas por forma de pago" << endl;
+      cout << "3. Ventas por marca y forma de pago" << endl;
+      cout << "4. Productos sin ventas" << endl;
+      cout << "5. Top 10 clientes + sorteo de cupones" << endl << endl;
+
+      cout << "Ingrese el número de la opción deseada: ";
+      cin >> opcionRep;
       opRepInvalida = true;
       cin >> opcionRep;
       while (opRepInvalida == true) {
@@ -107,15 +111,16 @@ int main() {
           cout << "Se ingresó una opción de reporte válida." << endl;
           break;
         default:
-          cout << "La opción ingresada es inválida. Por favor, intente de nuevo."
-               << endl;
+          cout
+              << "La opción ingresada es inválida. Por favor, intente de nuevo."
+              << endl;
           cin >> opcionRep;
           break;
         }
       }
       break;
     default:
-      cout << "La opción ingresada es inválida. Por favor, intente de nuevo."
+      cout << "La opción ingresada no es válida. Por favor, intente nuevamente."
            << endl;
       cin >> opcion;
       break;
