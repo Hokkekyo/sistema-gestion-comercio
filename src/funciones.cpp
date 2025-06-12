@@ -114,5 +114,5 @@ void cargarLoteMarcas(int vCodigomarca[], string vNombremarca[],
 }
 
 // ===================================================
-// ===========  CARGA DE MARCAS - LOTE 2 =============
+// ===========  CARGA DE PRODUCTOS - LOTE 2 =============
 // ===================================================
