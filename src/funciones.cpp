@@ -17,8 +17,13 @@ using namespace std;
 // ===========  CARGA DE MARCAS - LOTE 1 =============
 // ===================================================
 // vCodigomarca,vNombremarca,cantidadMarcasCargadas,marcasCargadas
-void cargarLoteMarcas(int vCodigomarca[], string vNombremarca[],
-                      int &cantidadMarcasCargadas, bool &marcasCargadas) {
+void cargarLoteMarcas(
+  int vCodigomarca[], 
+  string vNombremarca[],
+  int &cantidadMarcasCargadas, 
+  bool &marcasCargadas)
+  
+  {
   cantidadMarcasCargadas = 0;
   marcasCargadas = false;
 
@@ -99,3 +104,138 @@ void cargarLoteMarcas(int vCodigomarca[], string vNombremarca[],
 // ===================================================
 // ===========  CARGA DE PRODUCTOS - LOTE 2 =============
 // ===================================================
+
+void cargarLoteProductos (
+  int vCodigoProducto[],
+  string vNombreProducto[],
+  float vPrecioVenta[],
+  float vPrecioCompra[],
+  int vStockDisponible[],
+  int vCodigoMarcaProducto[],
+  const int vCodigomarca[]
+){
+
+
+  cout << "\n –––––––––––––––––––––––––––––––––––––––––––––––––––––" << endl;
+  cout << " INICIANDO CARGA DE LOTE 2 - PRODUCTOS. " << endl;
+  cout << " –––––––––––––––––––––––––––––––––––––––––––––––––––––" << endl
+       << endl;
+
+for (int i = 0; i < 20; i++)
+{
+  cout<<"Producto #"<< (i+1) <<" :"<<endl;
+
+    int codigoProducto;
+    cout<<"Codigo de producto (3 dígitos, no consecutivos): ";
+    cin>>codigoProducto;
+
+    if (codigoProducto<100 || codigoProducto>999)
+    {
+      cout<<"Codigo inválido. Carga interrumpida."<<endl;
+      return;
+    }
+
+  
+    int digito1 = codigoProducto/100;
+    int digito2 = (codigoProducto/10) % 10;
+    int digito3 = codigoProducto % 10;
+
+    if ((digito1+1 == digito2 && digito2+1 == digito3) || 
+        (digito1-1 == digito2 && digito2-1 == digito3)) 
+    {
+        cout<<"El código no puede ser consecutivo. Carga interrumpida."<<endl;
+      return;
+    }
+    
+    if (codigoProducto == 0)
+    {
+        cout<<"El código no puede ser 0. Carga interrumpida."<<endl;
+      return;
+    }
+  
+  
+  cout<<"Nombre producto: ";
+  
+    cin.ignore();
+    string nombre;
+    getline(cin, nombre);
+
+    if (nombre.empty())
+    {
+      cout<<"El nombre no puede estar vacio. Carga interrumpida."<<endl;
+      
+      return;
+    }
+
+  cout<<"Precio de venta: ";
+  
+    float precioVenta;
+    cin>>precioVenta;
+    
+    if (precioVenta == 0)
+    {
+      cout<<"Precio de venta necesario. Carga interrumpida."<<endl;
+      
+      return;
+    }
+  cout<<"Precio de compra: ";
+  
+    float precioCompra;
+    cin>>precioCompra;
+    
+    if (precioCompra == 0)
+    {
+      cout<<"Precio de compra necesario. Carga interrumpida."<<endl;
+      
+      return;
+    }
+  
+  cout<<"Stock disponible: ";
+  
+    int stock;
+    cin>>stock;
+    
+    if (stock == 0)
+    {
+      cout<<"Stock disponible necesario. Carga interrumpida."<<endl;
+      
+      return;
+    }
+
+  cout<<"Código de marca: ";
+
+    int codigoMarca;
+    cin>>codigoMarca;
+    if (codigoMarca == 0)
+    {
+      cout<<"Código de marca requerido. Carga interrumpida."<<endl;
+    
+      return;
+    }
+
+    bool marcaEncontrada=false;
+
+    for (int x = 0; x < 10; x++)
+    {
+      if (codigoMarca == vCodigomarca[x]){
+        marcaEncontrada = true;
+        break; // Sale del for por que encontro la marca
+      }
+    }
+    if (!marcaEncontrada)
+    {
+      cout<<"Código de marca no encontrado en el lote de marcas. Carga interrumpida."<<endl;
+      return;
+    }
+    
+  vCodigoProducto[i] = codigoProducto;
+  vNombreProducto[i] = nombre;
+  vPrecioVenta[i] = precioVenta;
+  vPrecioCompra[i] = precioCompra;
+  vStockDisponible[i] = stock;
+  vCodigoMarcaProducto[i] = codigoMarca;
+  
+}
+cout<<"Carga de productos completada.";
+
+}
