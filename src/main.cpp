@@ -42,7 +42,7 @@ int main() {
     cout << "2. Ingresar Productos" << endl;
     cout << "3. Ingresar Formas de Pago" << endl;
     cout << "4. Ingresar Ventas" << endl;
-    cout << "5. Reportes"<< endl;
+    cout << "5. Reportes" << endl;
     cout << "─────────────────────────────────────" << endl;
     cout << "0. SALIR" << endl << endl;
 
@@ -52,21 +52,12 @@ int main() {
     while (opInvalida == true) {
       switch (opcion) {
       case 1:
-
         opInvalida = false;
-        // cout << "Se ingresó una opción válida." << endl;
         cargarLoteMarcas(vCodigomarca, vNombremarca, cantidadMarcasCargadas,
                          marcasCargadas);
         cout << "\nToca ENTER para ir al menú principal.";
-        cin.ignore(); // Si antes de cin.get(); usaste otro cin (como cin >>
-                      // variable;), a veces queda un "Enter" pendiente en el
-                      // buffer. Por eso, muchas veces se usa antes un
-                      // cin.ignore(); para limpiar ese Enter y que la pausa
-                      // funcione bien:
-
-        cin.get(); // "cin.get()" espera a que el usuario presiona una tecla,
-                   // lo usamos para pausar la pantalla antes de volver al menú
-                   // o salir.
+        cin.ignore();
+        cin.get();
         break;
       case 2:
         opInvalida = false;
@@ -93,29 +84,29 @@ int main() {
         cin.get();
         break;
       case 0:
-        cout << "\nNos re vimoooo" << endl;
+        cout << "\nNos re vimoooooooo." << endl;
         return 0;
         break;
       case 5:
-      opInvalida = false;
-      opRepInvalida = true;
-      while (opRepInvalida == true) {
-        cout << "Se ingreso una opcion valida" << endl;
-        cout << endl;
-        cout << "─────────────────────────────────────" << endl;
-        cout << "           MENÚ DE REPORTES          " << endl;
-        cout << "─────────────────────────────────────" << endl;
-        cout << "   Seleccione una opción de reporte." << endl;
-        cout << "─────────────────────────────────────" << endl;
-        cout << "1. Recaudación por producto" << endl;
-        cout << "2. Porcentaje de ventas por forma de pago" << endl;
-        cout << "3. Ventas por marca y forma de pago" << endl;
-        cout << "4. Productos sin ventas" << endl;
-        cout << "5. Top 10 clientes + sorteo de cupones" << endl;
-        cout << "─────────────────────────────────────" << endl;
-        cout << "0. Volver al MENÚ PRINCIPAL." << endl << endl;
-        cout << "Ingrese el número de la opción deseada: ";
-        cin >> opcionRep;
+        opInvalida = false;
+        opRepInvalida = true;
+        while (opRepInvalida == true) {
+          cout << "Se ingreso una opcion valida" << endl;
+          cout << endl;
+          cout << "─────────────────────────────────────" << endl;
+          cout << "           MENÚ DE REPORTES          " << endl;
+          cout << "─────────────────────────────────────" << endl;
+          cout << "   Seleccione una opción de reporte." << endl;
+          cout << "─────────────────────────────────────" << endl;
+          cout << "1. Recaudación por producto" << endl;
+          cout << "2. Porcentaje de ventas por forma de pago" << endl;
+          cout << "3. Ventas por marca y forma de pago" << endl;
+          cout << "4. Productos sin ventas" << endl;
+          cout << "5. Top 10 clientes + sorteo de cupones" << endl;
+          cout << "─────────────────────────────────────" << endl;
+          cout << "0. Volver al MENÚ PRINCIPAL." << endl << endl;
+          cout << "Ingrese el número de la opción deseada: ";
+          cin >> opcionRep;
 
           switch (opcionRep) {
           case 1:
@@ -126,7 +117,8 @@ int main() {
             cin.get();
             break;
           case 2:
-            // Ingrese <AQUI> funcion para porcentaje de ventas por forma de pago.
+            // Ingrese <AQUI> funcion para porcentaje de ventas por forma de
+            // pago.
 
             cout << "\nToca ENTER para volver al menú de reportes." << endl;
             cin.ignore();
@@ -149,7 +141,7 @@ int main() {
           case 5:
             // Ingrese <AQUI> funcion top 10 clientes + sorteo de cupones.
 
-           cout << "\nToca ENTER para volver al menú de reportes." << endl;
+            cout << "\nToca ENTER para volver al menú de reportes." << endl;
             cin.ignore();
             cin.get();
             break;
