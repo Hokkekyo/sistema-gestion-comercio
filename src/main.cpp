@@ -14,13 +14,24 @@ using namespace std;
 
 int main() {
 
-  /* Declaracion de los vectores para la carga del Lote 1 (Codigo de Marca +
-   * Nombre de Marca) int vCodigomarca[10] - Vector de Codigo de marcas. string
-   * vNombremarca[10] - Vector de Nombres de marcas. int
-   * cantidadMarcasCargadas=0 - Contador de marcas cargadas para validar la
-   * bandera de marcasCargadas. bool marcasCargadas - Bandera para validar la
-   * carga completa.
-   */
+  /*
+  –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+   LOTE 1 - Declaracion de vectores (Codigo de Marca + Nombre de Marca)
+  –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+  - int vCodigomarca[10] - Vector de Codigo de marcas.
+  - string vNombremarca[10] - Vector de Nombres de marcas.
+  - int cantidadMarcasCargadas=0 - Contador de marcas cargadas para validar la bandera de marcasCargadas.
+  - bool marcasCargadas - Bandera para validar la carga completa.
+
+  –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+   LOTE 2 - Declaracion de vectores (Productos)
+  –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+  -
+  -
+  -
+  -
+  -
+ */
 
   // Declaración de variables:
   int vCodigomarca[10];
@@ -149,14 +160,16 @@ int main() {
             opRepInvalida = false;
             break;
           default:
-            cout << "La opción ingresada no es válida. Por favor, intente nuevamente: ";
+            cout << "La opción ingresada no es válida. Por favor, intente "
+                    "nuevamente: ";
             cin >> opcionRep;
             break;
           }
         }
         break;
       default:
-        cout << "La opción ingresada no es válida. Por favor, intente nuevamente: ";
+        cout << "La opción ingresada no es válida. Por favor, intente "
+                "nuevamente: ";
         cin >> opcion;
         break;
       }
@@ -167,6 +180,7 @@ int main() {
 }
 
 /*
+
 LOTE 1: Marcas
 El primer lote solicita las marcas con las que trabaja el comercio. Son 10
 marcas en total y por cada marca se ingresan los siguientes datos:
@@ -177,7 +191,7 @@ Ambos campos son requeridos. Cero se toma como vacío para el campo numérico. E
 código de marca debe ser validado que es un número entre 1 y 10. El campo string
 no puede estar vacío (es decir, “”). Los registros no se ingresan ordenados.
 
-––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 
 LOTE 2: Productos
 El segundo lote cuenta con 20 productos y por cada registro se cuenta con la
@@ -203,7 +217,7 @@ que se vuelva a ejecutar el proceso de carga desde cero.
 NOTA: si las marcas estuviesen cargadas, la falla de la carga de productos no
 resetea el lote de marcas, solo el de productos.
 
-––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 
 LOTE 3: Formas de Pago
 El tercer lote requiere los datos de las formas de pago. Son un total de 5
@@ -223,7 +237,7 @@ cargar en un orden distinto al que se presenta, pero no puede haber códigos
 distintos o repetir los códigos de las formas de pago. -EF: Efectivo -MP:
 Mercado Pago -TR: Transferencia -TC: Tarjeta de Crédito -CT: Criptomoneda
 
--------------------------------------------------------------------------------------------
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 
 🧾 LOTE DE VENTAS:
 Finalmente, se cuenta con un lote con las ventas registradas durante la semana
@@ -243,7 +257,7 @@ no se guardan. En este lote se deberá procesar para calcular lo necesario segú
 los requerimientos que se listan a continuación. La carga del lote finaliza con
 un registro con número de compra cero.
 
-––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 
 📊 REPORTES REQUERIDOS:
 1. Recaudación por producto:
@@ -281,7 +295,7 @@ compras). -Elegir aleatoriamente 3 de ellos y otorgarles un cupón de descuento.
 -Mostrar el top 10 y los 3 ganadores con su código de cliente y cantidad de
 compras.
 
-––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 
 ⭐ DESAFÍO ADICIONAL: Descuentos especiales por marca
 Puede haber marcas que tengan definidos días en los cuales se realizan una promo
@@ -324,7 +338,7 @@ distintas funcionalidades disponibles.
 La opción 5, a su vez, contará con un submenú con las opciones de reportes
 disponibles.
 
-––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 
 CONSIDERACIONES GENERALES SOBRE EL DESARROLLO DEL PROGRAMA:
 
