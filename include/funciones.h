@@ -15,6 +15,4 @@ using namespace std;
 
 void cargarLoteMarcas(int vCodigoMarca[], string vNombremarca[], int &cantidadMarcasCargadas, bool &marcasCargadas);
 
-void menuPrincipal(int &opcion);
-
 #endif
