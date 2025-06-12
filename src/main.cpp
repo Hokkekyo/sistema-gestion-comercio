@@ -16,7 +16,7 @@ int main() {
 
   /*
   –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
-   LOTE 1 - Declaracion de vectores (Codigo de Marca + Nombre de Marca)
+   LOTE 1 - Declaracion de vectores/variables (Codigo de Marca + Nombre de Marca)
   –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
   - int vCodigomarca[10] - Vector de Codigo de marcas.
   - string vNombremarca[10] - Vector de Nombres de marcas.
@@ -24,7 +24,16 @@ int main() {
   - bool marcasCargadas - Bandera para validar la carga completa.
 
   –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
-   LOTE 2 - Declaracion de vectores (Productos)
+   LOTE 2 - Declaracion de vectores/variables (Productos)
+  –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+  -
+  -
+  -
+  -
+  -
+
+  –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+   LOTE 3 - Declaracion de vectores/variables (Formas de pago)
   –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
   -
   -
