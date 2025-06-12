@@ -149,16 +149,14 @@ int main() {
             opRepInvalida = false;
             break;
           default:
-            cout << "La opción ingresada es inválida. Por favor, intente de "
-                    "nuevo:";
+            cout << "La opción ingresada no es válida. Por favor, intente nuevamente: ";
             cin >> opcionRep;
             break;
           }
         }
         break;
       default:
-        cout << "La opción ingresada no es válida. Por favor, intente "
-                "nuevamente:";
+        cout << "La opción ingresada no es válida. Por favor, intente nuevamente: ";
         cin >> opcion;
         break;
       }
