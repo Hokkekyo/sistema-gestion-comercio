@@ -33,17 +33,17 @@ int main() {
   // Menú:
   do {
     cout << endl;
-    cout << " ─────────────────────────────────────" << endl;
-    cout << "      MENÚ PRINCIPAL - MI NEGOCIO     " << endl;
-    cout << " ─────────────────────────────────────" << endl;
-    cout << "" << endl;
-    cout << "Seleccione una opción del menú." << endl;
-    cout << "" << endl;
+    cout << "=====================================" << endl;
+    cout << "   • MENÚ PRINCIPAL - MI NEGOCIO •   " << endl;
+    cout << "=====================================" << endl;
+    cout << "   Seleccione una opción del menú." << endl;
+    cout << "─────────────────────────────────────" << endl;
     cout << "1. Ingresar Marcas" << endl;
     cout << "2. Ingresar Productos" << endl;
     cout << "3. Ingresar Formas de Pago" << endl;
     cout << "4. Ingresar Ventas" << endl;
-    cout << "5. Reportes" << endl << endl;
+    cout << "5. Reportes"<< endl;
+    cout << "─────────────────────────────────────" << endl;
     cout << "0. SALIR" << endl << endl;
 
     opInvalida = true;
@@ -92,73 +92,64 @@ int main() {
         cin.ignore();
         cin.get();
         break;
-
-      // =======================================
-      //           Submenú reportes
-      // =======================================
+      case 0:
+        cout << "\nNos re vimoooo" << endl;
+        return 0;
+        break;
       case 5:
-        opInvalida = false;
+      opInvalida = false;
+      opRepInvalida = true;
+      while (opRepInvalida == true) {
         cout << "Se ingreso una opcion valida" << endl;
         cout << endl;
-        cout << " ─────────────────────────────────────" << endl;
-        cout << "           MENÚ DE REPORTES           " << endl;
-        cout << " ─────────────────────────────────────" << endl << endl;
-        cout << "Seleccione una opción de reporte." << endl << endl;
+        cout << "─────────────────────────────────────" << endl;
+        cout << "           MENÚ DE REPORTES          " << endl;
+        cout << "─────────────────────────────────────" << endl;
+        cout << "   Seleccione una opción de reporte." << endl;
+        cout << "─────────────────────────────────────" << endl;
         cout << "1. Recaudación por producto" << endl;
         cout << "2. Porcentaje de ventas por forma de pago" << endl;
         cout << "3. Ventas por marca y forma de pago" << endl;
         cout << "4. Productos sin ventas" << endl;
-        cout << "5. Top 10 clientes + sorteo de cupones" << endl << endl;
+        cout << "5. Top 10 clientes + sorteo de cupones" << endl;
+        cout << "─────────────────────────────────────" << endl;
         cout << "0. Volver al MENÚ PRINCIPAL." << endl << endl;
-
         cout << "Ingrese el número de la opción deseada: ";
         cin >> opcionRep;
-        opRepInvalida = true;
 
-      case 0:
-        cout << "\nNos re vimooooo" << endl;
-        opInvalida = false;
-        break;
-
-        while (opRepInvalida == true) {
           switch (opcionRep) {
           case 1:
-            opRepInvalida = false;
             // Ingrese <AQUI> funcion recaudacion por producto.
 
-            cout << "Toca ENTER para volver al menú principal." << endl;
+            cout << "\nToca ENTER para volver al menú de reportes." << endl;
             cin.ignore();
             cin.get();
             break;
           case 2:
-            opRepInvalida = false;
             // Ingrese <AQUI> funcion para porcentaje de ventas por forma de pago.
 
-            cout << "\nToca ENTER para volver al menú principal.";
+            cout << "\nToca ENTER para volver al menú de reportes." << endl;
             cin.ignore();
             cin.get();
             break;
           case 3:
-            opRepInvalida = false;
             // Ingrese <AQUI> funcion para ventas por marca y forma de pago.
 
-            cout << "\nToca ENTER para volver al menú principal.";
+            cout << "\nToca ENTER para volver al menú de reportes." << endl;
             cin.ignore();
             cin.get();
             break;
           case 4:
-            opRepInvalida = false;
             // Ingrese <AQUI> funcion para productos sin ventas.
 
-            cout << "\nToca ENTER para volver al menú principal.";
+            cout << "\nToca ENTER para volver al menú de reportes." << endl;
             cin.ignore();
             cin.get();
             break;
           case 5:
-            opRepInvalida = false;
             // Ingrese <AQUI> funcion top 10 clientes + sorteo de cupones.
 
-            cout << "\nToca ENTER para volver al menú principal.";
+           cout << "\nToca ENTER para volver al menú de reportes." << endl;
             cin.ignore();
             cin.get();
             break;
