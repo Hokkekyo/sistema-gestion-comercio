@@ -34,12 +34,12 @@ int main() {
  */
 
   // Declaración de variables:
-  int vCodigomarca[10];
-  string vNombremarca[10];
-  int cantidadMarcasCargadas = 0;
-  bool marcasCargadas = false;
-  int opcion, opcionRep;
-  bool opInvalida, opRepInvalida;
+  int opcion, opcionRep;           // Menu
+  bool opInvalida, opRepInvalida;  // Menu
+  int vCodigomarca[10];            // LOTE 1
+  string vNombremarca[10];         // LOTE 1
+  int cantidadMarcasCargadas = 0;  // LOTE 1
+  bool marcasCargadas = false;     // LOTE 1
 
   // Menú:
   do {
