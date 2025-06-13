@@ -16,12 +16,8 @@ using namespace std;
 // ===================================================
 // ===========  CARGA DE MARCAS - LOTE 1 =============
 // ===================================================
-<<<<<<< HEAD
+
 // vCodigomarca,vNombremarca,cantidadMarcasCargadas,marcasCargadas
-
-
-=======
->>>>>>> 8027e84a3c0cc72b6813a64ec788468b523aacc2
 
 void cargarLoteMarcas(int vCodigomarca[], string vNombremarca[],
                       int &cantidadMarcasCargadas, bool &marcasCargadas)

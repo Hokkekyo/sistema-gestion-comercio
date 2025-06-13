@@ -2,6 +2,8 @@
 *.o
 *.out
 *.exe
+*.json
+*.bat
 
 # Carpetas de build (por si se generan en el futuro)
 build/
@@ -11,6 +13,7 @@ obj/
 # Configuraciones locales de editores
 .vscode/
 .idea/
+.vscode/settings.json
 
 # Archivos temporales de sistema
 .DS_Store
@@ -18,4 +21,4 @@ obj/
 *.tmp
 
 # Archivos de prueba generados temporalmente
-test/*.out
+test/*.out.vscode/settings.json
