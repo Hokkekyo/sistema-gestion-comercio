@@ -29,7 +29,11 @@ void cargarLoteMarcas(int vCodigomarca[], string vNombremarca[],
   bool marcaValida;
 
   for (int i = 0; i < 10; i++) {
+#ifdef _WIN32
+    system("cls");
+#else
     system("clear");
+#endif
     cout << "\n ─────────────────────────────────────────────────────" << endl;
     cout << "               CARGA DE MARCAS - LOTE 1               " << endl;
     cout << " ─────────────────────────────────────────────────────" << endl
@@ -108,9 +112,9 @@ void cargarLoteProductos(int vCodigoProducto[], string vNombreProducto[],
                          int &cantidadProductosCargados, bool &productosCargados) 
 {
 
-  cout << "\n –––––––––––––––––––––––––––––––––––––––––––––––––––––" << endl;
-  cout << " INICIANDO CARGA DE LOTE 2 - PRODUCTOS. " << endl;
-  cout << " –––––––––––––––––––––––––––––––––––––––––––––––––––––" << endl
+  cout << "\n ─────────────────────────────────────────────────────" << endl;
+  cout << "       INICIANDO CARGA DE LOTE 2 - PRODUCTOS. " << endl;
+  cout << " ─────────────────────────────────────────────────────" << endl
        << endl;
 
   if (!marcasCargadas)
@@ -251,25 +255,26 @@ void cargarLoteProductos(int vCodigoProducto[], string vNombreProducto[],
 void cargarFormasDePago(string codigosLoteTres[], string nombresLoteTres[],
                         int porcentajesLoteTres[], int cantidadFormas) {
 
-  cout << "\n–––––––––––––––––––––––––––––––––––––––––––––––––––––" << endl;
-  cout << "     INICIANDO CARGA DE LOTE 3 - FORMAS DE PAGO. " << endl;
-  cout << "–––––––––––––––––––––––––––––––––––––––––––––––––––––" << endl
-       << endl;
-
   string codigosValidos[5] = {"EF", "MP", "TR", "TC", "CT"};
 
   for (int i = 0; i < cantidadFormas;) {
 
+#ifdef _WIN32
+    system("cls");
+#else
     system("clear");
-    cout << "––––––––––––––––––––––––––––––––" << endl;
+#endif
+  cout << "\n────────────────────────────────" << endl;
+  cout << " CARGA FORMAS DE PAGO - LOTE 3. " << endl;
+    cout << "────────────────────────────────" << endl;
     cout << "       Códigos válidos:" << endl;
-    cout << "––––––––––––––––––––––––––––––––" << endl;
+    cout << "────────────────────────────────" << endl;
     cout << "EF - (Efectivo)" << endl;
     cout << "MP - (Mercado pago)" << endl;
     cout << "TR - (Transferencia)" << endl;
     cout << "TC - (Tarjeta de crédito)" << endl;
-    cout << "CT - (Criptomoneda)" << endl << endl;
-    cout << "––––––––––––––––––––––––––––––––" << endl;
+    cout << "CT - (Criptomoneda)" << endl;
+    cout << "────────────────────────────────" << endl;
 
     string codigo;
     bool valido = false;
@@ -308,8 +313,7 @@ void cargarFormasDePago(string codigosLoteTres[], string nombresLoteTres[],
     getline(cin, nombresLoteTres[i]);
 
     cout << "Ingrese porcentaje (número entero positivo para interés, negativo "
-            "para descuento): "
-         << endl;
+            "para descuento): ";
     cin >> porcentajesLoteTres[i];
 
     cout << endl;
