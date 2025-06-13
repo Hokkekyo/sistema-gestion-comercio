@@ -16,11 +16,13 @@ int main() {
 
   /*
   –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
-   LOTE 1 - Declaracion de vectores/variables (Codigo de Marca + Nombre de Marca)
+   LOTE 1 - Declaracion de vectores/variables (Codigo de Marca + Nombre de
+  Marca)
   –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
   - int vCodigomarca[10] - Vector de Codigo de marcas.
   - string vNombremarca[10] - Vector de Nombres de marcas.
-  - int cantidadMarcasCargadas=0 - Contador de marcas cargadas para validar la bandera de marcasCargadas.
+  - int cantidadMarcasCargadas=0 - Contador de marcas cargadas para validar la
+  bandera de marcasCargadas.
   - bool marcasCargadas - Bandera para validar la carga completa.
 
   –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
@@ -42,21 +44,25 @@ int main() {
  */
 
   // Declaración de variables:
-  int opcion, opcionRep;            // Menu
-  bool opInvalida, opRepInvalida;   // Menu
+  int opcion, opcionRep;          // Menu
+  bool opInvalida, opRepInvalida; // Menu
 
-  int vCodigomarca[10];             // LOTE 1
-  string vNombremarca[10];          // LOTE 1
-  int cantidadMarcasCargadas = 0;   // LOTE 1
-  bool marcasCargadas = false;      // LOTE 1
+  int vCodigomarca[10];           // LOTE 1
+  string vNombremarca[10];        // LOTE 1
+  int cantidadMarcasCargadas = 0; // LOTE 1
+  bool marcasCargadas = false;    // LOTE 1
 
-  string codigosLoteTres[5];        // LOTE 3 (formas de pago)
-  string nombresLoteTres[5];        // LOTE 3 (formas de pago)
-  int porcentajesLoteTres[5];       // LOTE 3 (formas de pago)
+  string codigosLoteTres[5];  // LOTE 3 (formas de pago)
+  string nombresLoteTres[5];  // LOTE 3 (formas de pago)
+  int porcentajesLoteTres[5]; // LOTE 3 (formas de pago)
 
   // Menú:
   do {
+#ifdef _WIN32
+    system("cls");
+#else
     system("clear");
+#endif
     cout << endl;
     cout << "=====================================" << endl;
     cout << "   • MENÚ PRINCIPAL - MI NEGOCIO •   " << endl;
@@ -94,7 +100,8 @@ int main() {
         break;
       case 3:
         opInvalida = false;
-        cargarFormasDePago(codigosLoteTres, nombresLoteTres, porcentajesLoteTres, 5);
+        cargarFormasDePago(codigosLoteTres, nombresLoteTres,
+                           porcentajesLoteTres, 5);
 
         cout << "\nToca ENTER para volver al menú principal.";
         cin.ignore();
@@ -109,14 +116,22 @@ int main() {
         cin.get();
         break;
       case 0:
-      system("clear");
+#ifdef _WIN32
+        system("cls");
+#else
+        system("clear");
+#endif
         cout << "\nNos re vimoooooooo." << endl;
         return 0;
         break;
-      //case 6;
-      // Agregar sub menu para visualizar las tablas de los datos ingresados
+      // case 6;
+      //  Agregar sub menu para visualizar las tablas de los datos ingresados
       case 5:
-      system("clear");
+#ifdef _WIN32
+        system("cls");
+#else
+        system("clear");
+#endif
         opInvalida = false;
         opRepInvalida = true;
         while (opRepInvalida == true) {
