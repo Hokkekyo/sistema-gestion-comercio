@@ -16,9 +16,12 @@ using namespace std;
 // ===================================================
 // ===========  CARGA DE MARCAS - LOTE 1 =============
 // ===================================================
+<<<<<<< HEAD
 // vCodigomarca,vNombremarca,cantidadMarcasCargadas,marcasCargadas
 
 
+=======
+>>>>>>> 8027e84a3c0cc72b6813a64ec788468b523aacc2
 
 void cargarLoteMarcas(int vCodigomarca[], string vNombremarca[],
                       int &cantidadMarcasCargadas, bool &marcasCargadas)
@@ -110,12 +113,24 @@ void cargarLoteMarcas(int vCodigomarca[], string vNombremarca[],
 void cargarLoteProductos(int vCodigoProducto[], string vNombreProducto[],
                          float vPrecioVenta[], float vPrecioCompra[],
                          int vStockDisponible[], int vCodigoMarcaProducto[],
-                         const int vCodigomarca[]) {
+                         const int vCodigomarca[], bool marcasCargadas, 
+                         int &cantidadProductosCargados, bool &productosCargados) 
+{
 
   cout << "\n ─────────────────────────────────────────────────────" << endl;
   cout << "       INICIANDO CARGA DE LOTE 2 - PRODUCTOS. " << endl;
   cout << " ─────────────────────────────────────────────────────" << endl
        << endl;
+
+  if (!marcasCargadas)
+  {
+    cout<<"No se cargaron las marcas. No se puede inciar la carga de productos"<<endl;
+    return;
+  }
+  
+  cantidadProductosCargados = 0;
+  productosCargados = false;
+
 
   for (int i = 0; i < 20; i++) {
     cout << "Producto #" << (i + 1) << " :" << endl;
@@ -219,7 +234,22 @@ void cargarLoteProductos(int vCodigoProducto[], string vNombreProducto[],
     vPrecioCompra[i] = precioCompra;
     vStockDisponible[i] = stock;
     vCodigoMarcaProducto[i] = codigoMarca;
+    cantidadProductosCargados++;
   }
+
+  // En este if validamos que la carga se completó.
+  if (cantidadProductosCargados == 20) 
+  {
+    productosCargados = true;
+    cout << "Carga del lote 2 completada con éxito. A continuación se muestra "
+            "el listado de productos:"
+         << endl
+         << endl;
+  }
+    /* Mostramos la carga de datos:
+    for (int x = 0; x < 20; x++) {
+      
+    */
   cout << "Carga de productos completada.";
 }
 

@@ -56,6 +56,16 @@ int main() {
   string nombresLoteTres[5];  // LOTE 3 (formas de pago)
   int porcentajesLoteTres[5]; // LOTE 3 (formas de pago)
 
+
+  int vCodigoProducto[20];          // LOTE 2 (productos)
+  string vNombreProducto[20];       // LOTE 2 (productos)  
+  float vPrecioVenta[20];           // LOTE 2 (productos)   
+  float vPrecioCompra[20];          // LOTE 2 (productos) 
+  int vStockDisponible[20];         // LOTE 2 (productos)
+  int vCodigoMarcaProducto[20];     // LOTE 2 (productos)
+  int cantidadProductosCargados = 0;    // LOTE 2 (productos)
+  bool productosCargados = false;           // LOTE 2 (productos)  
+
   // Menú:
   do {
 #ifdef _WIN32
@@ -84,15 +94,22 @@ int main() {
       switch (opcion) {
       case 1:
         opInvalida = false;
+        
         cargarLoteMarcas(vCodigomarca, vNombremarca, cantidadMarcasCargadas,
                          marcasCargadas);
         cout << "\nToca ENTER para ir al menú principal.";
         cin.ignore();
         cin.get();
         break;
+
       case 2:
         opInvalida = false;
-        // Ingrese <AQUI> funcion para lote de productos.
+        
+        cargarLoteProductos(vCodigoProducto, vNombreProducto,
+                         vPrecioVenta, vPrecioCompra,
+                         vStockDisponible, vCodigoMarcaProducto,
+                          vCodigomarca, marcasCargadas, 
+                          cantidadProductosCargados, productosCargados);
 
         cout << "\nToca ENTER para ir al menú principal.";
         cin.ignore();
