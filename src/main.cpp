@@ -35,23 +35,28 @@ int main() {
   –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
    LOTE 3 - Declaracion de vectores/variables (Formas de pago)
   –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
-  -
-  -
-  -
-  -
-  -
+  - string codigosLoteTres[5];
+  - string nombresLoteTres[5];
+  - int porcentajesLoteTres[];
+  - int cantidadFormas;
  */
 
   // Declaración de variables:
-  int opcion, opcionRep;           // Menu
-  bool opInvalida, opRepInvalida;  // Menu
-  int vCodigomarca[10];            // LOTE 1
-  string vNombremarca[10];         // LOTE 1
-  int cantidadMarcasCargadas = 0;  // LOTE 1
-  bool marcasCargadas = false;     // LOTE 1
+  int opcion, opcionRep;            // Menu
+  bool opInvalida, opRepInvalida;   // Menu
+
+  int vCodigomarca[10];             // LOTE 1
+  string vNombremarca[10];          // LOTE 1
+  int cantidadMarcasCargadas = 0;   // LOTE 1
+  bool marcasCargadas = false;      // LOTE 1
+
+  string codigosLoteTres[5];        // LOTE 3 (formas de pago)
+  string nombresLoteTres[5];        // LOTE 3 (formas de pago)
+  int porcentajesLoteTres[5];       // LOTE 3 (formas de pago)
 
   // Menú:
   do {
+    system("clear");
     cout << endl;
     cout << "=====================================" << endl;
     cout << "   • MENÚ PRINCIPAL - MI NEGOCIO •   " << endl;
@@ -67,7 +72,7 @@ int main() {
     cout << "0. SALIR" << endl << endl;
 
     opInvalida = true;
-    cout << "Ingrese el número de la opción deseada: ";
+    cout << "Seleccione una opción: ";
     cin >> opcion;
     while (opInvalida == true) {
       switch (opcion) {
@@ -89,7 +94,7 @@ int main() {
         break;
       case 3:
         opInvalida = false;
-        // Ingrese <AQUI> funcion para lote de formas de pago.
+        cargarFormasDePago(codigosLoteTres, nombresLoteTres, porcentajesLoteTres, 5);
 
         cout << "\nToca ENTER para volver al menú principal.";
         cin.ignore();
@@ -104,19 +109,22 @@ int main() {
         cin.get();
         break;
       case 0:
+      system("clear");
         cout << "\nNos re vimoooooooo." << endl;
         return 0;
         break;
+      //case 6;
+      // Agregar sub menu para visualizar las tablas de los datos ingresados
       case 5:
+      system("clear");
         opInvalida = false;
         opRepInvalida = true;
         while (opRepInvalida == true) {
-          cout << "Se ingreso una opcion valida" << endl;
           cout << endl;
           cout << "─────────────────────────────────────" << endl;
-          cout << "           MENÚ DE REPORTES          " << endl;
+          cout << "          MENÚ DE REPORTES          " << endl;
           cout << "─────────────────────────────────────" << endl;
-          cout << "   Seleccione una opción de reporte." << endl;
+          cout << "  Seleccione una opción de reporte." << endl;
           cout << "─────────────────────────────────────" << endl;
           cout << "1. Recaudación por producto" << endl;
           cout << "2. Porcentaje de ventas por forma de pago" << endl;
@@ -125,7 +133,7 @@ int main() {
           cout << "5. Top 10 clientes + sorteo de cupones" << endl;
           cout << "─────────────────────────────────────" << endl;
           cout << "0. Volver al MENÚ PRINCIPAL." << endl << endl;
-          cout << "Ingrese el número de la opción deseada: ";
+          cout << "Seleccione una opción: ";
           cin >> opcionRep;
 
           switch (opcionRep) {

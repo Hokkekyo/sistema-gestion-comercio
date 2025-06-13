@@ -15,4 +15,7 @@ using namespace std;
 
 void cargarLoteMarcas(int vCodigoMarca[], string vNombremarca[], int &cantidadMarcasCargadas, bool &marcasCargadas);
 
+void cargarFormasDePago(string codigos[], string nombres[],
+                        int porcentajes[], int cantidadFormas);
+                        
 #endif

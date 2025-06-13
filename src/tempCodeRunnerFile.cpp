@@ -1,1 +1,1 @@
- 
+cargarFormasDePago(codigosLoteTres, nombresLoteTres, porcentajesLoteTres, 5)
