@@ -24,7 +24,6 @@ int main() {
   - int cantidadMarcasCargadas=0 - Contador de marcas cargadas para validar la
   bandera de marcasCargadas.
   - bool marcasCargadas - Bandera para validar la carga completa.
-
   –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
    LOTE 2 - Declaracion de vectores/variables (Productos)
   –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
@@ -33,7 +32,6 @@ int main() {
   -
   -
   -
-
   –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
    LOTE 3 - Declaracion de vectores/variables (Formas de pago)
   –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
@@ -41,50 +39,43 @@ int main() {
   - string nombresLoteTres[5];
   - int porcentajesLoteTres[];
   - int cantidadFormas;
-
-
-–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+ –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
    LOTE 4 - Declaracion de vectores/variables (Ventas)
-  –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+ –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
   - int ventasPorProducto[20] - Cantidad total vendida por producto
   - float recaudacionPorProducto[20] - Dinero recaudado por producto
   - int comprasPorCliente[50] - Cantidad de compras por cliente
   - int ventasPorFormaYMarca[10][5] - Ventas por marca y forma de pago
   - bool formasPagoCargadas - Bandera para validar carga de formas de pago
-  
-
-  
  */
 
   // Declaración de variables:
-  int opcion, opcionRep;          // Menu
-  bool opInvalida, opRepInvalida; // Menu
+  int opcion, opcionRep;             // Menu
+  bool opInvalida, opRepInvalida;    // Menu
 
-  int vCodigomarca[10];           // LOTE 1
-  string vNombremarca[10];        // LOTE 1
-  int cantidadMarcasCargadas = 0; // LOTE 1
-  bool marcasCargadas = false;    // LOTE 1
-
-  string codigosLoteTres[5];  // LOTE 3 (formas de pago)
-  string nombresLoteTres[5];  // LOTE 3 (formas de pago)
-  int porcentajesLoteTres[5]; // LOTE 3 (formas de pago)
-
-
-  int vCodigoProducto[20];          // LOTE 2 (productos)
-  string vNombreProducto[20];       // LOTE 2 (productos)  
-  float vPrecioVenta[20];           // LOTE 2 (productos)   
-  float vPrecioCompra[20];          // LOTE 2 (productos) 
-  int vStockDisponible[20];         // LOTE 2 (productos)
-  int vCodigoMarcaProducto[20];     // LOTE 2 (productos)
-  int cantidadProductosCargados = 0;    // LOTE 2 (productos)
-  bool productosCargados = false;           // LOTE 2 (productos) 
+  int vCodigomarca[10];              // LOTE 1
+  string vNombremarca[10];           // LOTE 1
+  int cantidadMarcasCargadas = 0;    // LOTE 1
+  bool marcasCargadas = false;       // LOTE 1
   
+  int vCodigoProducto[20];            // LOTE 2 (productos)
+  string vNombreProducto[20];         // LOTE 2 (productos)  
+  float vPrecioVenta[20];             // LOTE 2 (productos)   
+  float vPrecioCompra[20];            // LOTE 2 (productos) 
+  int vStockDisponible[20];           // LOTE 2 (productos)
+  int vCodigoMarcaProducto[20];       // LOTE 2 (productos)
+  int cantidadProductosCargados = 0;  // LOTE 2 (productos)
+  bool productosCargados = false;     // LOTE 2 (productos) 
   
-  int ventasPorProducto[20] = {0};             // LOTE 4
-  float recaudacionPorProducto[20] = {0.0};     // LOTE 4
-  int comprasPorCliente[50] = {0};              // LOTE 4
-  int ventasPorFormaYMarca[10][5] = {0};        // LOTE 4
-  bool formasPagoCargadas = false;               // 
+  string codigosLoteTres[5];          // LOTE 3 (formas de pago)
+  string nombresLoteTres[5];          // LOTE 3 (formas de pago)
+  int porcentajesLoteTres[5];         // LOTE 3 (formas de pago)
+  
+  int ventasPorProducto[20] = {0};           // LOTE 4
+  float recaudacionPorProducto[20] = {0.0};  // LOTE 4
+  int comprasPorCliente[50] = {0};           // LOTE 4
+  int ventasPorFormaYMarca[10][5] = {0};     // LOTE 4
+  bool formasPagoCargadas = false;           // LOTE 4 
 
   // Menú:
   do {
