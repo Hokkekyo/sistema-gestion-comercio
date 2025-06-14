@@ -17,6 +17,8 @@ using namespace std;
 // ===========  CARGA DE MARCAS - LOTE 1 =============
 // ===================================================
 
+// vCodigomarca,vNombremarca,cantidadMarcasCargadas,marcasCargadas
+
 void cargarLoteMarcas(int vCodigomarca[], string vNombremarca[],
                       int &cantidadMarcasCargadas, bool &marcasCargadas)
 
@@ -34,10 +36,9 @@ void cargarLoteMarcas(int vCodigomarca[], string vNombremarca[],
 #else
     system("clear");
 #endif
-    cout << "\n ─────────────────────────────────────────────────────" << endl;
-    cout << "               CARGA DE MARCAS - LOTE 1               " << endl;
-    cout << " ─────────────────────────────────────────────────────" << endl
-         << endl;
+    cout << "\n ──────────────────────────────────────────────────" << endl;
+    cout << "              CARGA DE MARCAS - LOTE 1               " << endl;
+    cout << " ──────────────────────────────────────────────────" << endl;
     cout << "A continuación, ingrese los datos para la marca #" << i + 1 << "."
          << endl;
 
