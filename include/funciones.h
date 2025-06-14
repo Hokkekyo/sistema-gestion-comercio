@@ -26,5 +26,20 @@ void cargarLoteProductos(int vCodigoProducto[], string vNombreProducto[],
 
 void cargarFormasDePago(string codigos[], string nombres[],
                         int porcentajes[], int cantidadFormas);
+
+void cargarLoteVentas(int vCodigoProducto[], string vNombreProducto[],
+                      float vPrecioVenta[], int vStockDisponible[], int vCodigoMarcaProducto[],
+                      string vCodigoFP[], int vPorcentajeFP[],
+                      int cantidadProductosCargados, int cantidadFormasPago,
+                      int ventasPorProducto[], float recaudacionPorProducto[],
+                      int comprasPorCliente[], int ventasPorFormaYMarca[][5],
+                      bool marcasCargadas, bool productosCargados, bool formasPagoCargadas);
+
+bool existeProducto(int codigo, int vCodigoProducto[], int cantidadProductosCargados);
+
+bool existeFormaPago(string codigoFP, string codigos[], int cantidadFormas);
+
+
+
                         
 #endif

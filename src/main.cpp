@@ -41,6 +41,19 @@ int main() {
   - string nombresLoteTres[5];
   - int porcentajesLoteTres[];
   - int cantidadFormas;
+
+
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+   LOTE 4 - Declaracion de vectores/variables (Ventas)
+  –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+  - int ventasPorProducto[20] - Cantidad total vendida por producto
+  - float recaudacionPorProducto[20] - Dinero recaudado por producto
+  - int comprasPorCliente[50] - Cantidad de compras por cliente
+  - int ventasPorFormaYMarca[10][5] - Ventas por marca y forma de pago
+  - bool formasPagoCargadas - Bandera para validar carga de formas de pago
+  
+
+  
  */
 
   // Declaración de variables:
@@ -64,7 +77,14 @@ int main() {
   int vStockDisponible[20];         // LOTE 2 (productos)
   int vCodigoMarcaProducto[20];     // LOTE 2 (productos)
   int cantidadProductosCargados = 0;    // LOTE 2 (productos)
-  bool productosCargados = false;           // LOTE 2 (productos)  
+  bool productosCargados = false;           // LOTE 2 (productos) 
+  
+  
+  int ventasPorProducto[20] = {0};             // LOTE 4
+  float recaudacionPorProducto[20] = {0.0};     // LOTE 4
+  int comprasPorCliente[50] = {0};              // LOTE 4
+  int ventasPorFormaYMarca[10][5] = {0};        // LOTE 4
+  bool formasPagoCargadas = false;               // 
 
   // Menú:
   do {
@@ -126,7 +146,13 @@ int main() {
         break;
       case 4:
         opInvalida = false;
-        // Ingrese <AQUI> funcion para lote de ventas.
+        cargarLoteVentas(vCodigoProducto, vNombreProducto,
+                         vPrecioVenta, vStockDisponible, vCodigoMarcaProducto,
+                         codigosLoteTres, porcentajesLoteTres,
+                         cantidadProductosCargados, 5,
+                         ventasPorProducto, recaudacionPorProducto,
+                         comprasPorCliente, ventasPorFormaYMarca,
+                         marcasCargadas, productosCargados, formasPagoCargadas);
 
         cout << "\nToca ENTER para volver al menú principal.";
         cin.ignore();
