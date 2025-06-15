@@ -30,7 +30,7 @@ void cargarLoteMarcas(int vCodigomarca[], string vNombremarca[],
   string nombreIngresado;
   bool marcaValida;
 
-  for (int i = 0; i < 10; i++) {
+  for (int i = 0; i < 2; i++) {
 #ifdef _WIN32
     system("cls");
 #else
@@ -85,7 +85,7 @@ void cargarLoteMarcas(int vCodigomarca[], string vNombremarca[],
   }
 
   // En este if validamos que la carga se completó.
-  if (cantidadMarcasCargadas == 10) {
+  if (cantidadMarcasCargadas == 2) {
     marcasCargadas = true;
     cout << "Carga del lote 1 completada con éxito. A continuación se muestra "
             "el listado:"
@@ -93,7 +93,7 @@ void cargarLoteMarcas(int vCodigomarca[], string vNombremarca[],
          << endl;
 
     // Mostramos la carga de datos:
-    for (int x = 0; x < 10; x++) {
+    for (int x = 0; x < 2; x++) {
       cout << "Código de marca: " << vCodigomarca[x]
            << "   |   Nombre de marca: " << vNombremarca[x] << endl;
     }
@@ -128,7 +128,7 @@ void cargarLoteProductos(int vCodigoProducto[], string vNombreProducto[],
   productosCargados = false;
 
 
-  for (int i = 0; i < 20; i++) {
+  for (int i = 0; i < 5; i++) {
     cout << "Producto #" << (i + 1) << " :" << endl;
 
     int codigoProducto;
@@ -211,7 +211,7 @@ void cargarLoteProductos(int vCodigoProducto[], string vNombreProducto[],
 
     bool marcaEncontrada = false;
 
-    for (int x = 0; x < 10; x++) {
+    for (int x = 0; x < 2; x++) {
       if (codigoMarca == vCodigomarca[x]) {
         marcaEncontrada = true;
         break; // Sale del for por que encontro la marca
@@ -234,7 +234,7 @@ void cargarLoteProductos(int vCodigoProducto[], string vNombreProducto[],
   }
 
   // En este if validamos que la carga se completó.
-  if (cantidadProductosCargados == 20) 
+  if (cantidadProductosCargados == 5) 
   {
     productosCargados = true;
     cout << "Carga del lote 2 completada con éxito. A continuación se muestra "
@@ -242,10 +242,17 @@ void cargarLoteProductos(int vCodigoProducto[], string vNombreProducto[],
          << endl
          << endl;
   }
-    /* Mostramos la carga de datos:
+    //Mostramos la carga de datos:
     for (int x = 0; x < 20; x++) {
       
-    */
+      cout << "Código de producto: " << vCodigoProducto[x]
+           << " | Nombre: " << vNombreProducto[x]
+           << " | Precio de venta: " << vPrecioVenta[x]
+           << " | Precio de compra: " << vPrecioCompra[x]
+           << " | Stock disponible: " << vStockDisponible[x]
+           << " | Código de marca: " << vCodigoMarcaProducto[x] << endl;
+    }
+    
   cout << "Carga de productos completada.";
 }
 
