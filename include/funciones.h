@@ -47,9 +47,9 @@ bool existeProducto(int codigo, int vCodigoProducto[], int cantidadProductosCarg
 
 bool existeFormaPago(string codigoFP, string codigos[], int cantidadFormas);
 
-// ========================================
-// ============ TABLA DE DATOS ============
-// ========================================
+// ========================================================
+// ============ TABLA DE DATOS (funciones.cpp) ============
+// ========================================================
 
 void tablaDatosLote3(string codigoLoteTres[], string nombresLoteTres[],
                      int porcentajesLoteTres[]);
