@@ -160,7 +160,6 @@ void cargarLoteProductos(int vCodigoProducto[], string vNombreProducto[],
   cantidadProductosCargados = 0;
   productosCargados = false;
 
-
   for (int i = 0; i < 5; i++) {
     cout << "Producto #" << (i + 1) << " :" << endl;
 
@@ -267,25 +266,24 @@ void cargarLoteProductos(int vCodigoProducto[], string vNombreProducto[],
   }
 
   // En este if validamos que la carga se completó.
-  if (cantidadProductosCargados == 5) 
-  {
+  if (cantidadProductosCargados == 5) {
     productosCargados = true;
     cout << "Carga del lote 2 completada con éxito. A continuación se muestra "
             "el listado de productos:"
          << endl
          << endl;
   }
-    //Mostramos la carga de datos:
-    for (int x = 0; x < 20; x++) {
-      
-      cout << "Código de producto: " << vCodigoProducto[x]
-           << " | Nombre: " << vNombreProducto[x]
-           << " | Precio de venta: " << vPrecioVenta[x]
-           << " | Precio de compra: " << vPrecioCompra[x]
-           << " | Stock disponible: " << vStockDisponible[x]
-           << " | Código de marca: " << vCodigoMarcaProducto[x] << endl;
-    }
-    
+  // Mostramos la carga de datos:
+  for (int x = 0; x < 20; x++) {
+
+    cout << "Código de producto: " << vCodigoProducto[x]
+         << " | Nombre: " << vNombreProducto[x]
+         << " | Precio de venta: " << vPrecioVenta[x]
+         << " | Precio de compra: " << vPrecioCompra[x]
+         << " | Stock disponible: " << vStockDisponible[x]
+         << " | Código de marca: " << vCodigoMarcaProducto[x] << endl;
+  }
+
   cout << "Carga de productos completada.";
 }
 
@@ -455,10 +453,13 @@ void cargarLoteVentas(int vCodigoProducto[], string vNombreProducto[],
 
     // carga de datos necesarios para el reporte 1
 
-    int posProducto = obtenerPosProductoPorCodigoProducto(vCodigoProducto, codigoProducto, cantidadProductosCargados);
-    int posFormaPago = obtenerPosFPPorCodigoFP(vCodigoFP, codigoFormaPago, formasPagoCargadas);
+    int posProducto = obtenerPosProductoPorCodigoProducto(
+        vCodigoProducto, codigoProducto, cantidadProductosCargados);
+    int posFormaPago =
+        obtenerPosFPPorCodigoFP(vCodigoFP, codigoFormaPago, formasPagoCargadas);
     float factorDescuentoIncremento = 1 + (vPorcentajeFP[posFormaPago] / 100);
-    float montoVentaActual = (vPrecioVenta[posProducto] * cantidadVendida) * factorDescuentoIncremento;
+    float montoVentaActual = (vPrecioVenta[posProducto] * cantidadVendida) *
+                             factorDescuentoIncremento;
     recaudacionPorProducto[posProducto] += montoVentaActual;
     ventasPorProducto[posProducto] += cantidadVendida;
     vStockDisponible[posProducto] -= cantidadVendida;
@@ -487,21 +488,20 @@ bool existeFormaPago(string codigoFP, string codigos[], int cantidadFormas) {
   return false;
 }
 
-int obtenerPosProductoPorCodigoProducto(int vCodigoProducto[], int codigoProducto, int cantidadProductos){
-  for (int i = 0; i < cantidadProductos; i++)
-  {
-    if(vCodigoProducto[i] == codigoProducto)
-    {
+int obtenerPosProductoPorCodigoProducto(int vCodigoProducto[],
+                                        int codigoProducto,
+                                        int cantidadProductos) {
+  for (int i = 0; i < cantidadProductos; i++) {
+    if (vCodigoProducto[i] == codigoProducto) {
       return i;
     }
   }
 }
 
-int obtenerPosFPPorCodigoFP (string vFormasPago[], string formaPago, int cantidadFormasPago){
-  for (int i = 0; i < cantidadFormasPago; i++)
-  {
-    if(vFormasPago[i] == formaPago)
-    {
+int obtenerPosFPPorCodigoFP(string vFormasPago[], string formaPago,
+                            int cantidadFormasPago) {
+  for (int i = 0; i < cantidadFormasPago; i++) {
+    if (vFormasPago[i] == formaPago) {
       return i;
     }
   }

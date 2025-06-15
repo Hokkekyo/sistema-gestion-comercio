@@ -50,32 +50,32 @@ int main() {
  */
 
   // Declaración de variables:
-  int opcion, opcionRep;             // Menu
-  bool opInvalida, opRepInvalida;    // Menu
+  int opcion, opcionRep;          // Menu
+  bool opInvalida, opRepInvalida; // Menu
 
-  int vCodigomarca[2];           // LOTE 1
-  string vNombremarca[2];        // LOTE 1
+  int vCodigomarca[2];            // LOTE 1
+  string vNombremarca[2];         // LOTE 1
   int cantidadMarcasCargadas = 0; // LOTE 1
   bool marcasCargadas = false;    // LOTE 1
 
-  int vCodigoProducto[5];          // LOTE 2 (productos)
-  string vNombreProducto[5];       // LOTE 2 (productos)  
-  float vPrecioVenta[5];           // LOTE 2 (productos)   
-  float vPrecioCompra[5];          // LOTE 2 (productos) 
-  int vStockDisponible[5];         // LOTE 2 (productos)
-  int vCodigoMarcaProducto[5];     // LOTE 2 (productos)
-  int cantidadProductosCargados = 0;    // LOTE 2 (productos)
-  bool productosCargados = false;           // LOTE 2 (productos) 
-  
-  string codigosLoteTres[5];          // LOTE 3 (formas de pago)
-  string nombresLoteTres[5];          // LOTE 3 (formas de pago)
-  int porcentajesLoteTres[5];         // LOTE 3 (formas de pago)
-  
-  int ventasPorProducto[20] = {0};           // LOTE 4
-  float recaudacionPorProducto[20] = {0.0};  // LOTE 4
-  int comprasPorCliente[50] = {0};           // LOTE 4
-  int ventasPorFormaYMarca[10][5] = {0};     // LOTE 4
-  bool formasPagoCargadas = false;           // LOTE 4 
+  int vCodigoProducto[5];            // LOTE 2 (productos)
+  string vNombreProducto[5];         // LOTE 2 (productos)
+  float vPrecioVenta[5];             // LOTE 2 (productos)
+  float vPrecioCompra[5];            // LOTE 2 (productos)
+  int vStockDisponible[5];           // LOTE 2 (productos)
+  int vCodigoMarcaProducto[5];       // LOTE 2 (productos)
+  int cantidadProductosCargados = 0; // LOTE 2 (productos)
+  bool productosCargados = false;    // LOTE 2 (productos)
+
+  string codigosLoteTres[5];  // LOTE 3 (formas de pago)
+  string nombresLoteTres[5];  // LOTE 3 (formas de pago)
+  int porcentajesLoteTres[5]; // LOTE 3 (formas de pago)
+
+  int ventasPorProducto[20] = {0};          // LOTE 4
+  float recaudacionPorProducto[20] = {0.0}; // LOTE 4
+  int comprasPorCliente[50] = {0};          // LOTE 4
+  int ventasPorFormaYMarca[10][5] = {0};    // LOTE 4
+  bool formasPagoCargadas = false;          // LOTE 4
 
   // Menú:
   do {
@@ -105,7 +105,7 @@ int main() {
       switch (opcion) {
       case 1:
         opInvalida = false;
-        
+
         cargarLoteMarcas(vCodigomarca, vNombremarca, cantidadMarcasCargadas,
                          marcasCargadas);
         cout << "\nToca ENTER para ir al menú principal.";
@@ -115,12 +115,11 @@ int main() {
 
       case 2:
         opInvalida = false;
-        
-        cargarLoteProductos(vCodigoProducto, vNombreProducto,
-                         vPrecioVenta, vPrecioCompra,
-                         vStockDisponible, vCodigoMarcaProducto,
-                          vCodigomarca, marcasCargadas, 
-                          cantidadProductosCargados, productosCargados);
+
+        cargarLoteProductos(vCodigoProducto, vNombreProducto, vPrecioVenta,
+                            vPrecioCompra, vStockDisponible,
+                            vCodigoMarcaProducto, vCodigomarca, marcasCargadas,
+                            cantidadProductosCargados, productosCargados);
 
         cout << "\nToca ENTER para ir al menú principal.";
         cin.ignore();
@@ -139,13 +138,12 @@ int main() {
         break;
       case 4:
         opInvalida = false;
-        cargarLoteVentas(vCodigoProducto, vNombreProducto,
-                         vPrecioVenta, vStockDisponible, vCodigoMarcaProducto,
-                         codigosLoteTres, porcentajesLoteTres,
-                         cantidadProductosCargados, 5,
-                         ventasPorProducto, recaudacionPorProducto,
-                         comprasPorCliente, ventasPorFormaYMarca,
-                         marcasCargadas, productosCargados, formasPagoCargadas);
+        cargarLoteVentas(
+            vCodigoProducto, vNombreProducto, vPrecioVenta, vStockDisponible,
+            vCodigoMarcaProducto, codigosLoteTres, porcentajesLoteTres,
+            cantidadProductosCargados, 5, ventasPorProducto,
+            recaudacionPorProducto, comprasPorCliente, ventasPorFormaYMarca,
+            marcasCargadas, productosCargados, formasPagoCargadas);
 
         cout << "\nToca ENTER para volver al menú principal.";
         cin.ignore();
