@@ -26,10 +26,10 @@ int main() {
   –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
    LOTE 3 - Declaracion de vectores/variables (Formas de pago)
   –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
-  - string codigosLoteTres[5];
-  - string nombresLoteTres[5];
-  - int porcentajesLoteTres[];
-  - int cantidadFormas;
+  - string codigosLoteTres[5]; - Códigos de forma de pago
+  - string nombresLoteTres[5]; - Nombres de forma de pago
+  - int porcentajesLoteTres[]; - Porcentaje de descuento o interés
+  - int cantidadFormas; - Cantidad de formas de pago (5)
  –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
    LOTE 4 - Declaracion de vectores/variables (Ventas)
  –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
