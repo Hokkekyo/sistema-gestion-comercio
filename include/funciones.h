@@ -13,6 +13,14 @@ using namespace std;
  * partes.
  */
 
+// ========================================
+// ============= REPORTES.CPP =============
+// ========================================
+
+// ========================================
+// ============ FUNCIONES.CPP =============
+// ========================================
+ 
 void cargarLoteMarcas(int vCodigoMarca[], string vNombremarca[], 
                         int &cantidadMarcasCargadas, bool &marcasCargadas);
 
@@ -39,9 +47,11 @@ bool existeProducto(int codigo, int vCodigoProducto[], int cantidadProductosCarg
 
 bool existeFormaPago(string codigoFP, string codigos[], int cantidadFormas);
 
-// Tabla de datos:
+// ========================================
+// ============ TABLA DE DATOS ============
+// ========================================
+
 void tablaDatosLote3(string codigoLoteTres[], string nombresLoteTres[],
                      int porcentajesLoteTres[]);
-
-                        
+                  
 #endif

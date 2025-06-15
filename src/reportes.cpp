@@ -7,3 +7,4 @@ using namespace std;
 // =============== REPORTES ===============
 // ========================================
 
+void ventaPorMarcaYFormaDePago(int cantidadProductosCargados[],string codigoLoteTres[]);
