@@ -13,6 +13,19 @@ using namespace std;
  * partes.
  */
 
+// ========================================
+// ============= REPORTES.CPP =============
+// ========================================
+
+// reporte 1
+void reporteRecaudacionPorProducto(const int vCodigoProducto[], const string vNombreProducto[],
+                                    const int ventasPorProducto[], const float recaudacionPorProducto[],
+                                    const int vStockDisponible[], int cantidadProductos);      
+
+// ========================================
+// ============ FUNCIONES.CPP =============
+// ========================================
+ 
 void cargarLoteMarcas(int vCodigoMarca[], string vNombremarca[], 
                         int &cantidadMarcasCargadas, bool &marcasCargadas);
 
@@ -42,15 +55,12 @@ bool existeFormaPago(string codigoFP, string codigos[], int cantidadFormas);
 int obtenerPosProductoPorCodigoProducto(int vCodigoProducto[], int codigoProducto, int cantidadProductos);
 
 int obtenerPosFPPorCodigoFP (string vFormasPago[], string formaPago, int cantidadFormasPago);
+                        
+// ========================================================
+// ============ TABLA DE DATOS (funciones.cpp) ============
+// ========================================================
 
-// Tabla de datos:
 void tablaDatosLote3(string codigoLoteTres[], string nombresLoteTres[],
                      int porcentajesLoteTres[]);
-
-
-// reporte 1
-void reporteRecaudacionPorProducto(const int vCodigoProducto[], const string vNombreProducto[],
-                                    const int ventasPorProducto[], const float recaudacionPorProducto[],
-                                    const int vStockDisponible[], int cantidadProductos);                     
-                        
+                  
 #endif

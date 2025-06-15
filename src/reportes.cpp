@@ -100,3 +100,4 @@ void reporteRecaudacionPorProducto(const int vCodigoProducto[], const string vNo
 
 
 }
+void ventaPorMarcaYFormaDePago(int cantidadProductosCargados[],string codigoLoteTres[]);
