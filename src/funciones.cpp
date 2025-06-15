@@ -13,6 +13,38 @@ using namespace std;
  * sistema) esté acá, así el main no se llena de cosas.
  */
 
+// ========================================
+// ============ TABLA DE DATOS ============
+// ========================================
+
+// LOTE 3 - Formas de pago
+void tablaDatosLote3(string codigoLoteTres[], string nombresLoteTres[],
+                     int porcentajesLoteTres[]) {
+  cout << "\n──────────────────────────────────────────────────" << endl;
+  cout << "          TABLA FORMAS DE PAGO - LOTE 3          " << endl;
+  cout << "──────────────────────────────────────────────────" << endl;
+  cout << "Código   Porcentaje   Nombre" << endl;
+  cout << "──────────────────────────────────────────────────" << endl;
+
+  for (int i = 0; i < 5; i++) {
+    cout << codigoLoteTres[i] << "       " << porcentajesLoteTres[i]; // 7
+
+    // Espaciado dinámico para alinear la columna de nombres
+    if ((porcentajesLoteTres[i] >= 0 && porcentajesLoteTres[i] < 10)) {
+      cout << "            ";
+    } else if ((porcentajesLoteTres[i] >= 10 && porcentajesLoteTres[i] < 100) ||
+               (porcentajesLoteTres[i] <= -1 && porcentajesLoteTres[i] > -10)) {
+      cout << "           ";
+    } else {
+      cout << "          ";
+    }
+
+    cout << nombresLoteTres[i] << endl;
+  }
+}
+
+// LOTES DE ACÁ PA ABAJO:
+
 // ===================================================
 // ===========  CARGA DE MARCAS - LOTE 1 =============
 // ===================================================
@@ -109,21 +141,22 @@ void cargarLoteMarcas(int vCodigomarca[], string vNombremarca[],
 void cargarLoteProductos(int vCodigoProducto[], string vNombreProducto[],
                          float vPrecioVenta[], float vPrecioCompra[],
                          int vStockDisponible[], int vCodigoMarcaProducto[],
-                         const int vCodigomarca[], bool marcasCargadas, 
-                         int &cantidadProductosCargados, bool &productosCargados) 
-{
+                         const int vCodigomarca[], bool marcasCargadas,
+                         int &cantidadProductosCargados,
+                         bool &productosCargados) {
 
   cout << "\n ─────────────────────────────────────────────────────" << endl;
   cout << "       INICIANDO CARGA DE LOTE 2 - PRODUCTOS. " << endl;
   cout << " ─────────────────────────────────────────────────────" << endl
        << endl;
 
-  if (!marcasCargadas)
-  {
-    cout<<"No se cargaron las marcas. No se puede inciar la carga de productos"<<endl;
+  if (!marcasCargadas) {
+    cout
+        << "No se cargaron las marcas. No se puede inciar la carga de productos"
+        << endl;
     return;
   }
-  
+
   cantidadProductosCargados = 0;
   productosCargados = false;
 
@@ -265,15 +298,15 @@ void cargarFormasDePago(string codigosLoteTres[], string nombresLoteTres[],
 
   string codigosValidos[5] = {"EF", "MP", "TR", "TC", "CT"};
 
-  for (int i = 0; i < cantidadFormas;) {
+  for (int i = 0; i < cantidadFormas; i++) {
 
 #ifdef _WIN32
     system("cls");
 #else
     system("clear");
 #endif
-  cout << "\n────────────────────────────────" << endl;
-  cout << " CARGA FORMAS DE PAGO - LOTE 3. " << endl;
+    cout << "\n────────────────────────────────" << endl;
+    cout << " CARGA FORMAS DE PAGO - LOTE 3. " << endl;
     cout << "────────────────────────────────" << endl;
     cout << "       Códigos válidos:" << endl;
     cout << "────────────────────────────────" << endl;
@@ -288,8 +321,12 @@ void cargarFormasDePago(string codigosLoteTres[], string nombresLoteTres[],
     bool valido = false;
 
     do {
-      cout << "Ingrese el código para la forma de pago # " << i + 1 << " : ";
+      cout << "Ingrese el código para la forma de pago # " << i + 1 << ": ";
       cin >> codigo;
+
+      // Convertir letras a mayúscula
+      codigo[0] = toupper(codigo[0]);
+      codigo[1] = toupper(codigo[1]);
 
       // Validar código:
       for (int x = 0; x < 5; x++) {
@@ -325,7 +362,6 @@ void cargarFormasDePago(string codigosLoteTres[], string nombresLoteTres[],
     cin >> porcentajesLoteTres[i];
 
     cout << endl;
-    i++; // Avanza el for si todo fue válido.
   }
 }
 
@@ -334,107 +370,109 @@ void cargarFormasDePago(string codigosLoteTres[], string nombresLoteTres[],
 // ===================================================
 
 void cargarLoteVentas(int vCodigoProducto[], string vNombreProducto[],
-                      float vPrecioVenta[], int vStockDisponible[], int vCodigoMarcaProducto[],
-                      string vCodigoFP[], int vPorcentajeFP[],
-                      int cantidadProductosCargados, int cantidadFormasPago,
-                      int ventasPorProducto[], float recaudacionPorProducto[],
-                      int comprasPorCliente[], int ventasPorFormaYMarca[][5],
-                      bool marcasCargadas, bool productosCargados, bool formasPagoCargadas) {
-  
+                      float vPrecioVenta[], int vStockDisponible[],
+                      int vCodigoMarcaProducto[], string vCodigoFP[],
+                      int vPorcentajeFP[], int cantidadProductosCargados,
+                      int cantidadFormasPago, int ventasPorProducto[],
+                      float recaudacionPorProducto[], int comprasPorCliente[],
+                      int ventasPorFormaYMarca[][5], bool marcasCargadas,
+                      bool productosCargados, bool formasPagoCargadas) {
+
   cout << endl;
-  cout << "═════════════════════════════════════════════" << endl;
+  cout << "─────────────────────────────────────────────" << endl;
   cout << "         CARGA DE VENTAS - LOTE 4            " << endl;
-  cout << "═════════════════════════════════════════════" << endl;
+  cout << "─────────────────────────────────────────────" << endl;
 
   if (!marcasCargadas || !productosCargados || !formasPagoCargadas) {
-      cout << "\n ERROR: Para cargar ventas primero debe cargar:" << endl;
-      if (!marcasCargadas) cout << "- Lote 1: Marcas" << endl;
-      if (!productosCargados) cout << "- Lote 2: Productos" << endl;
-      if (!formasPagoCargadas) cout << "- Lote 3: Formas de Pago" << endl;
-      cout << "\nRegresando al menú principal..." << endl;
-      return;
+    cout << "\n ERROR: Para cargar ventas primero debe cargar:" << endl;
+    if (!marcasCargadas)
+      cout << "- Lote 1: Marcas" << endl;
+    if (!productosCargados)
+      cout << "- Lote 2: Productos" << endl;
+    if (!formasPagoCargadas)
+      cout << "- Lote 3: Formas de Pago" << endl;
+    cout << "\nRegresando al menú principal..." << endl;
+    return;
+  }
+
+  int nroCompra;
+
+  do {
+    cout << "\nIngrese Nro de Compra (0 para finalizar): ";
+    cin >> nroCompra;
+
+    if (nroCompra == 0) {
+      cout << "\nCarga de ventas finalizada." << endl;
+      break;
     }
 
-    int nroCompra;
+    int codigoProducto;
+    string codigoFormaPago;
+    int cantidadVendida;
+    int codigoCliente;
+    int diaVenta;
 
-    do {
-        cout << "\nIngrese Nro de Compra (0 para finalizar): ";
-        cin >> nroCompra;
+    cout << "Ingrese Código de Producto: ";
+    cin >> codigoProducto;
 
-        if (nroCompra == 0) {
-            cout << "\nCarga de ventas finalizada." << endl;
-            break;
-        }
+    if (!existeProducto(codigoProducto, vCodigoProducto,
+                        cantidadProductosCargados)) {
+      cout << "Código de producto inválido. Venta no registrada.\n";
+      continue; // se salta a la siguiente venta
+    }
 
-        int codigoProducto;
-        string codigoFormaPago;
-        int cantidadVendida;
-        int codigoCliente;
-        int diaVenta;
+    cout << "Ingrese Código de Forma de Pago: ";
+    cin >> codigoFormaPago;
 
-        cout << "Ingrese Código de Producto: ";
-        cin >> codigoProducto;
+    if (!existeFormaPago(codigoFormaPago, vCodigoFP, cantidadFormasPago)) {
+      cout << "Código de forma de pago inválido. Venta no registrada.\n";
+      continue;
+    }
 
-        if (!existeProducto(codigoProducto, vCodigoProducto, cantidadProductosCargados)) {
-          cout << "Código de producto inválido. Venta no registrada.\n";
-          continue; // se salta a la siguiente venta
-        }
+    cout << "Ingrese Cantidad Vendida: ";
+    cin >> cantidadVendida;
 
-        cout << "Ingrese Código de Forma de Pago: ";
-        cin >> codigoFormaPago;
+    if (cantidadVendida <= 0) {
+      cout << "La cantidad vendida debe ser mayor a 0. Venta no registrada.\n";
+      continue;
+    }
 
-        if (!existeFormaPago(codigoFormaPago, vCodigoFP, cantidadFormasPago)) {
-          cout << "Código de forma de pago inválido. Venta no registrada.\n";
-          continue;
-        }
+    cout << "Ingrese Código de Cliente (1 a 50): ";
+    cin >> codigoCliente;
 
-        cout << "Ingrese Cantidad Vendida: ";
-        cin >> cantidadVendida;
+    if (codigoCliente < 1 || codigoCliente > 50) {
+      cout << "Código de cliente inválido. Venta no registrada.\n";
+      continue;
+    }
 
-        if (cantidadVendida <= 0) {
-            cout << "La cantidad vendida debe ser mayor a 0. Venta no registrada.\n";
-            continue;
-        }
+    cout << "Ingrese Día de Venta (1 a 30): ";
+    cin >> diaVenta;
 
+    if (diaVenta < 1 || diaVenta > 30) {
+      cout << "Dia inválido. Venta no registrada.\n";
+      continue;
+    }
 
-        cout << "Ingrese Código de Cliente (1 a 50): ";
-        cin >> codigoCliente;
+    // todo> logica necesaria para cada reporte
 
-        if (codigoCliente < 1 || codigoCliente > 50) {
-            cout << "Código de cliente inválido. Venta no registrada.\n";
-            continue;
-        }
-
-        cout << "Ingrese Día de Venta (1 a 30): ";
-        cin >> diaVenta;
-
-        if (diaVenta < 1 || diaVenta > 30){
-            cout << "Dia inválido. Venta no registrada.\n";
-            continue;
-        }
-
-        // todo> logica necesaria para cada reporte
-
-
-    } while (true);
-
-
+  } while (true);
 }
 
-bool existeProducto(int codigo, int vCodigoProducto[], int cantidadProductosCargados) {
-    for (int i = 0; i < cantidadProductosCargados; i++) {
-        if (vCodigoProducto[i] == codigo) {
-            return true;
-        }
+bool existeProducto(int codigo, int vCodigoProducto[],
+                    int cantidadProductosCargados) {
+  for (int i = 0; i < cantidadProductosCargados; i++) {
+    if (vCodigoProducto[i] == codigo) {
+      return true;
     }
-    return false;
+  }
+  return false;
 }
 
 bool existeFormaPago(string codigoFP, string codigos[], int cantidadFormas) {
-    for (int i = 0; i < cantidadFormas; i++) {
-        if (codigos[i] == codigoFP) {
-            return true;
-        }
+  for (int i = 0; i < cantidadFormas; i++) {
+    if (codigos[i] == codigoFP) {
+      return true;
     }
-    return false;
+  }
+  return false;
 }
