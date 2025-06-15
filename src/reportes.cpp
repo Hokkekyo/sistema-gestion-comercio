@@ -1,4 +1,5 @@
 #include "../include/funciones.h"
+#include <iomanip>
 #include <iostream>
 
 using namespace std;
@@ -105,11 +106,6 @@ void reporteRecaudacionPorProducto(const int vCodigoProducto[],
 // ====== Ventas por marca y forma de pago - REPORTE 3 ======
 // ==========================================================
 
-/*
-3.Ventas por marca y forma de pago:
-La cantidad total vendida de productos de cada marca discriminada por forma de
-pago.
-*/
-
-void ventaPorMarcaYFormaDePago(int cantidadProductosCargados[],
-                               string codigoLoteTres[]);
+// 3. Ventas por marca y forma de pago:
+// La cantidad total vendida de productos de cada marca discriminada por forma
+// de pago.

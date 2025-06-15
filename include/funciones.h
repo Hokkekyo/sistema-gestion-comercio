@@ -4,20 +4,11 @@
 
 using namespace std;
 
-/*
- * Archivo: funciones.h
- * Acá van solo las declaraciones de funciones.
- *
- * Es como un índice que le avisa al main qué funciones puede usar de
- * funciones.cpp. Sirve para mantener organizado el proyecto y separar bien las
- * partes.
- */
-
 // ========================================
 // ============= REPORTES.CPP =============
 // ========================================
 
-// reporte 1
+// Reporte 1:
 void reporteRecaudacionPorProducto(const int vCodigoProducto[],
                                    const string vNombreProducto[],
                                    const int ventasPorProducto[],
@@ -25,10 +16,11 @@ void reporteRecaudacionPorProducto(const int vCodigoProducto[],
                                    const int vStockDisponible[],
                                    int cantidadProductos);
 
+// Reporte 3:
+
 // ========================================
 // ============ FUNCIONES.CPP =============
 // ========================================
-
 void cargarLoteMarcas(int vCodigoMarca[], string vNombremarca[],
                       int &cantidadMarcasCargadas, bool &marcasCargadas);
 

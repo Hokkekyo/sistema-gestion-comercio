@@ -4,47 +4,6 @@
 
 using namespace std;
 
-/*
- * Archivo: funciones.cpp
- * Acá va casi todo el trabajo pesado.
- *
- * Acá se implementan las funciones que usamos para cargar datos, validar,
- * mostrar reportes, etc. La idea es que todo lo que haga cosas (lógica del
- * sistema) esté acá, así el main no se llena de cosas.
- */
-
-// ========================================
-// ============ TABLA DE DATOS ============
-// ========================================
-
-// LOTE 3 - Formas de pago
-void tablaDatosLote3(string codigoLoteTres[], string nombresLoteTres[],
-                     int porcentajesLoteTres[]) {
-  cout << "\n──────────────────────────────────────────────────" << endl;
-  cout << "          TABLA FORMAS DE PAGO - LOTE 3          " << endl;
-  cout << "──────────────────────────────────────────────────" << endl;
-  cout << "Código   Porcentaje   Nombre" << endl;
-  cout << "──────────────────────────────────────────────────" << endl;
-
-  for (int i = 0; i < 5; i++) {
-    cout << codigoLoteTres[i] << "       " << porcentajesLoteTres[i]; // 7
-
-    // Espaciado dinámico para alinear la columna de nombres
-    if ((porcentajesLoteTres[i] >= 0 && porcentajesLoteTres[i] < 10)) {
-      cout << "            ";
-    } else if ((porcentajesLoteTres[i] >= 10 && porcentajesLoteTres[i] < 100) ||
-               (porcentajesLoteTres[i] <= -1 && porcentajesLoteTres[i] > -10)) {
-      cout << "           ";
-    } else {
-      cout << "          ";
-    }
-
-    cout << nombresLoteTres[i] << endl;
-  }
-}
-
-// LOTES DE ACÁ PA ABAJO:
-
 // ===================================================
 // ===========  CARGA DE MARCAS - LOTE 1 =============
 // ===================================================
@@ -504,5 +463,35 @@ int obtenerPosFPPorCodigoFP(string vFormasPago[], string formaPago,
     if (vFormasPago[i] == formaPago) {
       return i;
     }
+  }
+}
+
+// ========================================
+// ============ TABLA DE DATOS ============
+// ========================================
+
+// LOTE 3 - Formas de pago
+void tablaDatosLote3(string codigoLoteTres[], string nombresLoteTres[],
+                     int porcentajesLoteTres[]) {
+  cout << "\n──────────────────────────────────────────────────" << endl;
+  cout << "          TABLA FORMAS DE PAGO - LOTE 3          " << endl;
+  cout << "──────────────────────────────────────────────────" << endl;
+  cout << "Código   Porcentaje   Nombre" << endl;
+  cout << "──────────────────────────────────────────────────" << endl;
+
+  for (int i = 0; i < 5; i++) {
+    cout << codigoLoteTres[i] << "       " << porcentajesLoteTres[i]; // 7
+
+    // Espaciado dinámico para alinear la columna de nombres
+    if ((porcentajesLoteTres[i] >= 0 && porcentajesLoteTres[i] < 10)) {
+      cout << "            ";
+    } else if ((porcentajesLoteTres[i] >= 10 && porcentajesLoteTres[i] < 100) ||
+               (porcentajesLoteTres[i] <= -1 && porcentajesLoteTres[i] > -10)) {
+      cout << "           ";
+    } else {
+      cout << "          ";
+    }
+
+    cout << nombresLoteTres[i] << endl;
   }
 }

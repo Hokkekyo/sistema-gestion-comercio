@@ -3,15 +3,6 @@
 
 using namespace std;
 
-/*
- * Archivo: main.cpp
- * Acá arranca todo.
- *
- * Solo va el menú principal y las llamadas a las funciones que están en
- * funciones.cpp. La idea es que este archivo quede limpio, sin meter toda la
- * lógica acá adentro. Así es más fácil leer y mantener el código.
- */
-
 int main() {
 
   /*
@@ -76,6 +67,9 @@ int main() {
   int comprasPorCliente[50] = {0};          // LOTE 4
   int ventasPorFormaYMarca[10][5] = {0};    // LOTE 4
   bool formasPagoCargadas = false;          // LOTE 4
+
+  // ─────────────────────────────────────────────────────────────
+  // REPORTES:
 
   // Menú:
   do {
@@ -187,11 +181,21 @@ int main() {
 
           switch (opcionRep) {
           case 1:
+#ifdef _WIN32
+            system("cls");
+#else
+            system("clear");
+#endif
             // Ingrese <AQUI> funcion recaudacion por producto.
 
             cout << "\nToca ENTER para volver al menú de reportes." << endl;
             cin.ignore();
             cin.get();
+#ifdef _WIN32
+            system("cls");
+#else
+            system("clear");
+#endif
             break;
           case 2:
             // Ingrese <AQUI> funcion para porcentaje de ventas por forma de
@@ -202,25 +206,55 @@ int main() {
             cin.get();
             break;
           case 3:
+#ifdef _WIN32
+            system("cls");
+#else
+            system("clear");
+#endif
             // Ingrese <AQUI> funcion para ventas por marca y forma de pago.
 
             cout << "\nToca ENTER para volver al menú de reportes." << endl;
             cin.ignore();
             cin.get();
+#ifdef _WIN32
+            system("cls");
+#else
+            system("clear");
+#endif
             break;
           case 4:
+#ifdef _WIN32
+            system("cls");
+#else
+            system("clear");
+#endif
             // Ingrese <AQUI> funcion para productos sin ventas.
 
             cout << "\nToca ENTER para volver al menú de reportes." << endl;
             cin.ignore();
             cin.get();
+#ifdef _WIN32
+            system("cls");
+#else
+            system("clear");
+#endif
             break;
           case 5:
+#ifdef _WIN32
+            system("cls");
+#else
+            system("clear");
+#endif
             // Ingrese <AQUI> funcion top 10 clientes + sorteo de cupones.
 
             cout << "\nToca ENTER para volver al menú de reportes." << endl;
             cin.ignore();
             cin.get();
+#ifdef _WIN32
+            system("cls");
+#else
+            system("clear");
+#endif
             break;
           case 0:
             opRepInvalida = false;
@@ -261,7 +295,8 @@ no puede estar vacío (es decir, “”). Los registros no se ingresan ordenados
 
 LOTE 2: Productos
 El segundo lote cuenta con 20 productos y por cada registro se cuenta con la
-siguiente información: -Código de Producto. (entero, 3 dígitos, no consecutivos)
+siguiente información:
+-Código de Producto. (entero, 3 dígitos, no consecutivos)
 -Nombre (string)
 -Precio de Venta. (float)
 -Precio de Compra. (float)
