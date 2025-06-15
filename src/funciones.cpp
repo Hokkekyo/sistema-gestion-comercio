@@ -13,26 +13,33 @@ using namespace std;
  * sistema) esté acá, así el main no se llena de cosas.
  */
 
-// Tabla de datos - LOTE 3
+// ========================================
+// ============ TABLA DE DATOS ============
+// ========================================
+
+// LOTE 3 - Formas de pago
 void tablaDatosLote3(string codigoLoteTres[], string nombresLoteTres[],
                      int porcentajesLoteTres[]) {
   cout << "\n──────────────────────────────────────────────────" << endl;
   cout << "          TABLA FORMAS DE PAGO - LOTE 3          " << endl;
+  cout << "──────────────────────────────────────────────────" << endl;
+  cout << "Código   Porcentaje   Nombre" << endl;
+  cout << "──────────────────────────────────────────────────" << endl;
 
   for (int i = 0; i < 5; i++) {
-    cout << "──────────────────────────────────────────────────" << endl;
-    cout << "Código   Porcentaje   Nombre" << endl;
-    cout << "──────────────────────────────────────────────────" << endl;
-    cout << codigoLoteTres[i] << "       " << porcentajesLoteTres[i] << "           " << nombresLoteTres[i]
-         << endl;
-    cout << codigoLoteTres[i] << "       " << porcentajesLoteTres[i] << "           " << nombresLoteTres[i]
-         << endl;
-    cout << codigoLoteTres[i] << "       " << porcentajesLoteTres[i] << "           " << nombresLoteTres[i]
-         << endl;
-    cout << codigoLoteTres[i] << "       " << porcentajesLoteTres[i] << "           " << nombresLoteTres[i]
-         << endl;
-    cout << codigoLoteTres[i] << "       " << porcentajesLoteTres[i] << "           " << nombresLoteTres[i]
-         << endl;
+    cout << codigoLoteTres[i] << "       " << porcentajesLoteTres[i]; //7
+
+    // Espaciado dinámico para alinear la columna de nombres
+    if ((porcentajesLoteTres[i] >= 0 && porcentajesLoteTres[i] < 10)) {
+      cout << "            ";
+    } else if ((porcentajesLoteTres[i] >= 10 && porcentajesLoteTres[i] < 100) ||
+               (porcentajesLoteTres[i] <= -1 && porcentajesLoteTres[i] > -10)) {
+      cout << "           ";
+    } else {
+      cout << "          ";
+    }
+
+    cout << nombresLoteTres[i] << endl;
   }
 }
 
