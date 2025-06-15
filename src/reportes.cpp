@@ -3,11 +3,6 @@
 
 using namespace std;
 
-// ========================================
-// =============== REPORTES ===============
-// ========================================
-
-
 // ===================================================
 // ======  RECAUDACION POR PRODUCTO - REPORTE 1 ======
 // ===================================================
@@ -97,7 +92,16 @@ void reporteRecaudacionPorProducto(const int vCodigoProducto[], const string vNo
 
     cout << auxNombres[i] << endl;
     }
-
-
 }
+
+// ==========================================================
+// ====== Ventas por marca y forma de pago - REPORTE 3 ======
+// ==========================================================
+
+/*
+3.Ventas por marca y forma de pago:
+La cantidad total vendida de productos de cada marca discriminada por forma de
+pago.
+*/
+
 void ventaPorMarcaYFormaDePago(int cantidadProductosCargados[],string codigoLoteTres[]);
