@@ -63,7 +63,7 @@ void reporteRecaudacionPorProducto(const int vCodigoProducto[],
   }
 
   // Encabezado
-  cout << "\n─────────────────────────────────────────────────────────────"
+  cout << "─────────────────────────────────────────────────────────────"
        << endl;
   cout << "     REPORTE - RECAUDACIÓN POR PRODUCTO (Lote 4)             "
        << endl;
@@ -107,5 +107,29 @@ void reporteRecaudacionPorProducto(const int vCodigoProducto[],
 // ==========================================================
 
 // 3. Ventas por marca y forma de pago:
+
 // La cantidad total vendida de productos de cada marca discriminada por forma
 // de pago.
+
+void mostrarReporteVentasPorMarcaYFormaPago(
+    int ventasPorFormaYMarca[10][5],
+    int vCodigomarca[], string vNombremarca[], int cantidadMarcas,
+    string codigosLoteTres[], int cantidadFormasPago
+) {
+    cout << "Ventas por marca y forma de pago:\n" << endl;
+
+    for (int i = 0; i < cantidadMarcas; i++) {
+        int codigoMarca = vCodigomarca[i];  // entre 1 y 10
+        int indiceMarca = codigoMarca - 1;
+
+        cout << "Marca: " << vNombremarca[i] << endl;
+
+        for (int j = 0; j < cantidadFormasPago; j++) {
+            cout << codigosLoteTres[j] << ": "
+                 << ventasPorFormaYMarca[indiceMarca][j]
+                 << " unidades" << endl;
+        }
+
+        cout << endl;
+    }
+};

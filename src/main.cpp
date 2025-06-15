@@ -99,9 +99,16 @@ int main() {
       switch (opcion) {
       case 1:
         opInvalida = false;
+#ifdef _WIN32
+        system("cls");
+#else
+        system("clear");
+#endif
 
         cargarLoteMarcas(vCodigomarca, vNombremarca, cantidadMarcasCargadas,
                          marcasCargadas);
+
+        marcasCargadas = true;
         cout << "\nToca ENTER para ir al menú principal.";
         cin.ignore();
         cin.get();
@@ -109,6 +116,11 @@ int main() {
 
       case 2:
         opInvalida = false;
+#ifdef _WIN32
+        system("cls");
+#else
+        system("clear");
+#endif
 
         cargarLoteProductos(vCodigoProducto, vNombreProducto, vPrecioVenta,
                             vPrecioCompra, vStockDisponible,
@@ -124,14 +136,25 @@ int main() {
         cargarFormasDePago(codigosLoteTres, nombresLoteTres,
                            porcentajesLoteTres, 5);
 
+#ifdef _WIN32
+        system("cls");
+#else
+        system("clear");
+#endif
         tablaDatosLote3(codigosLoteTres, nombresLoteTres, porcentajesLoteTres);
 
+        formasPagoCargadas = true;
         cout << "\nToca ENTER para volver al menú principal.";
         cin.ignore();
         cin.get();
         break;
       case 4:
         opInvalida = false;
+#ifdef _WIN32
+        system("cls");
+#else
+        system("clear");
+#endif
         cargarLoteVentas(
             vCodigoProducto, vNombreProducto, vPrecioVenta, vStockDisponible,
             vCodigoMarcaProducto, codigosLoteTres, porcentajesLoteTres,
@@ -212,6 +235,13 @@ int main() {
             system("clear");
 #endif
             // Ingrese <AQUI> funcion para ventas por marca y forma de pago.
+            if (marcasCargadas && formasPagoCargadas) {
+              mostrarReporteVentasPorMarcaYFormaPago(
+                  ventasPorFormaYMarca, vCodigomarca, vNombremarca,
+                  cantidadMarcasCargadas, codigosLoteTres, 5);
+            } else {
+              cout << "ERROR: faltan cargar marcas o formas de pago." << endl;
+            }
 
             cout << "\nToca ENTER para volver al menú de reportes." << endl;
             cin.ignore();

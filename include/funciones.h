@@ -17,6 +17,11 @@ void reporteRecaudacionPorProducto(const int vCodigoProducto[],
                                    int cantidadProductos);
 
 // Reporte 3:
+void mostrarReporteVentasPorMarcaYFormaPago(
+    int ventasPorFormaYMarca[10][5],
+    int vCodigomarca[], string vNombremarca[], int cantidadMarcas,
+    string codigosLoteTres[], int cantidadFormasPago
+);
 
 // ========================================
 // ============ FUNCIONES.CPP =============
