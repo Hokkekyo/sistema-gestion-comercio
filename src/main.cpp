@@ -131,6 +131,8 @@ int main() {
         cargarFormasDePago(codigosLoteTres, nombresLoteTres,
                            porcentajesLoteTres, 5);
 
+        tablaDatosLote3(codigosLoteTres, nombresLoteTres, porcentajesLoteTres);
+
         cout << "\nToca ENTER para volver al menú principal.";
         cin.ignore();
         cin.get();
