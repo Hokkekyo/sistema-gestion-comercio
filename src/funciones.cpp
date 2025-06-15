@@ -27,7 +27,7 @@ void tablaDatosLote3(string codigoLoteTres[], string nombresLoteTres[],
   cout << "──────────────────────────────────────────────────" << endl;
 
   for (int i = 0; i < 5; i++) {
-    cout << codigoLoteTres[i] << "       " << porcentajesLoteTres[i]; //7
+    cout << codigoLoteTres[i] << "       " << porcentajesLoteTres[i]; // 7
 
     // Espaciado dinámico para alinear la columna de nombres
     if ((porcentajesLoteTres[i] >= 0 && porcentajesLoteTres[i] < 10)) {
@@ -312,8 +312,12 @@ void cargarFormasDePago(string codigosLoteTres[], string nombresLoteTres[],
     bool valido = false;
 
     do {
-      cout << "Ingrese el código para la forma de pago # " << i + 1 << " : ";
+      cout << "Ingrese el código para la forma de pago # " << i + 1 << ": ";
       cin >> codigo;
+
+      // Convertir letras a mayúscula
+      codigo[0] = toupper(codigo[0]);
+      codigo[1] = toupper(codigo[1]);
 
       // Validar código:
       for (int x = 0; x < 5; x++) {
@@ -366,9 +370,9 @@ void cargarLoteVentas(int vCodigoProducto[], string vNombreProducto[],
                       bool productosCargados, bool formasPagoCargadas) {
 
   cout << endl;
-  cout << "═════════════════════════════════════════════" << endl;
+  cout << "─────────────────────────────────────────────" << endl;
   cout << "         CARGA DE VENTAS - LOTE 4            " << endl;
-  cout << "═════════════════════════════════════════════" << endl;
+  cout << "─────────────────────────────────────────────" << endl;
 
   if (!marcasCargadas || !productosCargados || !formasPagoCargadas) {
     cout << "\n ERROR: Para cargar ventas primero debe cargar:" << endl;
