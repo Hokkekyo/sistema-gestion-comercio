@@ -453,6 +453,16 @@ void cargarLoteVentas(int vCodigoProducto[], string vNombreProducto[],
       continue;
     }
 
+    // carga de datos necesarios para el reporte 1
+
+    int posProducto = obtenerPosProductoPorCodigoProducto(vCodigoProducto, codigoProducto, cantidadProductosCargados);
+    int posFormaPago = obtenerPosFPPorCodigoFP(vCodigoFP, codigoFormaPago, formasPagoCargadas);
+    float factorDescuentoIncremento = 1 + (vPorcentajeFP[posFormaPago] / 100);
+    float montoVentaActual = (vPrecioVenta[posProducto] * cantidadVendida) * factorDescuentoIncremento;
+    recaudacionPorProducto[posProducto] += montoVentaActual;
+    ventasPorProducto[posProducto] += cantidadVendida;
+    vStockDisponible[posProducto] -= cantidadVendida;
+
     // todo> logica necesaria para cada reporte
 
   } while (true);
@@ -475,4 +485,24 @@ bool existeFormaPago(string codigoFP, string codigos[], int cantidadFormas) {
     }
   }
   return false;
+}
+
+int obtenerPosProductoPorCodigoProducto(int vCodigoProducto[], int codigoProducto, int cantidadProductos){
+  for (int i = 0; i < cantidadProductos; i++)
+  {
+    if(vCodigoProducto[i] == codigoProducto)
+    {
+      return i;
+    }
+  }
+}
+
+int obtenerPosFPPorCodigoFP (string vFormasPago[], string formaPago, int cantidadFormasPago){
+  for (int i = 0; i < cantidadFormasPago; i++)
+  {
+    if(vFormasPago[i] == formaPago)
+    {
+      return i;
+    }
+  }
 }

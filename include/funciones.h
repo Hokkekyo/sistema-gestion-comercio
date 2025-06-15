@@ -39,9 +39,18 @@ bool existeProducto(int codigo, int vCodigoProducto[], int cantidadProductosCarg
 
 bool existeFormaPago(string codigoFP, string codigos[], int cantidadFormas);
 
+int obtenerPosProductoPorCodigoProducto(int vCodigoProducto[], int codigoProducto, int cantidadProductos);
+
+int obtenerPosFPPorCodigoFP (string vFormasPago[], string formaPago, int cantidadFormasPago);
+
 // Tabla de datos:
 void tablaDatosLote3(string codigoLoteTres[], string nombresLoteTres[],
                      int porcentajesLoteTres[]);
 
+
+// reporte 1
+void reporteRecaudacionPorProducto(const int vCodigoProducto[], const string vNombreProducto[],
+                                    const int ventasPorProducto[], const float recaudacionPorProducto[],
+                                    const int vStockDisponible[], int cantidadProductos);                     
                         
 #endif
