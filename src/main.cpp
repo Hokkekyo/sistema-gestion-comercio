@@ -195,7 +195,18 @@ int main() {
 #else
             system("clear");
 #endif
-            // Ingrese <AQUI> funcion recaudacion por producto.
+            if (productosCargados) {
+              reporteRecaudacionPorProducto(
+                vCodigoProducto,
+                vNombreProducto,
+                ventasPorProducto,
+                recaudacionPorProducto,
+                vStockDisponible,
+                cantidadProductosCargados
+            );
+        } else {
+          cout << "ERROR: primero debe cargar los productos y las ventas." << endl;
+        }
 
             cout << "\nToca ENTER para volver al menú de reportes." << endl;
             cin.ignore();

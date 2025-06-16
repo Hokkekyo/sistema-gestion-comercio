@@ -471,6 +471,7 @@ int obtenerPosProductoPorCodigoProducto(int vCodigoProducto[],
       return i;
     }
   }
+  return -1;
 }
 
 int obtenerPosFPPorCodigoFP(string vFormasPago[], string formaPago,
@@ -480,6 +481,7 @@ int obtenerPosFPPorCodigoFP(string vFormasPago[], string formaPago,
       return i;
     }
   }
+  return -1;
 }
 
 // ========================================
