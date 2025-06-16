@@ -68,36 +68,36 @@ void reporteRecaudacionPorProducto(const int vCodigoProducto[],
   cout << "     REPORTE - RECAUDACIÓN POR PRODUCTO (Lote 4)             "
        << endl;
   cout << "─────────────────────────────────────────────────────────────"
-       << endl;
+  << endl;
   cout << "Código   Vendido   Recaudado     Stock   Nombre" << endl;
   cout << "─────────────────────────────────────────────────────────────"
-       << endl;
-
+  << endl;
+  
   // Tabla
   for (int i = 0; i < cantidadProductos; i++) {
     cout << auxCodigos[i] << "       ";
     cout << auxVentas[i];
-
+    
     // Espaciado entre vendido y recaudado
     if (auxVentas[i] < 10)
-      cout << "         ";
+    cout << "         ";
     else if (auxVentas[i] < 100)
-      cout << "        ";
+    cout << "        ";
     else
-      cout << "       ";
-
+    cout << "       ";
+    
     cout << auxRecaudado[i];
-
+    
     // Espaciado entre recaudado y stock
     if (auxRecaudado[i] < 10)
-      cout << "         ";
+    cout << "         ";
     else if (auxRecaudado[i] < 100)
-      cout << "        ";
+    cout << "        ";
     else
-      cout << "       ";
-
+    cout << "       ";
+    
     cout << auxStock[i] << "       ";
-
+    
     cout << auxNombres[i] << endl;
   }
 }
@@ -112,11 +112,11 @@ void reporteRecaudacionPorProducto(const int vCodigoProducto[],
 // de pago.
 
 void mostrarReporteVentasPorMarcaYFormaPago(
-    int ventasPorFormaYMarca[10][5],
-    int vCodigomarca[], string vNombremarca[], int cantidadMarcas,
-    string codigosLoteTres[], int cantidadFormasPago
+  int ventasPorFormaYMarca[10][5],
+  int vCodigomarca[], string vNombremarca[], int cantidadMarcas,
+  string codigosLoteTres[], int cantidadFormasPago
 ) {
-    cout << "Ventas por marca y forma de pago:\n" << endl;
+  cout << "Ventas por marca y forma de pago:\n" << endl;
 
     for (int i = 0; i < cantidadMarcas; i++) {
         int codigoMarca = vCodigomarca[i];  // entre 1 y 10

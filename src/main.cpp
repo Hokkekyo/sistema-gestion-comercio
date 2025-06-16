@@ -99,11 +99,6 @@ int main() {
       switch (opcion) {
       case 1:
         opInvalida = false;
-#ifdef _WIN32
-        system("cls");
-#else
-        system("clear");
-#endif
 
         cargarLoteMarcas(vCodigomarca, vNombremarca, cantidadMarcasCargadas,
                          marcasCargadas);
@@ -116,11 +111,6 @@ int main() {
 
       case 2:
         opInvalida = false;
-#ifdef _WIN32
-        system("cls");
-#else
-        system("clear");
-#endif
 
         cargarLoteProductos(vCodigoProducto, vNombreProducto, vPrecioVenta,
                             vPrecioCompra, vStockDisponible,
@@ -150,11 +140,7 @@ int main() {
         break;
       case 4:
         opInvalida = false;
-#ifdef _WIN32
-        system("cls");
-#else
-        system("clear");
-#endif
+
         cargarLoteVentas(
             vCodigoProducto, vNombreProducto, vPrecioVenta, vStockDisponible,
             vCodigoMarcaProducto, codigosLoteTres, porcentajesLoteTres,
@@ -229,13 +215,13 @@ int main() {
             cin.get();
             break;
           case 3:
-#ifdef _WIN32
-            system("cls");
+            #ifdef _WIN32
+        system("cls");
 #else
-            system("clear");
+        system("clear");
 #endif
-            // Ingrese <AQUI> funcion para ventas por marca y forma de pago.
             if (marcasCargadas && formasPagoCargadas) {
+              
               mostrarReporteVentasPorMarcaYFormaPago(
                   ventasPorFormaYMarca, vCodigomarca, vNombremarca,
                   cantidadMarcasCargadas, codigosLoteTres, 5);

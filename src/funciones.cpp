@@ -239,6 +239,7 @@ void cargarLoteProductos(int vCodigoProducto[], string vNombreProducto[],
          << endl
          << endl;
   }
+  /*
   // Mostramos la carga de datos:
   for (int x = 0; x < 20; x++) {
 
@@ -248,9 +249,10 @@ void cargarLoteProductos(int vCodigoProducto[], string vNombreProducto[],
          << " | Precio de compra: " << vPrecioCompra[x]
          << " | Stock disponible: " << vStockDisponible[x]
          << " | Código de marca: " << vCodigoMarcaProducto[x] << endl;
-  }
-
+  }  
   cout << "Carga de productos completada.";
+  */
+
 }
 
 // ======================================================
