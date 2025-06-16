@@ -31,10 +31,10 @@ sistema-gestion-comercio/
 ## 📌 Tareas en progreso
 ```text
 - [x] Crear estructura base del proyecto
-- [ ] Hacer diagramas iniciales (flujo, lógica, menú, etc.)
-- [ ] Dividir tareas entre integrantes
-- [ ] Desarrollar funcionalidades mínimas
-- [ ] Implementar validaciones y reportes
+- [x] Hacer diagramas iniciales (flujo, lógica, menú, etc.)
+- [x] Dividir tareas entre integrantes
+- [x] Desarrollar funcionalidades mínimas
+- [x] Implementar validaciones y reportes
 - [ ] Testear el programa en las tres computadoras
 ```
 
