@@ -53,40 +53,19 @@ int main() {
   int opcion, opcionRep;             // Menu
   bool opInvalida, opRepInvalida;    // Menu
 
-<<<<<<< HEAD
-  int vCodigomarca[2];           // LOTE 1
-  string vNombremarca[2];        // LOTE 1
+  int vCodigomarca[2];            // LOTE 1
+  string vNombremarca[2];         // LOTE 1
   int cantidadMarcasCargadas = 0; // LOTE 1
   bool marcasCargadas = false;    // LOTE 1
 
-  string codigosLoteTres[5];  // LOTE 3 (formas de pago)
-  string nombresLoteTres[5];  // LOTE 3 (formas de pago)
-  int porcentajesLoteTres[5]; // LOTE 3 (formas de pago)
-
-
-  int vCodigoProducto[5];          // LOTE 2 (productos)
-  string vNombreProducto[5];       // LOTE 2 (productos)  
-  float vPrecioVenta[5];           // LOTE 2 (productos)   
-  float vPrecioCompra[5];          // LOTE 2 (productos) 
-  int vStockDisponible[5];         // LOTE 2 (productos)
-  int vCodigoMarcaProducto[5];     // LOTE 2 (productos)
-  int cantidadProductosCargados = 0;    // LOTE 2 (productos)
-  bool productosCargados = false;           // LOTE 2 (productos) 
-=======
-  int vCodigomarca[10];              // LOTE 1
-  string vNombremarca[10];           // LOTE 1
-  int cantidadMarcasCargadas = 0;    // LOTE 1
-  bool marcasCargadas = false;       // LOTE 1
->>>>>>> 6f1d57117a6757c30a002db9adada2a81d1ced03
-  
-  int vCodigoProducto[20];            // LOTE 2 (productos)
-  string vNombreProducto[20];         // LOTE 2 (productos)  
-  float vPrecioVenta[20];             // LOTE 2 (productos)   
-  float vPrecioCompra[20];            // LOTE 2 (productos) 
-  int vStockDisponible[20];           // LOTE 2 (productos)
-  int vCodigoMarcaProducto[20];       // LOTE 2 (productos)
-  int cantidadProductosCargados = 0;  // LOTE 2 (productos)
-  bool productosCargados = false;     // LOTE 2 (productos) 
+  int vCodigoProducto[3];              // LOTE 2 (productos)
+  string vNombreProducto[3];           // LOTE 2 (productos)  
+  float vPrecioVenta[3];               // LOTE 2 (productos)   
+  float vPrecioCompra[3];              // LOTE 2 (productos) 
+  int vStockDisponible[3];             // LOTE 2 (productos)
+  int vCodigoMarcaProducto[3];         // LOTE 2 (productos)
+  int cantidadProductosCargados = 0;   // LOTE 2 (productos)
+  bool productosCargados = false;      // LOTE 2 (productos) 
   
   string codigosLoteTres[5];          // LOTE 3 (formas de pago)
   string nombresLoteTres[5];          // LOTE 3 (formas de pago)

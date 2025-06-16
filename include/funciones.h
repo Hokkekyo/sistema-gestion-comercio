@@ -43,5 +43,11 @@ bool existeFormaPago(string codigoFP, string codigos[], int cantidadFormas);
 void tablaDatosLote3(string codigoLoteTres[], string nombresLoteTres[],
                      int porcentajesLoteTres[]);
 
+// Tabla de productos:
+void mostrarTablaProductos(int vCodigoProducto[], string vNombreProducto[],
+                          float vPrecioVenta[], float vPrecioCompra[],
+                          int vStockDisponible[], int vCodigoMarcaProducto[],
+                          int cantidadProductosCargados);
+
                         
 #endif

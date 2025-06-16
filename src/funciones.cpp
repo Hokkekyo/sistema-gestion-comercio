@@ -1,6 +1,7 @@
 #include "../include/funciones.h"
 #include <cctype>
 #include <iostream>
+#include <iomanip>
 
 using namespace std;
 
@@ -161,7 +162,7 @@ void cargarLoteProductos(int vCodigoProducto[], string vNombreProducto[],
   productosCargados = false;
 
 
-  for (int i = 0; i < 5; i++) {
+  for (int i = 0; i < 3; i++) {
     cout << "Producto #" << (i + 1) << " :" << endl;
 
     int codigoProducto;
@@ -267,25 +268,26 @@ void cargarLoteProductos(int vCodigoProducto[], string vNombreProducto[],
   }
 
   // En este if validamos que la carga se completó.
-  if (cantidadProductosCargados == 5) 
+  if (cantidadProductosCargados == 3) 
   {
     productosCargados = true;
     cout << "Carga del lote 2 completada con éxito. A continuación se muestra "
             "el listado de productos:"
          << endl
          << endl;
-  }
-    //Mostramos la carga de datos:
-    for (int x = 0; x < 20; x++) {
-      
-      cout << "Código de producto: " << vCodigoProducto[x]
-           << " | Nombre: " << vNombreProducto[x]
-           << " | Precio de venta: " << vPrecioVenta[x]
-           << " | Precio de compra: " << vPrecioCompra[x]
-           << " | Stock disponible: " << vStockDisponible[x]
-           << " | Código de marca: " << vCodigoMarcaProducto[x] << endl;
-    }
     
+         mostrarTablaProductos(vCodigoProducto, vNombreProducto,
+                     vPrecioVenta, vPrecioCompra, vStockDisponible, 
+                     vCodigoMarcaProducto, cantidadProductosCargados);
+}
+  
+    /*Mostramos la carga de datos:
+    for (int x = 0; x < cantidadProductosCargados; x++) {
+      
+      cout << "   Cód.Prod  | Nombre        | P. Venta | P. Compra  | Stock |   Código de marca |" << endl;
+      cout<< vCodigoProducto[x]<<"  | " <<vNombreProducto<<" | "<< vPrecioVenta[x]<< " | " << vPrecioCompra[x]<< " | " << vStockDisponible[x]<< " | " << vCodigoMarcaProducto[x] <<"  | "<< endl;
+    }
+    */
   cout << "Carga de productos completada.";
 }
 
@@ -475,4 +477,30 @@ bool existeFormaPago(string codigoFP, string codigos[], int cantidadFormas) {
     }
   }
   return false;
+}
+
+void mostrarTablaProductos(int vCodigoProducto[], std::string vNombreProducto[], float vPrecioVenta[], float vPrecioCompra[], int vStockDisponible[], int vCodigoMarcaProducto[], int cantidadProductosCargados) {
+    using namespace std;
+    cout << endl;
+    cout << "================================================================================================================" << endl;
+    cout << left
+         << setw(10) << "Código"
+         << setw(25) << "Nombre"
+         << setw(15) << "Precio Venta"
+         << setw(15) << "Precio Compra"
+         << setw(15) << "Stock"
+         << setw(15) << "Cod. Marca"
+         << endl;
+    cout << "----------------------------------------------------------------------------------------------------------------" << endl;
+    for (int i = 0; i < cantidadProductosCargados; i++) {
+        cout << left
+             << setw(10) << vCodigoProducto[i]
+             << setw(25) << vNombreProducto[i]
+             << setw(15) << fixed << setprecision(2) << vPrecioVenta[i]
+             << setw(15) << fixed << setprecision(2) << vPrecioCompra[i]
+             << setw(15) << vStockDisponible[i]
+             << setw(15) << vCodigoMarcaProducto[i]
+             << endl;
+    }
+    cout << "================================================================================================================" << endl;
 }
