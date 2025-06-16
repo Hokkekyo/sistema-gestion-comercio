@@ -3,15 +3,6 @@
 
 using namespace std;
 
-/*
- * Archivo: main.cpp
- * Acá arranca todo.
- *
- * Solo va el menú principal y las llamadas a las funciones que están en
- * funciones.cpp. La idea es que este archivo quede limpio, sin meter toda la
- * lógica acá adentro. Así es más fácil leer y mantener el código.
- */
-
 int main() {
 
   /*
@@ -35,10 +26,10 @@ int main() {
   –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
    LOTE 3 - Declaracion de vectores/variables (Formas de pago)
   –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
-  - string codigosLoteTres[5];
-  - string nombresLoteTres[5];
-  - int porcentajesLoteTres[];
-  - int cantidadFormas;
+  - string codigosLoteTres[5]; - Códigos de forma de pago
+  - string nombresLoteTres[5]; - Nombres de forma de pago
+  - int porcentajesLoteTres[]; - Porcentaje de descuento o interés
+  - int cantidadFormas; - Cantidad de formas de pago (5)
  –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
    LOTE 4 - Declaracion de vectores/variables (Ventas)
  –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
@@ -50,14 +41,15 @@ int main() {
  */
 
   // Declaración de variables:
-  int opcion, opcionRep;             // Menu
-  bool opInvalida, opRepInvalida;    // Menu
+  int opcion, opcionRep;          // Menu
+  bool opInvalida, opRepInvalida; // Menu
 
   int vCodigomarca[2];            // LOTE 1
   string vNombremarca[2];         // LOTE 1
   int cantidadMarcasCargadas = 0; // LOTE 1
   bool marcasCargadas = false;    // LOTE 1
 
+<<<<<<< HEAD
   int vCodigoProducto[3];              // LOTE 2 (productos)
   string vNombreProducto[3];           // LOTE 2 (productos)  
   float vPrecioVenta[3];               // LOTE 2 (productos)   
@@ -76,6 +68,29 @@ int main() {
   int comprasPorCliente[50] = {0};           // LOTE 4
   int ventasPorFormaYMarca[10][5] = {0};     // LOTE 4
   bool formasPagoCargadas = false;           // LOTE 4 
+=======
+  int vCodigoProducto[5];            // LOTE 2 (productos)
+  string vNombreProducto[5];         // LOTE 2 (productos)
+  float vPrecioVenta[5];             // LOTE 2 (productos)
+  float vPrecioCompra[5];            // LOTE 2 (productos)
+  int vStockDisponible[5];           // LOTE 2 (productos)
+  int vCodigoMarcaProducto[5];       // LOTE 2 (productos)
+  int cantidadProductosCargados = 0; // LOTE 2 (productos)
+  bool productosCargados = false;    // LOTE 2 (productos)
+
+  string codigosLoteTres[5];  // LOTE 3 (formas de pago)
+  string nombresLoteTres[5];  // LOTE 3 (formas de pago)
+  int porcentajesLoteTres[5]; // LOTE 3 (formas de pago)
+
+  int ventasPorProducto[20] = {0};          // LOTE 4
+  float recaudacionPorProducto[20] = {0.0}; // LOTE 4
+  int comprasPorCliente[50] = {0};          // LOTE 4
+  int ventasPorFormaYMarca[10][5] = {0};    // LOTE 4
+  bool formasPagoCargadas = false;          // LOTE 4
+
+  // ─────────────────────────────────────────────────────────────
+  // REPORTES:
+>>>>>>> 1fcf9e3b3aeb16fcd5f88a3ed6b0dad057b9b8dd
 
   // Menú:
   do {
@@ -105,9 +120,11 @@ int main() {
       switch (opcion) {
       case 1:
         opInvalida = false;
-        
+
         cargarLoteMarcas(vCodigomarca, vNombremarca, cantidadMarcasCargadas,
                          marcasCargadas);
+
+        marcasCargadas = true;
         cout << "\nToca ENTER para ir al menú principal.";
         cin.ignore();
         cin.get();
@@ -115,12 +132,11 @@ int main() {
 
       case 2:
         opInvalida = false;
-        
-        cargarLoteProductos(vCodigoProducto, vNombreProducto,
-                         vPrecioVenta, vPrecioCompra,
-                         vStockDisponible, vCodigoMarcaProducto,
-                          vCodigomarca, marcasCargadas, 
-                          cantidadProductosCargados, productosCargados);
+
+        cargarLoteProductos(vCodigoProducto, vNombreProducto, vPrecioVenta,
+                            vPrecioCompra, vStockDisponible,
+                            vCodigoMarcaProducto, vCodigomarca, marcasCargadas,
+                            cantidadProductosCargados, productosCargados);
 
         cout << "\nToca ENTER para ir al menú principal.";
         cin.ignore();
@@ -131,21 +147,27 @@ int main() {
         cargarFormasDePago(codigosLoteTres, nombresLoteTres,
                            porcentajesLoteTres, 5);
 
+#ifdef _WIN32
+        system("cls");
+#else
+        system("clear");
+#endif
         tablaDatosLote3(codigosLoteTres, nombresLoteTres, porcentajesLoteTres);
 
+        formasPagoCargadas = true;
         cout << "\nToca ENTER para volver al menú principal.";
         cin.ignore();
         cin.get();
         break;
       case 4:
         opInvalida = false;
-        cargarLoteVentas(vCodigoProducto, vNombreProducto,
-                         vPrecioVenta, vStockDisponible, vCodigoMarcaProducto,
-                         codigosLoteTres, porcentajesLoteTres,
-                         cantidadProductosCargados, 5,
-                         ventasPorProducto, recaudacionPorProducto,
-                         comprasPorCliente, ventasPorFormaYMarca,
-                         marcasCargadas, productosCargados, formasPagoCargadas);
+
+        cargarLoteVentas(
+            vCodigoProducto, vNombreProducto, vPrecioVenta, vStockDisponible,
+            vCodigoMarcaProducto, codigosLoteTres, porcentajesLoteTres,
+            cantidadProductosCargados, 5, ventasPorProducto,
+            recaudacionPorProducto, comprasPorCliente, ventasPorFormaYMarca,
+            marcasCargadas, productosCargados, formasPagoCargadas);
 
         cout << "\nToca ENTER para volver al menú principal.";
         cin.ignore();
@@ -189,11 +211,32 @@ int main() {
 
           switch (opcionRep) {
           case 1:
-            // Ingrese <AQUI> funcion recaudacion por producto.
+#ifdef _WIN32
+            system("cls");
+#else
+            system("clear");
+#endif
+            if (productosCargados) {
+              reporteRecaudacionPorProducto(
+                vCodigoProducto,
+                vNombreProducto,
+                ventasPorProducto,
+                recaudacionPorProducto,
+                vStockDisponible,
+                cantidadProductosCargados
+            );
+        } else {
+          cout << "ERROR: primero debe cargar los productos y las ventas." << endl;
+        }
 
             cout << "\nToca ENTER para volver al menú de reportes." << endl;
             cin.ignore();
             cin.get();
+#ifdef _WIN32
+            system("cls");
+#else
+            system("clear");
+#endif
             break;
           case 2:
             // Ingrese <AQUI> funcion para porcentaje de ventas por forma de
@@ -204,25 +247,62 @@ int main() {
             cin.get();
             break;
           case 3:
-            // Ingrese <AQUI> funcion para ventas por marca y forma de pago.
+            #ifdef _WIN32
+        system("cls");
+#else
+        system("clear");
+#endif
+            if (marcasCargadas && formasPagoCargadas) {
+              
+              mostrarReporteVentasPorMarcaYFormaPago(
+                  ventasPorFormaYMarca, vCodigomarca, vNombremarca,
+                  cantidadMarcasCargadas, codigosLoteTres, 5);
+            } else {
+              cout << "ERROR: faltan cargar marcas o formas de pago." << endl;
+            }
 
             cout << "\nToca ENTER para volver al menú de reportes." << endl;
             cin.ignore();
             cin.get();
+#ifdef _WIN32
+            system("cls");
+#else
+            system("clear");
+#endif
             break;
           case 4:
+#ifdef _WIN32
+            system("cls");
+#else
+            system("clear");
+#endif
             // Ingrese <AQUI> funcion para productos sin ventas.
 
             cout << "\nToca ENTER para volver al menú de reportes." << endl;
             cin.ignore();
             cin.get();
+#ifdef _WIN32
+            system("cls");
+#else
+            system("clear");
+#endif
             break;
           case 5:
+#ifdef _WIN32
+            system("cls");
+#else
+            system("clear");
+#endif
             // Ingrese <AQUI> funcion top 10 clientes + sorteo de cupones.
 
             cout << "\nToca ENTER para volver al menú de reportes." << endl;
             cin.ignore();
             cin.get();
+#ifdef _WIN32
+            system("cls");
+#else
+            system("clear");
+#endif
             break;
           case 0:
             opRepInvalida = false;
@@ -263,7 +343,8 @@ no puede estar vacío (es decir, “”). Los registros no se ingresan ordenados
 
 LOTE 2: Productos
 El segundo lote cuenta con 20 productos y por cada registro se cuenta con la
-siguiente información: -Código de Producto. (entero, 3 dígitos, no consecutivos)
+siguiente información:
+-Código de Producto. (entero, 3 dígitos, no consecutivos)
 -Nombre (string)
 -Precio de Venta. (float)
 -Precio de Compra. (float)
