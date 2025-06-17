@@ -185,7 +185,6 @@ int main() {
         opInvalida = false;
         opRepInvalida = true;
         while (opRepInvalida == true) {
-          cout << endl;
           cout << "─────────────────────────────────────" << endl;
           cout << "          MENÚ DE REPORTES          " << endl;
           cout << "─────────────────────────────────────" << endl;
