@@ -49,26 +49,6 @@ int main() {
   int cantidadMarcasCargadas = 0; // LOTE 1
   bool marcasCargadas = false;    // LOTE 1
 
-<<<<<<< HEAD
-  int vCodigoProducto[3];              // LOTE 2 (productos)
-  string vNombreProducto[3];           // LOTE 2 (productos)  
-  float vPrecioVenta[3];               // LOTE 2 (productos)   
-  float vPrecioCompra[3];              // LOTE 2 (productos) 
-  int vStockDisponible[3];             // LOTE 2 (productos)
-  int vCodigoMarcaProducto[3];         // LOTE 2 (productos)
-  int cantidadProductosCargados = 0;   // LOTE 2 (productos)
-  bool productosCargados = false;      // LOTE 2 (productos) 
-  
-  string codigosLoteTres[5];          // LOTE 3 (formas de pago)
-  string nombresLoteTres[5];          // LOTE 3 (formas de pago)
-  int porcentajesLoteTres[5];         // LOTE 3 (formas de pago)
-  
-  int ventasPorProducto[20] = {0};           // LOTE 4
-  float recaudacionPorProducto[20] = {0.0};  // LOTE 4
-  int comprasPorCliente[50] = {0};           // LOTE 4
-  int ventasPorFormaYMarca[10][5] = {0};     // LOTE 4
-  bool formasPagoCargadas = false;           // LOTE 4 
-=======
   int vCodigoProducto[5];            // LOTE 2 (productos)
   string vNombreProducto[5];         // LOTE 2 (productos)
   float vPrecioVenta[5];             // LOTE 2 (productos)
@@ -90,7 +70,10 @@ int main() {
 
   // ─────────────────────────────────────────────────────────────
   // REPORTES:
->>>>>>> 1fcf9e3b3aeb16fcd5f88a3ed6b0dad057b9b8dd
+
+  int totalVentas = 0;
+  int ventasPorForma[5] = {0};
+
 
   // Menú:
   do {
@@ -167,7 +150,8 @@ int main() {
             vCodigoMarcaProducto, codigosLoteTres, porcentajesLoteTres,
             cantidadProductosCargados, 5, ventasPorProducto,
             recaudacionPorProducto, comprasPorCliente, ventasPorFormaYMarca,
-            marcasCargadas, productosCargados, formasPagoCargadas);
+            marcasCargadas, productosCargados, formasPagoCargadas, 
+            ventasPorForma, totalVentas);
 
         cout << "\nToca ENTER para volver al menú principal.";
         cin.ignore();
@@ -239,13 +223,26 @@ int main() {
 #endif
             break;
           case 2:
+          #ifdef _WIN32
+            system("cls");
+#else
+            system("clear");
+#endif
             // Ingrese <AQUI> funcion para porcentaje de ventas por forma de
             // pago.
+            reportePorcentajeVentasPorFormaPago (ventasPorForma, codigosLoteTres, 
+                                                nombresLoteTres, 5,totalVentas);
 
             cout << "\nToca ENTER para volver al menú de reportes." << endl;
             cin.ignore();
             cin.get();
+            #ifdef _WIN32
+            system("cls");
+            #else
+            system("clear");
+            #endif
             break;
+      
           case 3:
             #ifdef _WIN32
         system("cls");

@@ -16,6 +16,12 @@ void reporteRecaudacionPorProducto(const int vCodigoProducto[],
                                    const int vStockDisponible[],
                                    int cantidadProductos);
 
+// Reporte 2:
+void reportePorcentajeVentasPorFormaPago(
+    const int ventasPorForma[], const string vCodigoFP[],
+    const string nombresLoteTres[], int cantidadFormasPago, int totalVentas);
+
+
 // Reporte 3:
 void mostrarReporteVentasPorMarcaYFormaPago(
     int ventasPorFormaYMarca[10][5],
@@ -46,7 +52,8 @@ void cargarLoteVentas(int vCodigoProducto[], string vNombreProducto[],
                       int cantidadFormasPago, int ventasPorProducto[],
                       float recaudacionPorProducto[], int comprasPorCliente[],
                       int ventasPorFormaYMarca[][5], bool marcasCargadas,
-                      bool productosCargados, bool formasPagoCargadas);
+                      bool productosCargados, bool formasPagoCargadas
+                    , int ventasPorForma[], int &totalVentas);
 
 bool existeProducto(int codigo, int vCodigoProducto[],
                     int cantidadProductosCargados);
@@ -67,7 +74,6 @@ int obtenerPosFPPorCodigoFP(string vFormasPago[], string formaPago,
 void tablaDatosLote3(string codigoLoteTres[], string nombresLoteTres[],
                      int porcentajesLoteTres[]);
 
-<<<<<<< HEAD
 // Tabla de productos:
 void mostrarTablaProductos(int vCodigoProducto[], string vNombreProducto[],
                           float vPrecioVenta[], float vPrecioCompra[],
@@ -75,6 +81,4 @@ void mostrarTablaProductos(int vCodigoProducto[], string vNombreProducto[],
                           int cantidadProductosCargados);
 
                         
-=======
->>>>>>> 1fcf9e3b3aeb16fcd5f88a3ed6b0dad057b9b8dd
 #endif

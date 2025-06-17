@@ -127,14 +127,8 @@ void cargarLoteProductos(int vCodigoProducto[], string vNombreProducto[],
   cantidadProductosCargados = 0;
   productosCargados = false;
 
-<<<<<<< HEAD
-
-  for (int i = 0; i < 3; i++) {
-    cout << "Producto #" << (i + 1) << " :" << endl;
-=======
   for (int i = 0; i < 5; i++) {
     cout << "\nProducto #" << (i + 1) << " :" << endl;
->>>>>>> 1fcf9e3b3aeb16fcd5f88a3ed6b0dad057b9b8dd
 
     int codigoProducto;
     cout << "Codigo de producto (3 dígitos, no consecutivos): ";
@@ -239,47 +233,30 @@ void cargarLoteProductos(int vCodigoProducto[], string vNombreProducto[],
   }
 
   // En este if validamos que la carga se completó.
-<<<<<<< HEAD
-  if (cantidadProductosCargados == 3) 
-  {
-=======
   if (cantidadProductosCargados == 5) {
->>>>>>> 1fcf9e3b3aeb16fcd5f88a3ed6b0dad057b9b8dd
     productosCargados = true;
     cout << "Carga del lote 2 completada con éxito. A continuación se muestra "
             "el listado de productos:"
          << endl
          << endl;
-<<<<<<< HEAD
-    
-         mostrarTablaProductos(vCodigoProducto, vNombreProducto,
-                     vPrecioVenta, vPrecioCompra, vStockDisponible, 
-                     vCodigoMarcaProducto, cantidadProductosCargados);
-}
-  
-    /*Mostramos la carga de datos:
-    for (int x = 0; x < cantidadProductosCargados; x++) {
-      
-      cout << "   Cód.Prod  | Nombre        | P. Venta | P. Compra  | Stock |   Código de marca |" << endl;
-      cout<< vCodigoProducto[x]<<"  | " <<vNombreProducto<<" | "<< vPrecioVenta[x]<< " | " << vPrecioCompra[x]<< " | " << vStockDisponible[x]<< " | " << vCodigoMarcaProducto[x] <<"  | "<< endl;
-    }
-    */
-=======
   }
-  /*
-  // Mostramos la carga de datos:
-  for (int x = 0; x < 20; x++) {
 
-    cout << "Código de producto: " << vCodigoProducto[x]
-         << " | Nombre: " << vNombreProducto[x]
-         << " | Precio de venta: " << vPrecioVenta[x]
-         << " | Precio de compra: " << vPrecioCompra[x]
-         << " | Stock disponible: " << vStockDisponible[x]
-         << " | Código de marca: " << vCodigoMarcaProducto[x] << endl;
-  }  
->>>>>>> 1fcf9e3b3aeb16fcd5f88a3ed6b0dad057b9b8dd
-  cout << "Carga de productos completada.";
-  */
+  // Mostramos la carga de datos:
+#ifdef _WIN32
+  system("cls");
+#else 
+  system("clear");
+#endif  
+
+mostrarTablaProductos(vCodigoProducto, vNombreProducto, vPrecioVenta,
+                         vPrecioCompra, vStockDisponible, vCodigoMarcaProducto,
+                         cantidadProductosCargados);
+
+  cout << "─────────────────────────────────────────────────────" << endl;
+  cout << "Carga de productos finalizada." << endl;
+  cout << "Total de productos cargados: " << cantidadProductosCargados
+       << endl;
+
 
 }
 
@@ -370,7 +347,8 @@ void cargarLoteVentas(int vCodigoProducto[], string vNombreProducto[],
                       int cantidadFormasPago, int ventasPorProducto[],
                       float recaudacionPorProducto[], int comprasPorCliente[],
                       int ventasPorFormaYMarca[][5], bool marcasCargadas,
-                      bool productosCargados, bool formasPagoCargadas) {
+                      bool productosCargados, bool formasPagoCargadas, 
+                      int ventasPorForma[],int &totalVentas) {
 
   cout << endl;
   cout << "─────────────────────────────────────────────" << endl;
@@ -390,6 +368,8 @@ void cargarLoteVentas(int vCodigoProducto[], string vNombreProducto[],
   }
 
   int nroCompra;
+  totalVentas = 0;
+  for (int i = 0; i < 5; i++) ventasPorForma[i] = 0;
 
   do {
     cout << "\nIngrese Nro de Compra (0 para finalizar): ";
@@ -469,6 +449,20 @@ void cargarLoteVentas(int vCodigoProducto[], string vNombreProducto[],
       ventasPorFormaYMarca[indiceMarca][posFormaPago] += cantidadVendida;
     }
 
+    //Carga de vectores para el reporte 2 
+    //Listado con el procentaje de ventas realizado por cada forma de pago, 
+    //incluir el nombre de la forma de pago y el porcentaje correspondiente
+
+   
+    for (int j = 0; j < 5; j++) {
+        if (codigoFormaPago == vCodigoFP[j]) {
+            ventasPorForma[j]++; // Suma una venta a esa forma de pago
+                   // Suma una venta al total general
+            break;
+        }
+    }
+    totalVentas++;
+  
   } while (true);
 }
 
@@ -491,33 +485,7 @@ bool existeFormaPago(string codigoFP, string codigos[], int cantidadFormas) {
   return false;
 }
 
-<<<<<<< HEAD
-void mostrarTablaProductos(int vCodigoProducto[], std::string vNombreProducto[], float vPrecioVenta[], float vPrecioCompra[], int vStockDisponible[], int vCodigoMarcaProducto[], int cantidadProductosCargados) {
-    using namespace std;
-    cout << endl;
-    cout << "================================================================================================================" << endl;
-    cout << left
-         << setw(10) << "Código"
-         << setw(25) << "Nombre"
-         << setw(15) << "Precio Venta"
-         << setw(15) << "Precio Compra"
-         << setw(15) << "Stock"
-         << setw(15) << "Cod. Marca"
-         << endl;
-    cout << "----------------------------------------------------------------------------------------------------------------" << endl;
-    for (int i = 0; i < cantidadProductosCargados; i++) {
-        cout << left
-             << setw(10) << vCodigoProducto[i]
-             << setw(25) << vNombreProducto[i]
-             << setw(15) << fixed << setprecision(2) << vPrecioVenta[i]
-             << setw(15) << fixed << setprecision(2) << vPrecioCompra[i]
-             << setw(15) << vStockDisponible[i]
-             << setw(15) << vCodigoMarcaProducto[i]
-             << endl;
-    }
-    cout << "================================================================================================================" << endl;
-=======
-int obtenerPosProductoPorCodigoProducto(int vCodigoProducto[],
+  int obtenerPosProductoPorCodigoProducto(int vCodigoProducto[],
                                         int codigoProducto,
                                         int cantidadProductos) {
   for (int i = 0; i < cantidadProductos; i++) {
@@ -542,6 +510,39 @@ int obtenerPosFPPorCodigoFP(string vFormasPago[], string formaPago,
 // ============ TABLA DE DATOS ============
 // ========================================
 
+// LOTE 2 - Productos
+
+
+void mostrarTablaProductos(int vCodigoProducto[], std::string vNombreProducto[],
+                         float vPrecioVenta[], float vPrecioCompra[], int vStockDisponible[],
+                          int vCodigoMarcaProducto[], int cantidadProductosCargados){
+
+  cout << endl;
+    cout << "============================================================" << endl;
+    cout << left
+         << setw(10) << "Código"
+         << setw(25) << "Nombre"
+         << setw(15) << "Precio Venta"
+         << setw(15) << "Precio Compra"
+         << setw(15) << "Stock"
+         << setw(15) << "Cod. Marca"
+         << endl;
+    cout << "------------------------------------------------------------" << endl;
+    for (int i = 0; i < cantidadProductosCargados; i++) {
+        cout << left
+             << setw(10) << vCodigoProducto[i]
+             << setw(25) << vNombreProducto[i]
+             << setw(15) << fixed << setprecision(2) << vPrecioVenta[i]
+             << setw(15) << fixed << setprecision(2) << vPrecioCompra[i]
+             << setw(15) << vStockDisponible[i]
+             << setw(15) << vCodigoMarcaProducto[i]
+             << endl;
+    }
+  cout<<"================================================================="<<endl;
+  
+  }
+
+
 // LOTE 3 - Formas de pago
 void tablaDatosLote3(string codigoLoteTres[], string nombresLoteTres[],
                      int porcentajesLoteTres[]) {
@@ -565,5 +566,5 @@ void tablaDatosLote3(string codigoLoteTres[], string nombresLoteTres[],
 
     cout << nombresLoteTres[i] << endl;
   }
->>>>>>> 1fcf9e3b3aeb16fcd5f88a3ed6b0dad057b9b8dd
 }
+

@@ -102,6 +102,46 @@ void reporteRecaudacionPorProducto(const int vCodigoProducto[],
   }
 }
 
+
+// =========================================================
+// === Porcentaje de ventas por foma de pago - REPORTE 2 ===
+// =========================================================
+
+void reportePorcentajeVentasPorFormaPago(
+  const int ventasPorForma[],
+  const string vCodigoFP[],
+  const string nombresLoteTres[],
+  int cantidadFormasPago,
+  int totalVentas
+) {
+  cout << "─────────────────────────────────────────────────────────────"
+       << endl;
+  cout << "     REPORTE - PORCENTAJE DE VENTAS POR FORMA DE PAGO        "
+       << endl;
+  cout << "─────────────────────────────────────────────────────────────"
+       << endl;
+
+  cout << "Total de ventas: " << totalVentas << endl;
+
+  if (totalVentas == 0) {
+    cout << "No hay ventas registradas para calcular porcentajes." << endl;
+    return;
+  }
+
+  cout << "Código   Nombre                   Porcentaje" << endl;
+  cout << "─────────────────────────────────────────────────────────────"
+       << endl;
+
+  for (int i = 0; i < cantidadFormasPago; i++) {
+    float porcentaje = (static_cast<float>(ventasPorForma[i]) / totalVentas) * 100;
+    cout << vCodigoFP[i] << "       "
+         << nombresLoteTres[i] << "          "
+         << fixed << setprecision(2) << porcentaje << "%" << endl;
+  }
+}
+
+
+
 // ==========================================================
 // ====== Ventas por marca y forma de pago - REPORTE 3 ======
 // ==========================================================
@@ -132,4 +172,5 @@ void mostrarReporteVentasPorMarcaYFormaPago(
 
         cout << endl;
     }
-};
+}
+
