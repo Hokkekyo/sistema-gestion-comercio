@@ -343,7 +343,6 @@ void cargarLoteVentas(int vCodigoProducto[], string vNombreProducto[],
                       bool productosCargados, bool formasPagoCargadas,
                       int ventasPorForma[], int &totalVentas) {
 
-  cout << endl;
   cout << "─────────────────────────────────────────────" << endl;
   cout << "         CARGA DE VENTAS - LOTE 4            " << endl;
   cout << "─────────────────────────────────────────────" << endl;
