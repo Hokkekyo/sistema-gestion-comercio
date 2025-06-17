@@ -22,7 +22,7 @@ void cargarLoteMarcas(int vCodigomarca[], string vNombremarca[],
   string nombreIngresado;
   bool marcaValida;
 
-  for (int i = 0; i < 2; i++) {
+  for (int i = 0; i < 10; i++) {
 #ifdef _WIN32
     system("cls");
 #else
@@ -77,7 +77,7 @@ void cargarLoteMarcas(int vCodigomarca[], string vNombremarca[],
   }
 
   // En este if validamos que la carga se completó.
-  if (cantidadMarcasCargadas == 2) {
+  if (cantidadMarcasCargadas == 10) {
     marcasCargadas = true;
     cout << "Carga del lote 1 completada con éxito. A continuación se muestra "
             "el listado:"
@@ -91,7 +91,7 @@ void cargarLoteMarcas(int vCodigomarca[], string vNombremarca[],
     system("clear");
 #endif
     cout << "──────────────────────────────────────────────────" << endl;
-    for (int x = 0; x < 2; x++) {
+    for (int x = 0; x < 10; x++) {
       cout << "Código de marca: " << vCodigomarca[x]
            << "   |   Nombre de marca: " << vNombremarca[x] << endl;
     }
@@ -127,7 +127,7 @@ void cargarLoteProductos(int vCodigoProducto[], string vNombreProducto[],
   cantidadProductosCargados = 0;
   productosCargados = false;
 
-  for (int i = 0; i < 5; i++) {
+  for (int i = 0; i < 20; i++) {
     cout << "\nProducto #" << (i + 1) << " :" << endl;
 
     int codigoProducto;
@@ -210,7 +210,7 @@ void cargarLoteProductos(int vCodigoProducto[], string vNombreProducto[],
 
     bool marcaEncontrada = false;
 
-    for (int x = 0; x < 2; x++) {
+    for (int x = 0; x < 10; x++) {
       if (codigoMarca == vCodigomarca[x]) {
         marcaEncontrada = true;
         break; // Sale del for por que encontro la marca
@@ -233,7 +233,7 @@ void cargarLoteProductos(int vCodigoProducto[], string vNombreProducto[],
   }
 
   // En este if validamos que la carga se completó.
-  if (cantidadProductosCargados == 5) {
+  if (cantidadProductosCargados == 20) {
     productosCargados = true;
     cout << "Carga del lote 2 completada con éxito. A continuación se muestra "
             "el listado de productos:"
