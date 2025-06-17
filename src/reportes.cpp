@@ -161,9 +161,9 @@ void mostrarReporteVentasPorMarcaYFormaPago(
   }
 }
 
-// ==========================================================
-// ====== Ventas por marca y forma de pago - REPORTE 3 ======
-// ==========================================================
+// ============================================================
+// ============= PRODUCTOS SIN VENTAS - REPORTE 4 =============
+// ============================================================
 
 void reporteProductosSinVentas(int vCodigoProducto[], string vNombreProducto[], int cantidadProductosCargados, int ventasPorProducto[]) {
 
