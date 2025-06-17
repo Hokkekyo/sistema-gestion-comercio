@@ -17,17 +17,21 @@ void reporteRecaudacionPorProducto(const int vCodigoProducto[],
                                    int cantidadProductos);
 
 // Reporte 2:
-void reportePorcentajeVentasPorFormaPago(
-    const int ventasPorForma[], const string vCodigoFP[],
-    const string nombresLoteTres[], int cantidadFormasPago, int totalVentas);
-
+void reportePorcentajeVentasPorFormaPago(const int ventasPorForma[],
+                                         const string vCodigoFP[],
+                                         const string nombresLoteTres[],
+                                         int cantidadFormasPago,
+                                         int totalVentas);
 
 // Reporte 3:
 void mostrarReporteVentasPorMarcaYFormaPago(
-    int ventasPorFormaYMarca[10][5],
-    int vCodigomarca[], string vNombremarca[], int cantidadMarcas,
-    string codigosLoteTres[], int cantidadFormasPago
-);
+    int ventasPorFormaYMarca[10][5], int vCodigomarca[], string vNombremarca[],
+    int cantidadMarcas, string codigosLoteTres[], int cantidadFormasPago);
+
+// Reporte 4:
+void reporteProductosSinVentas(int vCodigoProducto[], string vNombreProducto[],
+                               int cantidadProductosCargados,
+                               int ventasPorProducto[]);
 
 // ========================================
 // ============ FUNCIONES.CPP =============
@@ -52,8 +56,8 @@ void cargarLoteVentas(int vCodigoProducto[], string vNombreProducto[],
                       int cantidadFormasPago, int ventasPorProducto[],
                       float recaudacionPorProducto[], int comprasPorCliente[],
                       int ventasPorFormaYMarca[][5], bool marcasCargadas,
-                      bool productosCargados, bool formasPagoCargadas
-                    , int ventasPorForma[], int &totalVentas);
+                      bool productosCargados, bool formasPagoCargadas,
+                      int ventasPorForma[], int &totalVentas);
 
 bool existeProducto(int codigo, int vCodigoProducto[],
                     int cantidadProductosCargados);
@@ -73,5 +77,5 @@ int obtenerPosFPPorCodigoFP(string vFormasPago[], string formaPago,
 
 void tablaDatosLote3(string codigoLoteTres[], string nombresLoteTres[],
                      int porcentajesLoteTres[]);
-                     
+
 #endif

@@ -74,7 +74,6 @@ int main() {
   int totalVentas = 0;
   int ventasPorForma[5] = {0};
 
-
   // Menú:
   do {
 #ifdef _WIN32
@@ -148,13 +147,18 @@ int main() {
         break;
       case 4:
         opInvalida = false;
+        #ifdef _WIN32
+        system("cls");
+#else
+        system("clear");
+#endif
 
         cargarLoteVentas(
             vCodigoProducto, vNombreProducto, vPrecioVenta, vStockDisponible,
             vCodigoMarcaProducto, codigosLoteTres, porcentajesLoteTres,
             cantidadProductosCargados, 5, ventasPorProducto,
             recaudacionPorProducto, comprasPorCliente, ventasPorFormaYMarca,
-            marcasCargadas, productosCargados, formasPagoCargadas, 
+            marcasCargadas, productosCargados, formasPagoCargadas,
             ventasPorForma, totalVentas);
 
         cout << "\nToca ENTER para volver al menú principal.";
@@ -206,16 +210,13 @@ int main() {
 #endif
             if (productosCargados) {
               reporteRecaudacionPorProducto(
-                vCodigoProducto,
-                vNombreProducto,
-                ventasPorProducto,
-                recaudacionPorProducto,
-                vStockDisponible,
-                cantidadProductosCargados
-            );
-        } else {
-          cout << "ERROR: primero debe cargar los productos y las ventas." << endl;
-        }
+                  vCodigoProducto, vNombreProducto, ventasPorProducto,
+                  recaudacionPorProducto, vStockDisponible,
+                  cantidadProductosCargados);
+            } else {
+              cout << "ERROR: primero debe cargar los productos y las ventas."
+                   << endl;
+            }
 
             cout << "\nToca ENTER para volver al menú de reportes." << endl;
             cin.ignore();
@@ -227,26 +228,27 @@ int main() {
 #endif
             break;
           case 2:
-          #ifdef _WIN32
+#ifdef _WIN32
             system("cls");
 #else
             system("clear");
 #endif
             // Ingrese <AQUI> funcion para porcentaje de ventas por forma de
             // pago.
-            reportePorcentajeVentasPorFormaPago (ventasPorForma, codigosLoteTres, 
-                                                nombresLoteTres, 5,totalVentas);
+            reportePorcentajeVentasPorFormaPago(ventasPorForma, codigosLoteTres,
+                                                nombresLoteTres, 5,
+                                                totalVentas);
 
             cout << "\nToca ENTER para volver al menú de reportes." << endl;
             cin.ignore();
             cin.get();
-            #ifdef _WIN32
+#ifdef _WIN32
             system("cls");
-            #else
+#else
             system("clear");
-            #endif
+#endif
             break;
-      
+
           case 3:
 #ifdef _WIN32
             system("cls");
@@ -277,7 +279,7 @@ int main() {
 #else
             system("clear");
 #endif
-            // Ingrese <AQUI> funcion para productos sin ventas.
+reporteProductosSinVentas(vCodigoProducto, vNombreProducto, cantidadProductosCargados, ventasPorProducto);
 
             cout << "\nToca ENTER para volver al menú de reportes." << endl;
             cin.ignore();

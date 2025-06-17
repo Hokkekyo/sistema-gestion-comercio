@@ -68,52 +68,49 @@ void reporteRecaudacionPorProducto(const int vCodigoProducto[],
   cout << "     REPORTE - RECAUDACIÓN POR PRODUCTO (Lote 4)             "
        << endl;
   cout << "─────────────────────────────────────────────────────────────"
-  << endl;
+       << endl;
   cout << "Código   Vendido   Recaudado     Stock   Nombre" << endl;
   cout << "─────────────────────────────────────────────────────────────"
-  << endl;
-  
+       << endl;
+
   // Tabla
   for (int i = 0; i < cantidadProductos; i++) {
     cout << auxCodigos[i] << "       ";
     cout << auxVentas[i];
-    
+
     // Espaciado entre vendido y recaudado
     if (auxVentas[i] < 10)
-    cout << "         ";
+      cout << "         ";
     else if (auxVentas[i] < 100)
-    cout << "        ";
+      cout << "        ";
     else
-    cout << "       ";
-    
+      cout << "       ";
+
     cout << auxRecaudado[i];
-    
+
     // Espaciado entre recaudado y stock
     if (auxRecaudado[i] < 10)
-    cout << "         ";
+      cout << "         ";
     else if (auxRecaudado[i] < 100)
-    cout << "        ";
+      cout << "        ";
     else
-    cout << "       ";
-    
+      cout << "       ";
+
     cout << auxStock[i] << "       ";
-    
+
     cout << auxNombres[i] << endl;
   }
 }
-
 
 // =========================================================
 // === Porcentaje de ventas por foma de pago - REPORTE 2 ===
 // =========================================================
 
-void reportePorcentajeVentasPorFormaPago(
-  const int ventasPorForma[],
-  const string vCodigoFP[],
-  const string nombresLoteTres[],
-  int cantidadFormasPago,
-  int totalVentas
-) {
+void reportePorcentajeVentasPorFormaPago(const int ventasPorForma[],
+                                         const string vCodigoFP[],
+                                         const string nombresLoteTres[],
+                                         int cantidadFormasPago,
+                                         int totalVentas) {
   cout << "─────────────────────────────────────────────────────────────"
        << endl;
   cout << "     REPORTE - PORCENTAJE DE VENTAS POR FORMA DE PAGO        "
@@ -133,44 +130,83 @@ void reportePorcentajeVentasPorFormaPago(
        << endl;
 
   for (int i = 0; i < cantidadFormasPago; i++) {
-    float porcentaje = (static_cast<float>(ventasPorForma[i]) / totalVentas) * 100;
-    cout << vCodigoFP[i] << "       "
-         << nombresLoteTres[i] << "          "
+    float porcentaje =
+        (static_cast<float>(ventasPorForma[i]) / totalVentas) * 100;
+    cout << vCodigoFP[i] << "       " << nombresLoteTres[i] << "          "
          << fixed << setprecision(2) << porcentaje << "%" << endl;
   }
 }
-
-
 
 // ==========================================================
 // ====== Ventas por marca y forma de pago - REPORTE 3 ======
 // ==========================================================
 
-// 3. Ventas por marca y forma de pago:
-
-// La cantidad total vendida de productos de cada marca discriminada por forma
-// de pago.
-
 void mostrarReporteVentasPorMarcaYFormaPago(
-  int ventasPorFormaYMarca[10][5],
-  int vCodigomarca[], string vNombremarca[], int cantidadMarcas,
-  string codigosLoteTres[], int cantidadFormasPago
-) {
+    int ventasPorFormaYMarca[10][5], int vCodigomarca[], string vNombremarca[],
+    int cantidadMarcas, string codigosLoteTres[], int cantidadFormasPago) {
   cout << "Ventas por marca y forma de pago:\n" << endl;
 
-    for (int i = 0; i < cantidadMarcas; i++) {
-        int codigoMarca = vCodigomarca[i];  // entre 1 y 10
-        int indiceMarca = codigoMarca - 1;
+  for (int i = 0; i < cantidadMarcas; i++) {
+    int codigoMarca = vCodigomarca[i];
+    int indiceMarca = codigoMarca - 1;
 
-        cout << "Marca: " << vNombremarca[i] << endl;
+    cout << "Marca: " << vNombremarca[i] << endl;
 
-        for (int j = 0; j < cantidadFormasPago; j++) {
-            cout << codigosLoteTres[j] << ": "
-                 << ventasPorFormaYMarca[indiceMarca][j]
-                 << " unidades" << endl;
-        }
-
-        cout << endl;
+    for (int x = 0; x < cantidadFormasPago; x++) {
+      cout << codigosLoteTres[x] << ": " << ventasPorFormaYMarca[indiceMarca][x]
+           << " unidades" << endl;
     }
+
+    cout << endl;
+  }
 }
 
+// ==========================================================
+// ====== Ventas por marca y forma de pago - REPORTE 3 ======
+// ==========================================================
+
+void reporteProductosSinVentas(int vCodigoProducto[], string vNombreProducto[], int cantidadProductosCargados, int ventasPorProducto[]) {
+
+  cout << "─────────────────────────────────────" << endl;
+  cout << "        PRODUCTOS SIN VENTAS"        << endl;
+  cout << "─────────────────────────────────────" << endl << endl;
+
+  bool sinVentas = false;
+  for (int i = 0; i < cantidadProductosCargados; i++) {
+    if (ventasPorProducto[i] == 0) {
+      cout << "Código: " << vCodigoProducto[i] << " | " << "Nombre del producto: " << vNombreProducto[i] << "." << endl;
+      sinVentas = true;
+    }
+  }
+
+  if (!sinVentas) {
+      cout << "No hay productos sin ventas." << endl;
+    }
+  
+}
+/*
+4. Productos sin ventas:
+Emitir un listado con los productos que no registraron ninguna venta. Incluir el
+código y nombre del producto. 
+*/
+
+
+
+
+/*
+void reporteProductosSinVentas(const int vCodigoProducto[], const string vNombreProducto[], const int ventasPorProducto[], int cantidadProductosCargados) {
+  cout << "=====================================" << endl;
+  cout << "   PRODUCTOS SIN VENTAS REGISTRADAS  " << endl;
+  cout << "=====================================" << endl;
+  bool haySinVentas = false;
+  for (int i = 0; i < cantidadProductosCargados; ++i) {
+    if (ventasPorProducto[i] == 0) {
+      cout << "Código: " << vCodigoProducto[i] << " | Nombre: " << vNombreProducto[i] << endl;
+      haySinVentas = true;
+    }
+  }
+  if (!haySinVentas) {
+    cout << "Todos los productos registraron al menos una venta." << endl;
+  }
+}
+*/
