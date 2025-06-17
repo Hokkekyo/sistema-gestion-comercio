@@ -81,7 +81,6 @@ int main() {
 #else
     system("clear");
 #endif
-    cout << endl;
     cout << "=====================================" << endl;
     cout << "   • MENÚ PRINCIPAL - MI NEGOCIO •   " << endl;
     cout << "=====================================" << endl;
