@@ -184,29 +184,3 @@ void reporteProductosSinVentas(int vCodigoProducto[], string vNombreProducto[], 
     }
   
 }
-/*
-4. Productos sin ventas:
-Emitir un listado con los productos que no registraron ninguna venta. Incluir el
-código y nombre del producto. 
-*/
-
-
-
-
-/*
-void reporteProductosSinVentas(const int vCodigoProducto[], const string vNombreProducto[], const int ventasPorProducto[], int cantidadProductosCargados) {
-  cout << "=====================================" << endl;
-  cout << "   PRODUCTOS SIN VENTAS REGISTRADAS  " << endl;
-  cout << "=====================================" << endl;
-  bool haySinVentas = false;
-  for (int i = 0; i < cantidadProductosCargados; ++i) {
-    if (ventasPorProducto[i] == 0) {
-      cout << "Código: " << vCodigoProducto[i] << " | Nombre: " << vNombreProducto[i] << endl;
-      haySinVentas = true;
-    }
-  }
-  if (!haySinVentas) {
-    cout << "Todos los productos registraron al menos una venta." << endl;
-  }
-}
-*/
