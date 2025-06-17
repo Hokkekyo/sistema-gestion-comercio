@@ -73,6 +73,7 @@ int obtenerPosFPPorCodigoFP(string vFormasPago[], string formaPago,
 
 void tablaDatosLote3(string codigoLoteTres[], string nombresLoteTres[],
                      int porcentajesLoteTres[]);
+<<<<<<< Updated upstream
 
 // Tabla de productos:
 void mostrarTablaProductos(int vCodigoProducto[], string vNombreProducto[],
@@ -81,4 +82,7 @@ void mostrarTablaProductos(int vCodigoProducto[], string vNombreProducto[],
                           int cantidadProductosCargados);
 
                         
+=======
+                     
+>>>>>>> Stashed changes
 #endif

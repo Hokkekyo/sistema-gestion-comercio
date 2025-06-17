@@ -115,7 +115,11 @@ int main() {
 
       case 2:
         opInvalida = false;
-
+#ifdef _WIN32
+        system("cls");
+#else
+        system("clear");
+#endif
         cargarLoteProductos(vCodigoProducto, vNombreProducto, vPrecioVenta,
                             vPrecioCompra, vStockDisponible,
                             vCodigoMarcaProducto, vCodigomarca, marcasCargadas,
@@ -244,13 +248,13 @@ int main() {
             break;
       
           case 3:
-            #ifdef _WIN32
-        system("cls");
+#ifdef _WIN32
+            system("cls");
 #else
-        system("clear");
+            system("clear");
 #endif
             if (marcasCargadas && formasPagoCargadas) {
-              
+
               mostrarReporteVentasPorMarcaYFormaPago(
                   ventasPorFormaYMarca, vCodigomarca, vNombremarca,
                   cantidadMarcasCargadas, codigosLoteTres, 5);

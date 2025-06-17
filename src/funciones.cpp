@@ -114,8 +114,7 @@ void cargarLoteProductos(int vCodigoProducto[], string vNombreProducto[],
 
   cout << "─────────────────────────────────────────────────────" << endl;
   cout << "       INICIANDO CARGA DE LOTE 2 - PRODUCTOS. " << endl;
-  cout << "─────────────────────────────────────────────────────" << endl
-       << endl;
+  cout << "─────────────────────────────────────────────────────" << endl;
 
   if (!marcasCargadas) {
     cout
@@ -128,7 +127,7 @@ void cargarLoteProductos(int vCodigoProducto[], string vNombreProducto[],
   productosCargados = false;
 
   for (int i = 0; i < 5; i++) {
-    cout << "\nProducto #" << (i + 1) << " :" << endl;
+    cout << "\nProducto #" << (i + 1) << endl;
 
     int codigoProducto;
     cout << "Codigo de producto (3 dígitos, no consecutivos): ";
@@ -240,23 +239,19 @@ void cargarLoteProductos(int vCodigoProducto[], string vNombreProducto[],
          << endl
          << endl;
   }
-
+  
   // Mostramos la carga de datos:
-#ifdef _WIN32
-  system("cls");
-#else 
-  system("clear");
-#endif  
+  for (int x = 0; x < 4; x++) { // original x < 20
 
-mostrarTablaProductos(vCodigoProducto, vNombreProducto, vPrecioVenta,
-                         vPrecioCompra, vStockDisponible, vCodigoMarcaProducto,
-                         cantidadProductosCargados);
-
-  cout << "─────────────────────────────────────────────────────" << endl;
-  cout << "Carga de productos finalizada." << endl;
-  cout << "Total de productos cargados: " << cantidadProductosCargados
-       << endl;
-
+    cout << "Código de producto: " << vCodigoProducto[x]
+         << " | Nombre: " << vNombreProducto[x]
+         << " | Precio de venta: " << vPrecioVenta[x]
+         << " | Precio de compra: " << vPrecioCompra[x]
+         << " | Stock disponible: " << vStockDisponible[x]
+         << " | Código de marca: " << vCodigoMarcaProducto[x] << endl;
+  }  
+  cout << "Carga de productos completada.";
+  
 
 }
 
