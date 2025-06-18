@@ -112,13 +112,13 @@ void cargarLoteProductos(int vCodigoProducto[], string vNombreProducto[],
                          int &cantidadProductosCargados,
                          bool &productosCargados) {
 
-  cout << "─────────────────────────────────────────────────────" << endl;
-  cout << "       INICIANDO CARGA DE LOTE 2 - PRODUCTOS. " << endl;
-  cout << "─────────────────────────────────────────────────────" << endl;
+  cout << "─────────────────────────────────────────────────" << endl;
+  cout << "          CARGA DE LOTE 2 - PRODUCTOS.           " << endl;
+  cout << "─────────────────────────────────────────────────" << endl;
 
   if (!marcasCargadas) {
     cout
-        << "No se cargaron las marcas. No se puede inciar la carga de productos"
+        << "\nERROR: Debe cargar las marcas antes de iniciar la carga de productos."
         << endl;
     return;
   }

@@ -65,7 +65,7 @@ void reporteRecaudacionPorProducto(const int vCodigoProducto[],
   // Encabezado
   cout << "─────────────────────────────────────────────────────────────"
        << endl;
-  cout << "     REPORTE - RECAUDACIÓN POR PRODUCTO (Lote 4)             "
+  cout << "                   RECAUDACIÓN POR PRODUCTO                  "
        << endl;
   cout << "─────────────────────────────────────────────────────────────"
        << endl;
@@ -113,10 +113,10 @@ void reportePorcentajeVentasPorFormaPago(const int ventasPorForma[],
                                          int totalVentas) {
   cout << "─────────────────────────────────────────────────────────────"
        << endl;
-  cout << "     REPORTE - PORCENTAJE DE VENTAS POR FORMA DE PAGO        "
+  cout << "           PORCENTAJE DE VENTAS POR FORMA DE PAGO           "
        << endl;
   cout << "─────────────────────────────────────────────────────────────"
-       << endl;
+       << endl << endl;
 
   cout << "Total de ventas: " << totalVentas << endl;
 
