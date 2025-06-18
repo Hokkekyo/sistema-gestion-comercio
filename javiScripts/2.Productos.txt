@@ -1,0 +1,120 @@
+101
+Zapatillas Running
+10
+5
+15
+1
+102
+Camiseta Deportiva
+20
+10
+15
+8
+103
+Pantalones
+30
+15
+15
+9
+104
+Mochila Urbana
+40
+20
+15
+9
+105
+Botella de Agua
+50
+25
+15
+1
+106
+Gorra Deportiva
+60
+30
+15
+6
+107
+Chaqueta Impermeable
+70
+35
+15
+9
+108
+Guantes
+80
+40
+15
+3
+109
+Vestido Casual
+90
+45
+15
+2
+110
+Jeans Slim Fit
+100
+50
+15
+10
+111
+Calcetines Deportivos
+110
+55
+15
+3
+112
+Shorts de Entrenamiento
+120
+60
+15
+4
+113
+Sudadera con Capucha
+130
+65
+15
+8
+114
+Bufanda de Lana
+140
+70
+15
+3
+115
+Bandas de Resistencia
+150
+75
+15
+7
+116
+Gafas de Sol
+160
+80
+15
+2
+117
+Carpa de Camping
+170
+85
+15
+2
+118
+Colchoneta de Yoga
+180
+90
+15
+9
+119
+Blusa de Seda
+190
+95
+15
+4
+120
+Zapatos Formales
+200
+100
+15
+2

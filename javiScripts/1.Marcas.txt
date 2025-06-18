@@ -1,0 +1,20 @@
+1
+Nike 
+2
+Adidas 
+3
+Puma 
+4
+Reebok 
+5
+Under Armour 
+6
+New Balance 
+7
+Columbia 
+8
+The North Face 
+9
+H&M 
+10
+Zara

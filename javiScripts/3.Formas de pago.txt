@@ -1,0 +1,15 @@
+EF
+Efectivo
+-10
+MP
+Mercado Pago
+-5
+TR
+Transferencia
+0
+TC
+Tarjeta de Crédito
+5
+CT
+Criptomoneda
+2

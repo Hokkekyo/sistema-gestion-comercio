@@ -118,26 +118,26 @@ void reportePorcentajeVentasPorFormaPago(const int ventasPorForma[],
   cout << "           PORCENTAJE DE VENTAS POR FORMA DE PAGO           "
        << endl;
   cout << "─────────────────────────────────────────────────────────────"
-       << endl
        << endl;
-
-  cout << "Total de ventas: " << totalVentas << endl;
 
   if (totalVentas == 0) {
     cout << "No hay ventas registradas para calcular porcentajes." << endl;
     return;
   }
 
-  cout << "Código   Nombre                   Porcentaje" << endl;
+  cout << "Código   Porcentaje    Nombre" << endl;
   cout << "─────────────────────────────────────────────────────────────"
        << endl;
 
   for (int i = 0; i < cantidadFormasPago; i++) {
     float porcentaje =
         (static_cast<float>(ventasPorForma[i]) / totalVentas) * 100;
-    cout << vCodigoFP[i] << "       " << nombresLoteTres[i] << "          "
-         << fixed << setprecision(2) << porcentaje << "%" << endl;
+    cout << vCodigoFP[i] << "       " << porcentaje << "%" << "          "
+         << fixed << setprecision(2) << nombresLoteTres[i] << endl;
   }
+  cout << "─────────────────────────────────────────────────────────────"
+       << endl;
+  cout << "Total ventas: " << totalVentas << endl;
 }
 
 // ==========================================================
@@ -174,7 +174,7 @@ void reporteProductosSinVentas(int vCodigoProducto[], string vNombreProducto[],
 
   cout << "─────────────────────────────────────" << endl;
   cout << "        PRODUCTOS SIN VENTAS" << endl;
-  cout << "─────────────────────────────────────" << endl << endl;
+  cout << "─────────────────────────────────────" << endl;
 
   bool sinVentas = false;
   for (int i = 0; i < cantidadProductosCargados; i++) {

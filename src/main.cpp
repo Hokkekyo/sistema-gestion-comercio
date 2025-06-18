@@ -127,9 +127,6 @@ int main() {
             marcasCargadas, productosCargados, formasPagoCargadas,
             ventasPorForma, totalVentas);
 
-        cout << "\nToca ENTER para volver al menú principal.";
-        cin.ignore();
-        cin.get();
         break;
       case 0:
 #ifdef _WIN32
@@ -137,7 +134,7 @@ int main() {
 #else
         system("clear");
 #endif
-        cout << "\nNos re vimoooooooo." << endl;
+        cout << "\nGracias por utilizar Mi Negocio. Hasta pronto!" << endl;
         return 0;
         break;
       // case 6;

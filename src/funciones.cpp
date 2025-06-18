@@ -104,9 +104,6 @@ void cargarLoteMarcas(int vCodigomarca[], string vNombremarca[],
   } else {
     cout << "No se completo correctamente la carga del lote 1." << endl;
   }
-  cout << "──────────────────────────────────────────────────────────────────"
-          "───────────"
-       << endl;
 }
 
 // ======================================================
@@ -254,7 +251,7 @@ void cargarLoteProductos(int vCodigoProducto[], string vNombreProducto[],
                         vPrecioCompra, vStockDisponible, vCodigoMarcaProducto,
                         cantidadProductosCargados);
 
-  cout << "\nCarga de productos completada." << endl;
+  cout << "Carga de productos completada." << endl;
 }
 
 // ======================================================
@@ -519,12 +516,14 @@ void mostrarTablaProductos(int vCodigoProducto[], std::string vNombreProducto[],
                            int cantidadProductosCargados) {
 
   cout << endl;
-  cout << "============================================================"
+  cout << "────────────────────────────────────────────────────────────────────"
+          "─────────────────────"
        << endl;
-  cout << left << setw(10) << "Código" << setw(25) << "Nombre" << setw(15)
+  cout << left << setw(10) << "Código" << setw(25) << " Nombre" << setw(15)
        << "Precio Venta" << setw(15) << "Precio Compra" << setw(15) << "Stock"
        << setw(15) << "Cod. Marca" << endl;
-  cout << "------------------------------------------------------------"
+  cout << "────────────────────────────────────────────────────────────────────"
+          "─────────────────────"
        << endl;
   for (int i = 0; i < cantidadProductosCargados; i++) {
     cout << left << setw(10) << vCodigoProducto[i] << setw(25)
@@ -533,7 +532,8 @@ void mostrarTablaProductos(int vCodigoProducto[], std::string vNombreProducto[],
          << vPrecioCompra[i] << setw(15) << vStockDisponible[i] << setw(15)
          << vCodigoMarcaProducto[i] << endl;
   }
-  cout << "================================================================="
+  cout << "────────────────────────────────────────────────────────────────────"
+          "─────────────────────"
        << endl;
 }
 
@@ -560,4 +560,6 @@ void tablaDatosLote3(string codigoLoteTres[], string nombresLoteTres[],
 
     cout << nombresLoteTres[i] << endl;
   }
+  cout << "──────────────────────────────────────────────────" << endl;
+  cout << "La carga se completó correctamente." << endl;
 }
