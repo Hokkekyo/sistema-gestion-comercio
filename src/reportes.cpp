@@ -116,7 +116,8 @@ void reportePorcentajeVentasPorFormaPago(const int ventasPorForma[],
   cout << "           PORCENTAJE DE VENTAS POR FORMA DE PAGO           "
        << endl;
   cout << "─────────────────────────────────────────────────────────────"
-       << endl << endl;
+       << endl
+       << endl;
 
   cout << "Total de ventas: " << totalVentas << endl;
 
@@ -183,10 +184,10 @@ void reporteProductosSinVentas(int vCodigoProducto[], string vNombreProducto[],
   }
 
   if (!sinVentas) {
-      cout << "No hay productos sin ventas." << endl;
-    }
-  }    
-    
+    cout << "No hay productos sin ventas." << endl;
+  }
+}
+
 // ============================================================
 // =============   TOP 10 CLIENTES  - REPORTE 5   =============
 // ============================================================
@@ -194,52 +195,46 @@ void reporteProductosSinVentas(int vCodigoProducto[], string vNombreProducto[],
 /*-Calcular el top 10 de clientes con más compras realizadas (por cantidad de
 compras). -Elegir aleatoriamente 3 de ellos y otorgarles un cupón de descuento.
 -Mostrar el top 10 y los 3 ganadores con su código de cliente y cantidad de
-compras.*/ 
+compras.*/
 
 void reporteTop10Clientes(int comprasPorCliente[]) {
 
-
   cout << "─────────────────────────────────────" << endl;
-  cout << "   TOP 10 CLIENTES CON MÁS COMPRAS   "        << endl;
+  cout << "   TOP 10 CLIENTES CON MÁS COMPRAS   " << endl;
   cout << "─────────────────────────────────────" << endl << endl;
 
-int copiaCompras[51];
-int copiaCodigos[51];
+  int copiaCompras[51];
+  int copiaCodigos[51];
 
+  // 1. Copiar los datos originales (del 1 al 50)
+  for (int i = 1; i <= 50; i++) {
+    copiaCompras[i] = comprasPorCliente[i];
+    copiaCodigos[i] = i;
+  }
 
- // 1. Copiar los datos originales (del 1 al 50)
-    for (int i = 1; i <= 50; i++) {
-        copiaCompras[i] = comprasPorCliente[i];
-        copiaCodigos[i] = i;
+  // 2. Ordenar ambos vectores de mayor a menor usando burbujeo
+  for (int i = 1; i < 50; i++) {
+    for (int j = 1; j <= 50 - i; j++) {
+      if (copiaCompras[j] < copiaCompras[j + 1]) {
+        // Intercambiar compras
+        int aux = copiaCompras[j];
+        copiaCompras[j] = copiaCompras[j + 1];
+        copiaCompras[j + 1] = aux;
+        // Intercambiar códigos para mantener la relación
+        int auxCod = copiaCodigos[j];
+        copiaCodigos[j] = copiaCodigos[j + 1];
+        copiaCodigos[j + 1] = auxCod;
+      }
     }
+  }
 
-    // 2. Ordenar ambos vectores de mayor a menor usando burbujeo
-    for (int i = 1; i < 50; i++) {
-        for (int j = 1; j <= 50 - i; j++) {
-            if (copiaCompras[j] < copiaCompras[j + 1]) {
-                // Intercambiar compras
-                int aux = copiaCompras[j];
-                copiaCompras[j] = copiaCompras[j + 1];
-                copiaCompras[j + 1] = aux;
-                // Intercambiar códigos para mantener la relación
-                int auxCod = copiaCodigos[j];
-                copiaCodigos[j] = copiaCodigos[j + 1];
-                copiaCodigos[j + 1] = auxCod;
-            }
-        }
-    }
+  // 3. Mostrar el top 10
+  cout << "\nTop 10 clientes con más compras:" << endl;
+  cout << "Cliente\tCompras" << endl;
+  for (int i = 1; i <= 10; i++) {
+    cout << copiaCodigos[i] << "\t" << copiaCompras[i] << endl;
+  }
 
-    // 3. Mostrar el top 10
-    cout << "\nTop 10 clientes con más compras:" << endl;
-    cout << "Cliente\tCompras" << endl;
-    for (int i = 1; i <= 10; i++) {
-        cout << copiaCodigos[i] << "\t" << copiaCompras[i] << endl;
-    }
-
-    // 4. Elegir aleatoriamente 3 clientes ganadores
-    cout << "\nClientes ganadores del cupón de descuento:" << endl;
-
-
+  // 4. Elegir aleatoriamente 3 clientes ganadores
+  cout << "\nClientes ganadores del cupón de descuento:" << endl;
 }
-
-
