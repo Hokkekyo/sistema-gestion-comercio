@@ -190,8 +190,6 @@ int main() {
 #else
             system("clear");
 #endif
-            // Ingrese <AQUI> funcion para porcentaje de ventas por forma de
-            // pago.
             reportePorcentajeVentasPorFormaPago(ventasPorForma, codigosLoteTres,
                                                 nombresLoteTres, 5,
                                                 totalVentas);
