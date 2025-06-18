@@ -79,26 +79,34 @@ void cargarLoteMarcas(int vCodigomarca[], string vNombremarca[],
   // En este if validamos que la carga se completó.
   if (cantidadMarcasCargadas == 10) {
     marcasCargadas = true;
-    cout << "Carga del lote 1 completada con éxito. A continuación se muestra "
-            "el listado:"
-         << endl
-         << endl;
-
-// Mostramos la carga de datos:
 #ifdef _WIN32
     system("cls");
 #else
     system("clear");
 #endif
-    cout << "──────────────────────────────────────────────────" << endl;
+    cout << "Carga del lote 1 completada con éxito. A continuación se muestra "
+            "el listado:"
+         << endl;
+
+    // Mostramos la carga de datos:
+    cout << "──────────────────────────────────────────────────────────────────"
+            "───────────"
+         << endl;
     for (int x = 0; x < 10; x++) {
-      cout << "Código de marca: " << vCodigomarca[x]
+      if (vCodigomarca[x] <= 9) {
+        cout << "Código de marca: " << vCodigomarca[x]
            << "   |   Nombre de marca: " << vNombremarca[x] << endl;
+      } else {
+        cout << "Código de marca: " << vCodigomarca[x]
+           << "  |   Nombre de marca: " << vNombremarca[x] << endl;
+      }
     }
   } else {
     cout << "No se completo correctamente la carga del lote 1." << endl;
   }
-  cout << "──────────────────────────────────────────────────" << endl;
+  cout << "──────────────────────────────────────────────────────────────────"
+          "───────────"
+       << endl;
 }
 
 // ======================================================

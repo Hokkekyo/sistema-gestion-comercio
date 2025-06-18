@@ -1,7 +1,7 @@
 #include "../include/funciones.h"
-#include <iostream>
 #include <cstdlib>
 #include <ctime>
+#include <iostream>
 
 using namespace std;
 
@@ -263,7 +263,6 @@ int main() {
 #else
             system("clear");
 #endif
-            // Ingrese <AQUI> funcion top 10 clientes + sorteo de cupones.
             reporteTop10Clientes(comprasPorCliente);
 
             cout << "\nToca ENTER para volver al menú de reportes." << endl;

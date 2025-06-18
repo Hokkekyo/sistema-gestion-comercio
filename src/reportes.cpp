@@ -1,8 +1,8 @@
 #include "../include/funciones.h"
-#include <iomanip>
-#include <iostream>
 #include <cstdlib>
 #include <ctime>
+#include <iomanip>
+#include <iostream>
 
 using namespace std;
 
@@ -194,60 +194,72 @@ void reporteProductosSinVentas(int vCodigoProducto[], string vNombreProducto[],
 // =============   TOP 10 CLIENTES  - REPORTE 5   =============
 // ============================================================
 
-
 void reporteTop10Clientes(int comprasPorCliente[]) {
 
   cout << "─────────────────────────────────────" << endl;
   cout << "   TOP 10 CLIENTES CON MÁS COMPRAS   " << endl;
-  cout << "─────────────────────────────────────" << endl << endl;
-
+  cout << "─────────────────────────────────────" << endl;
+  
   int copiaCompras[51];
   int copiaCodigos[51];
-
+  
   // Copiar los datos originales (del 1 al 50)
   for (int i = 1; i <= 50; i++) {
     copiaCompras[i] = comprasPorCliente[i];
     copiaCodigos[i] = i;
   }
-
-    // Ordenar ambos vectores de mayor a menor usando burbujeo
-    for (int i = 1; i < 50; i++) {
-        for (int j = 1; j <= 50 - i; j++) {
-            if (copiaCompras[j] < copiaCompras[j + 1]) {
-                // Intercambiar compras
-                int aux = copiaCompras[j];
-                copiaCompras[j] = copiaCompras[j + 1];
-                copiaCompras[j + 1] = aux;
-                // Intercambiar códigos para mantener la relación
-                int auxCod = copiaCodigos[j];
-                copiaCodigos[j] = copiaCodigos[j + 1];
-                copiaCodigos[j + 1] = auxCod;
-            }
-        }
+  
+  // Ordenar ambos vectores de mayor a menor usando burbujeo
+  for (int i = 1; i < 50; i++) {
+    for (int j = 1; j <= 50 - i; j++) {
+      if (copiaCompras[j] < copiaCompras[j + 1]) {
+        // Intercambiar compras
+        int aux = copiaCompras[j];
+        copiaCompras[j] = copiaCompras[j + 1];
+        copiaCompras[j + 1] = aux;
+        // Intercambiar códigos para mantener la relación
+        int auxCod = copiaCodigos[j];
+        copiaCodigos[j] = copiaCodigos[j + 1];
+        copiaCodigos[j + 1] = auxCod;
+      }
     }
+  }
 
-    // Mostrar el top 10
-    cout << "\nTop 10 clientes con más compras:" << endl;
-    cout << "Cliente\tCompras" << endl;
-    for (int i = 1; i <= 10; i++) {
-        cout << copiaCodigos[i] << "\t" << copiaCompras[i] << endl;
+  // Verificar si hubo al menos una compra
+  bool huboCompras = false;
+  for (int i = 1; i <= 50; i++) {
+    if (copiaCompras[i] > 0) {
+      huboCompras = true;
+      break;
     }
+  }
 
-    //Elegir aleatoriamente 3 clientes ganadores
-    cout << "\nClientes ganadores del cupón de descuento:" << endl;
-    cout<< endl;
-    cout<< endl;
+  if (!huboCompras) {
+    cout << "No hubo compras registradas. No hay sorteo." << endl;
+    return;
+  }
+  
+  // Mostrar el top 10
+  cout << "Cliente\t" "    " "Compras" << endl;
+  cout << "─────────────────────────────────────" << endl;
+  for (int i = 1; i <= 10; i++) {
+    cout << copiaCodigos[i] << "\t" "    " << copiaCompras[i] << endl;
+  }
+  
+  // Elegir aleatoriamente 3 clientes ganadores
+  cout << "\nClientes ganadores del cupón de descuento:" << endl;
+  cout << "───────────────────────────────────────────"<< endl;
 
-    srand((unsigned)time(0));
-    bool yaSalio[11] = {false}; // Marca que índices 1 a 10 ya saliern
-    int ganadores = 0;
+  srand((unsigned)time(0));
+  bool yaSalio[11] = {false}; // Marca que índices 1 a 10 ya saliern
+  int ganadores = 0;
 
-    while (ganadores < 3) {
-        int indiceGanador = rand() % 10 + 1; // Genera un número entre 1 y 10
-        if (!yaSalio[indiceGanador]) { // Si no salió antes
-            cout << "Cliente #" << copiaCodigos[indiceGanador] << endl;
-            yaSalio[indiceGanador] = true; // Marca como salido
-            ganadores++;
-        }
+  while (ganadores < 3) {
+    int indiceGanador = rand() % 10 + 1; // Genera un número entre 1 y 10
+    if (!yaSalio[indiceGanador]) {       // Si no salió antes
+      cout << "Cliente #" << copiaCodigos[indiceGanador] << endl;
+      yaSalio[indiceGanador] = true; // Marca como salido
+      ganadores++;
     }
+  }
 }
