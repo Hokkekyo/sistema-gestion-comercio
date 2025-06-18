@@ -199,16 +199,16 @@ void reporteTop10Clientes(int comprasPorCliente[]) {
   cout << "─────────────────────────────────────" << endl;
   cout << "   TOP 10 CLIENTES CON MÁS COMPRAS   " << endl;
   cout << "─────────────────────────────────────" << endl;
-  
+
   int copiaCompras[51];
   int copiaCodigos[51];
-  
+
   // Copiar los datos originales (del 1 al 50)
   for (int i = 1; i <= 50; i++) {
     copiaCompras[i] = comprasPorCliente[i];
     copiaCodigos[i] = i;
   }
-  
+
   // Ordenar ambos vectores de mayor a menor usando burbujeo
   for (int i = 1; i < 50; i++) {
     for (int j = 1; j <= 50 - i; j++) {
@@ -238,17 +238,23 @@ void reporteTop10Clientes(int comprasPorCliente[]) {
     cout << "No hubo compras registradas. No hay sorteo." << endl;
     return;
   }
-  
+
   // Mostrar el top 10
-  cout << "Cliente\t" "    " "Compras" << endl;
+  cout << "Cliente\t"
+          "    "
+          "Compras"
+       << endl;
   cout << "─────────────────────────────────────" << endl;
   for (int i = 1; i <= 10; i++) {
-    cout << copiaCodigos[i] << "\t" "    " << copiaCompras[i] << endl;
+    cout << copiaCodigos[i]
+         << "\t"
+            "    "
+         << copiaCompras[i] << endl;
   }
-  
+
   // Elegir aleatoriamente 3 clientes ganadores
   cout << "\nClientes ganadores del cupón de descuento:" << endl;
-  cout << "───────────────────────────────────────────"<< endl;
+  cout << "───────────────────────────────────────────" << endl;
 
   srand((unsigned)time(0));
   bool yaSalio[11] = {false}; // Marca que índices 1 a 10 ya saliern

@@ -95,10 +95,10 @@ void cargarLoteMarcas(int vCodigomarca[], string vNombremarca[],
     for (int x = 0; x < 10; x++) {
       if (vCodigomarca[x] <= 9) {
         cout << "Código de marca: " << vCodigomarca[x]
-           << "   |   Nombre de marca: " << vNombremarca[x] << endl;
+             << "   |   Nombre de marca: " << vNombremarca[x] << endl;
       } else {
         cout << "Código de marca: " << vCodigomarca[x]
-           << "  |   Nombre de marca: " << vNombremarca[x] << endl;
+             << "  |   Nombre de marca: " << vNombremarca[x] << endl;
       }
     }
   } else {
