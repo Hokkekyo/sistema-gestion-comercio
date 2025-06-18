@@ -1,5 +1,7 @@
 #include "../include/funciones.h"
 #include <iostream>
+#include <cstdlib>
+#include <ctime>
 
 using namespace std;
 

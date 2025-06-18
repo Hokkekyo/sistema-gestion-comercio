@@ -1,6 +1,8 @@
 #include "../include/funciones.h"
 #include <iomanip>
 #include <iostream>
+#include <cstdlib>
+#include <ctime>
 
 using namespace std;
 
@@ -191,10 +193,6 @@ void reporteProductosSinVentas(int vCodigoProducto[], string vNombreProducto[],
 // =============   TOP 10 CLIENTES  - REPORTE 5   =============
 // ============================================================
 
-/*-Calcular el top 10 de clientes con más compras realizadas (por cantidad de
-compras). -Elegir aleatoriamente 3 de ellos y otorgarles un cupón de descuento.
--Mostrar el top 10 y los 3 ganadores con su código de cliente y cantidad de
-compras.*/ 
 
 void reporteTop10Clientes(int comprasPorCliente[]) {
 
@@ -207,13 +205,13 @@ int copiaCompras[51];
 int copiaCodigos[51];
 
 
- // 1. Copiar los datos originales (del 1 al 50)
+ // Copiar los datos originales (del 1 al 50)
     for (int i = 1; i <= 50; i++) {
         copiaCompras[i] = comprasPorCliente[i];
         copiaCodigos[i] = i;
     }
 
-    // 2. Ordenar ambos vectores de mayor a menor usando burbujeo
+    // Ordenar ambos vectores de mayor a menor usando burbujeo
     for (int i = 1; i < 50; i++) {
         for (int j = 1; j <= 50 - i; j++) {
             if (copiaCompras[j] < copiaCompras[j + 1]) {
@@ -229,17 +227,30 @@ int copiaCodigos[51];
         }
     }
 
-    // 3. Mostrar el top 10
+    // Mostrar el top 10
     cout << "\nTop 10 clientes con más compras:" << endl;
     cout << "Cliente\tCompras" << endl;
     for (int i = 1; i <= 10; i++) {
         cout << copiaCodigos[i] << "\t" << copiaCompras[i] << endl;
     }
 
-    // 4. Elegir aleatoriamente 3 clientes ganadores
+    //Elegir aleatoriamente 3 clientes ganadores
     cout << "\nClientes ganadores del cupón de descuento:" << endl;
+    cout<< endl;
+    cout<< endl;
 
+    srand((unsigned)time(0));
+    bool yaSalio[11] = {false}; // Marca que índices 1 a 10 ya saliern
+    int ganadores = 0;
 
+    while (ganadores < 3) {
+        int indiceGanador = rand() % 10 + 1; // Genera un número entre 1 y 10
+        if (!yaSalio[indiceGanador]) { // Si no salió antes
+            cout << "Cliente #" << copiaCodigos[indiceGanador] << endl;
+            yaSalio[indiceGanador] = true; // Marca como salido
+            ganadores++;
+        }
+    }
 }
 
 
