@@ -36,7 +36,6 @@ void reporteProductosSinVentas(int vCodigoProducto[], string vNombreProducto[],
 // Reporte 5:
 void reporteTop10Clientes(int comprasPorCliente[]);
 
-
 // ========================================
 // ============ FUNCIONES.CPP =============
 // ========================================
@@ -81,7 +80,6 @@ int obtenerPosFPPorCodigoFP(string vFormasPago[], string formaPago,
 
 void tablaDatosLote3(string codigoLoteTres[], string nombresLoteTres[],
                      int porcentajesLoteTres[]);
-
 
 void mostrarTablaProductos(int vCodigoProducto[], string vNombreProducto[],
                            float vPrecioVenta[], float vPrecioCompra[],

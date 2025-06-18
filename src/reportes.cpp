@@ -118,7 +118,8 @@ void reportePorcentajeVentasPorFormaPago(const int ventasPorForma[],
   cout << "           PORCENTAJE DE VENTAS POR FORMA DE PAGO           "
        << endl;
   cout << "─────────────────────────────────────────────────────────────"
-       << endl << endl;
+       << endl
+       << endl;
 
   cout << "Total de ventas: " << totalVentas << endl;
 
@@ -185,10 +186,10 @@ void reporteProductosSinVentas(int vCodigoProducto[], string vNombreProducto[],
   }
 
   if (!sinVentas) {
-      cout << "No hay productos sin ventas." << endl;
-    }
-  }    
-    
+    cout << "No hay productos sin ventas." << endl;
+  }
+}
+
 // ============================================================
 // =============   TOP 10 CLIENTES  - REPORTE 5   =============
 // ============================================================
@@ -196,20 +197,18 @@ void reporteProductosSinVentas(int vCodigoProducto[], string vNombreProducto[],
 
 void reporteTop10Clientes(int comprasPorCliente[]) {
 
-
   cout << "─────────────────────────────────────" << endl;
-  cout << "   TOP 10 CLIENTES CON MÁS COMPRAS   "        << endl;
+  cout << "   TOP 10 CLIENTES CON MÁS COMPRAS   " << endl;
   cout << "─────────────────────────────────────" << endl << endl;
 
-int copiaCompras[51];
-int copiaCodigos[51];
+  int copiaCompras[51];
+  int copiaCodigos[51];
 
-
- // Copiar los datos originales (del 1 al 50)
-    for (int i = 1; i <= 50; i++) {
-        copiaCompras[i] = comprasPorCliente[i];
-        copiaCodigos[i] = i;
-    }
+  // Copiar los datos originales (del 1 al 50)
+  for (int i = 1; i <= 50; i++) {
+    copiaCompras[i] = comprasPorCliente[i];
+    copiaCodigos[i] = i;
+  }
 
     // Ordenar ambos vectores de mayor a menor usando burbujeo
     for (int i = 1; i < 50; i++) {
@@ -252,5 +251,3 @@ int copiaCodigos[51];
         }
     }
 }
-
-
