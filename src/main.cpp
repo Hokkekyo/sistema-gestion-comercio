@@ -9,17 +9,17 @@ int main() {
   int opcion, opcionRep;          // Menu
   bool opInvalida, opRepInvalida; // Menu
 
-  int vCodigomarca[10];            // LOTE 1
-  string vNombremarca[10];         // LOTE 1
+  int vCodigomarca[10];           // LOTE 1
+  string vNombremarca[10];        // LOTE 1
   int cantidadMarcasCargadas = 0; // LOTE 1
   bool marcasCargadas = false;    // LOTE 1
 
-  int vCodigoProducto[20];            // LOTE 2 (productos)
-  string vNombreProducto[20];         // LOTE 2 (productos)
-  float vPrecioVenta[20];             // LOTE 2 (productos)
-  float vPrecioCompra[20];            // LOTE 2 (productos)
-  int vStockDisponible[20];           // LOTE 2 (productos)
-  int vCodigoMarcaProducto[20];       // LOTE 2 (productos)
+  int vCodigoProducto[20];           // LOTE 2 (productos)
+  string vNombreProducto[20];        // LOTE 2 (productos)
+  float vPrecioVenta[20];            // LOTE 2 (productos)
+  float vPrecioCompra[20];           // LOTE 2 (productos)
+  int vStockDisponible[20];          // LOTE 2 (productos)
+  int vCodigoMarcaProducto[20];      // LOTE 2 (productos)
   int cantidadProductosCargados = 0; // LOTE 2 (productos)
   bool productosCargados = false;    // LOTE 2 (productos)
 
@@ -111,7 +111,7 @@ int main() {
         break;
       case 4:
         opInvalida = false;
-        #ifdef _WIN32
+#ifdef _WIN32
         system("cls");
 #else
         system("clear");
@@ -242,7 +242,9 @@ int main() {
 #else
             system("clear");
 #endif
-reporteProductosSinVentas(vCodigoProducto, vNombreProducto, cantidadProductosCargados, ventasPorProducto);
+            reporteProductosSinVentas(vCodigoProducto, vNombreProducto,
+                                      cantidadProductosCargados,
+                                      ventasPorProducto);
 
             cout << "\nToca ENTER para volver al menú de reportes." << endl;
             cin.ignore();
