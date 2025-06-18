@@ -241,16 +241,13 @@ void cargarLoteProductos(int vCodigoProducto[], string vNombreProducto[],
   }
 
   // Mostramos la carga de datos:
-  for (int x = 0; x < 4; x++) { // original x < 20
-
-    cout << "Código de producto: " << vCodigoProducto[x]
-         << " | Nombre: " << vNombreProducto[x]
-         << " | Precio de venta: " << vPrecioVenta[x]
-         << " | Precio de compra: " << vPrecioCompra[x]
-         << " | Stock disponible: " << vStockDisponible[x]
-         << " | Código de marca: " << vCodigoMarcaProducto[x] << endl;
-  }
-  cout << "\nCarga de productos completada." << endl;
+  
+  mostrarTablaProductos (vCodigoProducto, vNombreProducto,
+                        vPrecioVenta, vPrecioCompra,
+                        vStockDisponible, vCodigoMarcaProducto,
+                         cantidadProductosCargados);
+  
+cout << "\nCarga de productos completada." << endl;
 }
 
 // ======================================================
@@ -358,10 +355,11 @@ void cargarLoteVentas(int vCodigoProducto[], string vNombreProducto[],
     return;
   }
 
+  totalVentas = 0;  // Inicializamos el contador de ventas
+  for (int i = 0; i < 5; i++)  // Inicializamos el vector de ventas por forma de pago
+        ventasPorForma[i] = 0;
+
   int nroCompra;
-  totalVentas = 0;
-  for (int i = 0; i < 5; i++)
-    ventasPorForma[i] = 0;
 
   do {
     cout << "\nIngrese Nro de Compra (0 para finalizar): ";
@@ -448,11 +446,15 @@ void cargarLoteVentas(int vCodigoProducto[], string vNombreProducto[],
     for (int j = 0; j < 5; j++) {
       if (codigoFormaPago == vCodigoFP[j]) {
         ventasPorForma[j]++; // Suma una venta a esa forma de pago
-                             // Suma una venta al total general
+                             
         break;
       }
     }
-    totalVentas++;
+    totalVentas++; // Suma una venta al total general
+
+    // Carga de datos para el reporte 5
+
+    comprasPorCliente[codigoCliente]++; // Incrementa la compra del cliente
 
   } while (true);
 }
