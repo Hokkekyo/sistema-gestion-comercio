@@ -165,22 +165,24 @@ void mostrarReporteVentasPorMarcaYFormaPago(
 // ============= PRODUCTOS SIN VENTAS - REPORTE 4 =============
 // ============================================================
 
-void reporteProductosSinVentas(int vCodigoProducto[], string vNombreProducto[], int cantidadProductosCargados, int ventasPorProducto[]) {
+void reporteProductosSinVentas(int vCodigoProducto[], string vNombreProducto[],
+                               int cantidadProductosCargados,
+                               int ventasPorProducto[]) {
 
   cout << "─────────────────────────────────────" << endl;
-  cout << "        PRODUCTOS SIN VENTAS"        << endl;
+  cout << "        PRODUCTOS SIN VENTAS" << endl;
   cout << "─────────────────────────────────────" << endl << endl;
 
   bool sinVentas = false;
   for (int i = 0; i < cantidadProductosCargados; i++) {
     if (ventasPorProducto[i] == 0) {
-      cout << "Código: " << vCodigoProducto[i] << " | " << "Nombre del producto: " << vNombreProducto[i] << "." << endl;
+      cout << "Código: " << vCodigoProducto[i] << " | "
+           << "Nombre del producto: " << vNombreProducto[i] << "." << endl;
       sinVentas = true;
     }
   }
 
   if (!sinVentas) {
-      cout << "No hay productos sin ventas." << endl;
-    }
-  
+    cout << "No hay productos sin ventas." << endl;
+  }
 }
