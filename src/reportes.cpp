@@ -125,7 +125,7 @@ void reportePorcentajeVentasPorFormaPago(const int ventasPorForma[],
     return;
   }
 
-  cout << "Código   Porcentaje    Nombre" << endl;
+  cout << "Código   Porcentaje      Nombre" << endl;
   cout << "─────────────────────────────────────────────────────────────"
        << endl;
 
