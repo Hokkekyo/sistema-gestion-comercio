@@ -183,11 +183,6 @@ int main() {
             cout << "\nToca ENTER para volver al menú de reportes." << endl;
             cin.ignore();
             cin.get();
-#ifdef _WIN32
-            system("cls");
-#else
-            system("clear");
-#endif
             break;
           case 2:
 #ifdef _WIN32
@@ -204,11 +199,6 @@ int main() {
             cout << "\nToca ENTER para volver al menú de reportes." << endl;
             cin.ignore();
             cin.get();
-#ifdef _WIN32
-            system("cls");
-#else
-            system("clear");
-#endif
             break;
 
           case 3:
@@ -229,11 +219,6 @@ int main() {
             cout << "\nToca ENTER para volver al menú de reportes." << endl;
             cin.ignore();
             cin.get();
-#ifdef _WIN32
-            system("cls");
-#else
-            system("clear");
-#endif
             break;
           case 4:
 #ifdef _WIN32
@@ -248,11 +233,6 @@ int main() {
             cout << "\nToca ENTER para volver al menú de reportes." << endl;
             cin.ignore();
             cin.get();
-#ifdef _WIN32
-            system("cls");
-#else
-            system("clear");
-#endif
             break;
           case 5:
 #ifdef _WIN32
@@ -265,11 +245,6 @@ int main() {
             cout << "\nToca ENTER para volver al menú de reportes." << endl;
             cin.ignore();
             cin.get();
-#ifdef _WIN32
-            system("cls");
-#else
-            system("clear");
-#endif
             break;
           case 0:
             opRepInvalida = false;
