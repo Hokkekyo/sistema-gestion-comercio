@@ -29,7 +29,7 @@ int main() {
 
   int ventasPorProducto[20] = {0};          // LOTE 4
   float recaudacionPorProducto[20] = {0.0}; // LOTE 4
-  int comprasPorCliente[50] = {0};          // LOTE 4
+  int comprasPorCliente[51] = {0};          // LOTE 4
   int ventasPorFormaYMarca[10][5] = {0};    // LOTE 4
   bool formasPagoCargadas = false;          // LOTE 4
 
@@ -262,6 +262,7 @@ int main() {
             system("clear");
 #endif
             // Ingrese <AQUI> funcion top 10 clientes + sorteo de cupones.
+            reporteTop10Clientes(comprasPorCliente);
 
             cout << "\nToca ENTER para volver al menú de reportes." << endl;
             cin.ignore();
