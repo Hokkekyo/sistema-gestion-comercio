@@ -22,7 +22,6 @@ sistema-gestion-comercio/
 │
 ├── src/              → Código fuente principal (main.cpp, funciones.cpp)
 ├── include/          → Archivos de cabecera (.h)
-├── test/             → Pruebas (en caso de agregar más adelante)
 ├── docs/             → Diagramas y documentación del proyecto
 ├── README.md         → Descripción general del proyecto
 ├── CONTRIB.md        → Guía para colaborar en el repositorio
@@ -35,7 +34,7 @@ sistema-gestion-comercio/
 - [x] Dividir tareas entre integrantes
 - [x] Desarrollar funcionalidades mínimas
 - [x] Implementar validaciones y reportes
-- [ ] Testear el programa en las tres computadoras
+- [X] Testear el programa en las tres computadoras
 ```
 
 ## 📝 Notas
