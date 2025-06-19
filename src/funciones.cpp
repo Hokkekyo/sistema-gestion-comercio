@@ -118,7 +118,7 @@ void cargarLoteProductos(int vCodigoProducto[], string vNombreProducto[],
                          bool &productosCargados) {
 
   cout << "─────────────────────────────────────────────────" << endl;
-  cout << "          CARGA DE LOTE 2 - PRODUCTOS.           " << endl;
+  cout << "          CARGA DE PRODUCTOS - LOTE 2           " << endl;
   cout << "─────────────────────────────────────────────────" << endl;
 
   if (!marcasCargadas) {
@@ -271,7 +271,7 @@ void cargarFormasDePago(string codigosLoteTres[], string nombresLoteTres[],
     system("clear");
 #endif
     cout << "────────────────────────────────" << endl;
-    cout << " CARGA FORMAS DE PAGO - LOTE 3. " << endl;
+    cout << " CARGA FORMAS DE PAGO - LOTE 3 " << endl;
     cout << "────────────────────────────────" << endl;
     cout << "       Códigos válidos:" << endl;
     cout << "────────────────────────────────" << endl;
@@ -302,7 +302,7 @@ void cargarFormasDePago(string codigosLoteTres[], string nombresLoteTres[],
       }
 
       // Verificar repetidos:
-      for (int j = 0; j < i; j++) {
+      for (int j = 0; j < 5; j++) {
         if (codigo == codigosLoteTres[j]) {
           valido = false;
           break;

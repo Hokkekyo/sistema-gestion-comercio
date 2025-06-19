@@ -127,6 +127,9 @@ int main() {
             marcasCargadas, productosCargados, formasPagoCargadas,
             ventasPorForma, totalVentas);
 
+        cout << "\nToca ENTER para volver al menú principal.";
+        cin.ignore();
+        cin.get();
         break;
       case 0:
 #ifdef _WIN32
@@ -183,13 +186,13 @@ int main() {
             cout << "\nToca ENTER para volver al menú de reportes." << endl;
             cin.ignore();
             cin.get();
-            #ifdef _WIN32
-        system("cls");
+#ifdef _WIN32
+            system("cls");
 #else
-        system("clear");
+            system("clear");
 #endif
             break;
-            
+
           case 2:
 #ifdef _WIN32
             system("cls");
@@ -203,10 +206,10 @@ int main() {
             cout << "\nToca ENTER para volver al menú de reportes." << endl;
             cin.ignore();
             cin.get();
-                        #ifdef _WIN32
-        system("cls");
+#ifdef _WIN32
+            system("cls");
 #else
-        system("clear");
+            system("clear");
 #endif
             break;
 
@@ -216,7 +219,7 @@ int main() {
 #else
             system("clear");
 #endif
-            if (marcasCargadas && formasPagoCargadas) {
+            if (marcasCargadas > 0 && formasPagoCargadas) {
 
               mostrarReporteVentasPorMarcaYFormaPago(
                   ventasPorFormaYMarca, vCodigomarca, vNombremarca,
@@ -228,10 +231,10 @@ int main() {
             cout << "\nToca ENTER para volver al menú de reportes." << endl;
             cin.ignore();
             cin.get();
-                        #ifdef _WIN32
-        system("cls");
+#ifdef _WIN32
+            system("cls");
 #else
-        system("clear");
+            system("clear");
 #endif
             break;
           case 4:
@@ -247,10 +250,10 @@ int main() {
             cout << "\nToca ENTER para volver al menú de reportes." << endl;
             cin.ignore();
             cin.get();
-                        #ifdef _WIN32
-        system("cls");
+#ifdef _WIN32
+            system("cls");
 #else
-        system("clear");
+            system("clear");
 #endif
             break;
           case 5:
@@ -264,10 +267,10 @@ int main() {
             cout << "\nToca ENTER para volver al menú de reportes." << endl;
             cin.ignore();
             cin.get();
-                        #ifdef _WIN32
-        system("cls");
+#ifdef _WIN32
+            system("cls");
 #else
-        system("clear");
+            system("clear");
 #endif
             break;
           case 0:
