@@ -34,7 +34,7 @@ sistema-gestion-comercio/
 - [x] Dividir tareas entre integrantes
 - [x] Desarrollar funcionalidades mínimas
 - [x] Implementar validaciones y reportes
-- [ ] Testear el programa en las tres computadoras
+- [X] Testear el programa en las tres computadoras
 ```
 
 ## 📝 Notas
